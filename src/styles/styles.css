@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(30, 30, 30);
+}
+
+header {
+  background-color: rgb(60, 60, 60);
+}
+
+.light-blue-text {
+  color: rgb(150, 220, 250);
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+}
+
+.dark-blue-text {
+  color: rgb(74, 156, 216);
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+}
+
+.light-purple-text {
+  color: rgb(190, 135, 190);
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+}
+
+.orange-text {
+  color: rgb(184, 85, 40);
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+}
+
+.green-text {
+  color: rgb(68, 129, 75);
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+}
