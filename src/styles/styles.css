@@ -2,31 +2,60 @@ body {
   background-color: rgb(30, 30, 30);
 }
 
-header {
+nav {
   background-color: rgb(60, 60, 60);
+}
+
+.navbar-brand {
+  font-size: 3em;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+}
+
+.fa {
+  font-size: 3em;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.5;
+}
+
+.fa-twitter,
+.fa-twitter:hover {
+  color: rgb(85, 172, 238);
+}
+
+.fa-linkedin,
+.fa-linkedin:hover {
+  color: rgb(0,123,181);
+}
+
+.fa-github,
+.fa-github:hover {
+  color: rgb(255, 255, 255);
 }
 
 .light-blue-text {
   color: rgb(150, 220, 250);
-  font-family: monaco, Consolas, 'Lucida Console', monospace;
 }
 
 .dark-blue-text {
   color: rgb(74, 156, 216);
-  font-family: monaco, Consolas, 'Lucida Console', monospace;
 }
 
 .light-purple-text {
   color: rgb(190, 135, 190);
-  font-family: monaco, Consolas, 'Lucida Console', monospace;
 }
 
 .orange-text {
   color: rgb(184, 85, 40);
-  font-family: monaco, Consolas, 'Lucida Console', monospace;
 }
 
 .green-text {
   color: rgb(68, 129, 75);
+}
+
+.code-font {
   font-family: monaco, Consolas, 'Lucida Console', monospace;
 }
