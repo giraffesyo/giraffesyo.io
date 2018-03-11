@@ -12,9 +12,17 @@ nav {
   font-family: 'Nunito', sans-serif;
 }
 
+.blog div {
+  margin-bottom: 5vh;
+}
+
+.blog h6.orange-text {
+  text-align: right;
+}
+
 @media screen and (max-width: 767px) {
   .navbar-brand {
-      font-size: 1em;
+    font-size: 1em;
   }
 }
 
@@ -34,7 +42,7 @@ nav {
 
 .fa-linkedin,
 .fa-linkedin:hover {
-  color: rgb(0,123,181);
+  color: rgb(0, 123, 181);
 }
 
 .fa-github,
@@ -50,8 +58,18 @@ nav {
   color: rgb(74, 156, 216);
 }
 
+a:hover.dark-blue-text {
+  color: rgb(74, 156, 216);
+  opacity: 0.8;
+}
+
 .light-purple-text {
   color: rgb(190, 135, 190);
+}
+
+a:hover.light-purple-text {
+  color: rgb(190, 135, 190);
+  opacity: 0.8;
 }
 
 .orange-text {
@@ -60,6 +78,10 @@ nav {
 
 .green-text {
   color: rgb(68, 129, 75);
+}
+
+.white-text {
+  color: rgb(255, 255, 255);
 }
 
 .code-font {
