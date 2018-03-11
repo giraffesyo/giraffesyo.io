@@ -127,3 +127,9 @@ a:hover.light-purple-text {
 .code-font {
   font-family: monaco, Consolas, 'Lucida Console', monospace;
 }
+
+.PrairieDog {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    
+}
