@@ -9,10 +9,33 @@ nav {
 .secondary.menu
 {
   border: 0 !important;
+  background-color: rgb(30,30,30) !important;
+}
+
+.secondary.menu .item {
+  font-size: 1.5em !important;
 }
 
 .secondary.menu .active.item {
+  border-radius: 0 !important;
   border-color: rgb(255,255,255) !important;
+  border-bottom: 1.5px solid white;
+  background-color: inherit !important;
+}
+
+
+
+
+@media screen and (max-width: 1023px) {
+  .secondary.menu .item {
+    font-size: .9em !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secondary.menu .item {
+    font-size: 1.5em !important;
+  }
 }
 
 /*.secondary-nav {
