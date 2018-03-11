@@ -4,7 +4,7 @@ import 'styles/styles.css'
 class Header extends React.PureComponent {
   render() {
     return (
-      <nav className="navbar bg-dark">
+      <nav className="navbar">
         <ul className="nav">
           <li className="nav-item">
             <a
