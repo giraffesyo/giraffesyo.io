@@ -11,17 +11,18 @@ class Home extends React.PureComponent {
     return (
       <div>
         <Header />
-        <Grid columns={3} stackable>
+        <Grid container stackable>
           <Grid.Row>
-            <Grid.Column floated="right">
+            <Grid.Column width={11} />
+            <Grid.Column width={5}>
               <SecondaryNavigation />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width={2}>
+            <Grid.Column width={10}>
               <Projects />
             </Grid.Column>
-            <Grid.Column floated="right">
+            <Grid.Column width={5}>
               <BlogExcerpts />
             </Grid.Column>
           </Grid.Row>
