@@ -1,32 +1,36 @@
 import React from 'react'
+import { Menu, Segment } from 'semantic-ui-react'
 import 'styles/styles.css'
 
 class SecondaryNavigation extends React.PureComponent {
+  state = { activeItem: 'Projects' }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
   render() {
+    const { activeItem } = this.state
     return (
-      <ul className="nav">
-        <li className="nav-item">
-          <h2>
-            <a href="#" className="nav-link light-purple-text">
-              About Me
-            </a>
-          </h2>
-        </li>
-        <li className="nav-item">
-          <h2>
-            <a href="#" className="nav-link light-purple-text">
-              Projects
-            </a>
-          </h2>
-        </li>
-        <li>
-          <h2>
-            <a href="#" className="nav-link light-purple-text">
-              Photos
-            </a>
-          </h2>
-        </li>
-      </ul>
+      <Menu pointing secondary borderless fluid>
+        <Menu.Item
+          name="About Me"
+          active={activeItem === 'About Me'}
+          onClick={this.handleItemClick}
+          className="light-purple-text"
+        />
+        <Menu.Item
+          name="Projects"
+          active={activeItem === 'Projects'}
+          onClick={this.handleItemClick}
+          className="light-purple-text"
+        />
+        <Menu.Item
+          name="Photos"
+          active={activeItem === 'Photos'}
+          onClick={this.handleItemClick}
+          className="light-purple-text"
+          disabled
+        />
+      </Menu>
     )
   }
 }
