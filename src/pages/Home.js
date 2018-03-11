@@ -19,7 +19,7 @@ class Home extends React.PureComponent {
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width={10}>
+            <Grid.Column width={11}>
               <Projects />
             </Grid.Column>
             <Grid.Column width={5}>
