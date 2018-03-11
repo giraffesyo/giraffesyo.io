@@ -12,6 +12,12 @@ nav {
   font-family: 'Nunito', sans-serif;
 }
 
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+      font-size: 1em;
+  }
+}
+
 .fa {
   font-size: 3em;
   border-radius: 50%;
