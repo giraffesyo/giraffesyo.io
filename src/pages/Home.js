@@ -5,6 +5,8 @@ import { Header } from 'components/Header'
 import { Projects } from 'components/Projects'
 import { BlogExcerpts } from 'components/BlogExcerpts'
 import { SecondaryNavigation } from 'components/SecondaryNavigation'
+import { AboutMe } from 'components/AboutMe'
+import { Photos } from 'components/Photos'
 
 class Home extends React.PureComponent {
   constructor(props) {
@@ -13,8 +15,8 @@ class Home extends React.PureComponent {
 
     this.state = { activeItem: 'Projects' }
   }
-  changeActiveItem(e, {name}) {
-    this.setState({activeItem: name})
+  changeActiveItem(e, { name }) {
+    this.setState({ activeItem: name })
   }
 
   render() {
@@ -34,7 +36,13 @@ class Home extends React.PureComponent {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column width={11}>
-              <Projects />
+              {activeItem === 'Projects' ? (
+                <Projects />
+              ) : activeItem === 'About Me' ? (
+                <AboutMe />
+              ) : (
+                <Photos />
+              )}
             </Grid.Column>
             <Grid.Column width={5}>
               <BlogExcerpts />
