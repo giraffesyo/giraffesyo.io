@@ -7,7 +7,18 @@ import { BlogExcerpts } from 'components/BlogExcerpts'
 import { SecondaryNavigation } from 'components/SecondaryNavigation'
 
 class Home extends React.PureComponent {
+  constructor(props) {
+    super(props)
+    this.changeActiveItem = this.changeActiveItem.bind(this)
+
+    this.state = { activeItem: 'Projects' }
+  }
+  changeActiveItem(e, {name}) {
+    this.setState({activeItem: name})
+  }
+
   render() {
+    const { activeItem } = this.state
     return (
       <div>
         <Header />
@@ -15,7 +26,10 @@ class Home extends React.PureComponent {
           <Grid.Row>
             <Grid.Column width={11} />
             <Grid.Column width={5}>
-              <SecondaryNavigation />
+              <SecondaryNavigation
+                callback={this.changeActiveItem}
+                activeItem={activeItem}
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
