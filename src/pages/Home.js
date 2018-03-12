@@ -13,7 +13,7 @@ class Home extends React.PureComponent {
     super(props)
     this.changeActiveItem = this.changeActiveItem.bind(this)
 
-    this.state = { activeItem: 'Projects' }
+    this.state = { activeItem: 'About Me' }
   }
   changeActiveItem(e, { name }) {
     this.setState({ activeItem: name })
