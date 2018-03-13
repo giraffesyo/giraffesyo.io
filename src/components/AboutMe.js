@@ -6,11 +6,13 @@ import 'styles/styles.css'
 class AboutMe extends React.PureComponent {
   render() {
     return (
-      <Grid container className="AboutMe">
+      <Grid container stackable className="AboutMe">
         <Grid.Row>
-          <Header size={'large'} className="light-purple-text">
-            About Me
-          </Header>
+          <Grid.Column>
+            <Header size={'large'} className="light-purple-text">
+              About Me
+            </Header>
+          </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column width={5}>
@@ -25,7 +27,7 @@ class AboutMe extends React.PureComponent {
             </p>
             <p>
               My experiences have been varied, from customer service to managing
-              pizza places. Now, I'm finally doing what I love, learning to
+              a pizza place. Now, I'm finally doing what I love, learning to
               code!
             </p>
           </Grid.Column>
