@@ -16,7 +16,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "413cddd5051b61b44e6e9dbb0f945bf8",
+        "contentDigest": "a86ab84018265c426617d4854990f8d0",
         "owner": "internal-data-bridge"
       }
     },
@@ -398,6 +398,10 @@
             "version": "^4.0.0"
           },
           {
+            "name": "font-awesome",
+            "version": "^4.7.0"
+          },
+          {
             "name": "gatsby",
             "version": "^1.9.241"
           },
@@ -452,12 +456,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-03-25T22:09:59.765Z",
+      "buildTime": "2018-03-25T22:20:33.954Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "247c9ba8b16c3aa65f660f07fec0eb15",
+        "contentDigest": "84916ff8fe7cbf9b1057fbc0bb03baeb",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -478,7 +482,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "f8749c164ac3674915d18d3e6e78be74",
+        "contentDigest": "3142aeddcda6ecae3a345c30a2242c66",
         "owner": "internal-data-bridge"
       }
     },
@@ -498,7 +502,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "2e9a60e9285ff3d02f8b2fcc9ab4b482",
+        "contentDigest": "d3377e7e4993d57fe551822284288793",
         "owner": "internal-data-bridge"
       }
     },
@@ -518,7 +522,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "a1d55ad21a0418c7f1458cb34c40f0a4",
+        "contentDigest": "b2ed1bc1a929ed2fbbfedf1934a2a467",
         "owner": "internal-data-bridge"
       }
     },
@@ -538,14 +542,14 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "df410f5da70913794ee78a4aacc8f9a2",
+        "contentDigest": "6da4f7d3e8a2f76adcccec0f21ab680b",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "1d7baff485c749ef4a43436acdb605ef"
+    "PLUGINS_HASH": "7e209118680241315904f36e19ced0f6"
   },
   "componentDataDependencies": {
     "nodes": {},
