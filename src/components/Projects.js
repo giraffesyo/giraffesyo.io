@@ -6,11 +6,11 @@ import Dog from '../images/dog.png'
 class Projects extends React.PureComponent {
   render() {
     return (
-      <Container container columns="equal">
+      <Container>
         <Row>
-          <Header size={'large'} className="light-purple-text">
+          <h1 className="light-purple-text">
             Projects
-          </Header>
+          </h1>
         </Row>
         <Row />
         <Row>

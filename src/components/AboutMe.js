@@ -5,7 +5,7 @@ import Me from '../images/MichaelMcQuadeGiraffesyo.jpg'
 class AboutMe extends React.PureComponent {
   render() {
     return (
-      <Container container stackable className="AboutMe">
+      <Container className="AboutMe">
         <Row>
           <Col>
             <h1 className="light-purple-text">

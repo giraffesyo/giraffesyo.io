@@ -14,8 +14,8 @@ class Home extends React.PureComponent {
 
     this.state = { activeItem: 'About Me' }
   }
-  changeActiveItem(e, { name }) {
-    this.setState({ activeItem: name })
+  changeActiveItem(e) {
+    this.setState({ activeItem: e.target.name })
   }
 
   render() {

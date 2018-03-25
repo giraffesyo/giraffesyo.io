@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav, NavItem } from 'reactstrap'
+import { Nav, NavItem, NavLink } from 'reactstrap'
 
 class SecondaryNavigation extends React.PureComponent {
   handleItemClick = (e, { name }) =>
@@ -8,27 +8,15 @@ class SecondaryNavigation extends React.PureComponent {
   render() {
     const { activeItem } = this.props
     return (
-      <Nav>
-        <NavItem
-          active={activeItem === 'About Me'}
-          onClick={this.props.callback}
-          className="light-purple-text"
-        >
-          About Me
+      <Nav justified>
+        <NavItem  className="light-purple-text">
+          <NavLink name='About Me' onClick={this.props.callback} active={activeItem === 'About Me'}>About Me</NavLink>
         </NavItem>
-        <NavItem
-          active={activeItem === 'Projects'}
-          onClick={this.props.callback}
-          className="light-purple-text"
-        >
-          Projects
+        <NavItem onClick={this.props.callback} className="light-purple-text">
+          <NavLink name='Projects' active={activeItem === 'Projects'}>Projects</NavLink>
         </NavItem>
-        <NavItem
-          active={activeItem === 'Photos'}
-          onClick={this.props.callback}
-          className="light-purple-text"
-        >
-          Photos
+        <NavItem className="light-purple-text">
+          <NavLink name='Photos' onClick={this.props.callback} active={activeItem === 'Photos'}>Photos</NavLink>
         </NavItem>
       </Nav>
     )
