@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Projects } from '../components/Projects'
 import { BlogExcerpts } from '../components/BlogExcerpts'
 import { SecondaryNavigation } from '../components/SecondaryNavigation'
