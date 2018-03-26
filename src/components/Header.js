@@ -4,7 +4,7 @@ import React from 'react'
 class Header extends React.PureComponent {
   render() {
     return (
-      <nav className="navbar">
+      <nav className="primarynav navbar">
         <ul className="nav">
           <li className="nav-item">
             <a

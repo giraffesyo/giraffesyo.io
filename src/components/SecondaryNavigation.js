@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav, NavItem, NavLink } from 'reactstrap'
+import { Navbar, Nav, NavItem, NavLink } from 'reactstrap'
 import styles from './SecondaryNavigation.module.css'
 
 class SecondaryNavigation extends React.PureComponent {
@@ -9,37 +9,49 @@ class SecondaryNavigation extends React.PureComponent {
   render() {
     const { activeItem } = this.props
     return (
-      <Nav justified>
-        <NavItem className="light-purple-text">
-          <NavLink
-            className={styles.button}
-            name="About Me"
-            onClick={this.props.callback}
-            active={activeItem === 'About Me'}
-          >
-            About Me
-          </NavLink>
-        </NavItem>
-        <NavItem onClick={this.props.callback} className="light-purple-text">
-          <NavLink
-            className={styles.button}
-            name="Projects"
-            active={activeItem === 'Projects'}
-          >
-            Projects
-          </NavLink>
-        </NavItem>
-        <NavItem className="light-purple-text">
-          <NavLink
-            className={styles.button}
-            name="Photos"
-            onClick={this.props.callback}
-            active={activeItem === 'Photos'}
-          >
-            Photos
-          </NavLink>
-        </NavItem>
-      </Nav>
+      <Navbar expand="xs">
+        <Nav className="ml-auto" navbar>
+          <NavItem className="light-purple-text">
+            <NavLink
+              className={styles.button}
+              name="About Me"
+              onClick={this.props.callback}
+              active={activeItem === 'About Me'}
+            >
+              About
+            </NavLink>
+          </NavItem>
+          <NavItem className="light-purple-text">
+            <NavLink
+              className={styles.button}
+              name="Blog"
+              onClick={this.props.callback}
+              active={activeItem === 'Blog'}
+            >
+              Blog
+            </NavLink>
+          </NavItem>
+          <NavItem onClick={this.props.callback} className="light-purple-text">
+            <NavLink
+              className={styles.button}
+              name="Projects"
+              active={activeItem === 'Projects'}
+            >
+              Projects
+            </NavLink>
+          </NavItem>
+          <NavItem className="light-purple-text">
+            <NavLink
+              className={styles.button}
+              name="Photos"
+              onClick={this.props.callback}
+              active={activeItem === 'Photos'}
+            >
+              Photos
+            </NavLink>
+          </NavItem>
+        </Nav>
+      </Navbar>
     )
   }
 }
