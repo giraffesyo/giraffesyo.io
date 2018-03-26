@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import {navigateTo} from 'gatsby-link'
 
 const SecondPage = () => (
   <div style={{color: "white"}}>
@@ -7,6 +7,7 @@ const SecondPage = () => (
     <br />
     <p>Here's a video of a panda eating sweets.</p>
     <br />
+    <div onClick={ () => navigateTo({pathname: '/', activeItem: 'Blog'})}>Home</div>
     <iframe
       width="560"
       height="315"

@@ -11,8 +11,8 @@ class Home extends React.PureComponent {
   constructor(props) {
     super(props)
     this.changeActiveItem = this.changeActiveItem.bind(this)
-
-    this.state = { activeItem: 'About Me' }
+    const activeItem = this.props.location.activeItem ? this.props.location.activeItem : "About Me"
+    this.state = { activeItem }
   }
   changeActiveItem(e) {
     this.setState({ activeItem: e.target.name })
@@ -47,13 +47,15 @@ class Home extends React.PureComponent {
               <BlogExcerpts data={data.allMarkdownRemark.edges} />
             </Col>
           </Row>
-        ) : (
+        ) : activeItem === 'Photos' ? (
           <Row>
             <Col xs={12}>
               <Photos />
             </Col>
           </Row>
-        )}
+        ) : activeItem === 'Blog' ? (
+          <div></div>
+        ): <div>You broke it...</div>}
       </Container>
     )
   }
