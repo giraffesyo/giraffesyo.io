@@ -5,7 +5,7 @@ import Me from '../images/MichaelMcQuadeGiraffesyo.jpg'
 class AboutMe extends React.PureComponent {
   render() {
     return (
-      <Container className="AboutMe">
+      <Container fluid className="AboutMe">
         <Row>
           <Col>
             <h1 className="light-purple-text">
@@ -14,10 +14,10 @@ class AboutMe extends React.PureComponent {
           </Col>
         </Row>
         <Row>
-          <Col width={5}>
+          <Col xs={{size: 11, offset: 1}} sm={{size:12, offset: 0}} md={{size:3, offset: 0}}>
             <img src={Me} />
           </Col>
-          <Col width={11}>
+          <Col>
             <p>I'm Michael McQuade.</p>
             <p>
               I'm a Computer Science student at Oklahoma State University.
