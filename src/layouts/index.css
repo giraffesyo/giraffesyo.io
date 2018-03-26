@@ -16,11 +16,6 @@ nav {
   color: white;
 }
 
-.secondary.menu {
-  border: 0 !important;
-  background-color: rgb(30, 30, 30) !important;
-}
-
 .navbar-brand {
   font-size: 3em;
   font-weight: 600;
@@ -111,6 +106,15 @@ a:hover.light-purple-text {
   filter: invert(1);
 }
 
+.nav-link:hover {
+  opacity: .5;
+}
+
 .nav-link.active {
   border-bottom: 1px solid rgb(255, 255, 255);
 }
+
+.nav-link.active:hover {
+  opacity: 1;
+}
+
