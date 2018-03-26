@@ -12,11 +12,20 @@ class BlogExcerpts extends React.PureComponent {
         </h6>
 
         <p className="white-text">{node.excerpt}</p>
-        <h6 style={{"text-align": "right"}} className="orange-text">Read more</h6>
+        <h6 className="orange-text">
+          Read more
+        </h6>
       </div>
     ))
 
-    return <div>{excerpts}</div>
+    return (
+      <div className="blog">
+        <h2 className="dark-blue-text code-font">
+          {'<'}blog{'>'}
+        </h2>
+        {excerpts}
+      </div>
+    )
   }
 }
 
