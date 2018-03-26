@@ -6,7 +6,7 @@ class AboutMe extends React.PureComponent {
   render() {
     return (
       <Container className="AboutMe">
-        <Row nogutters>
+        <Row noGutters>
           <Col>
             <h1 className="light-purple-text">About Me</h1>
           </Col>
