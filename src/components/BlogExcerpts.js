@@ -12,7 +12,7 @@ class BlogExcerpts extends React.PureComponent {
             I've blacked out a few names and places because of legal matters
             but, other than that, this is what happened on the night I moved in
             with Sherlock Holmes. When I first met Sherlock, he told me my life
-            story . . . 
+            story . . .
           </p>
           <h6 className="orange-text">Read more</h6>
         </div>

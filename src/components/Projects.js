@@ -8,9 +8,7 @@ class Projects extends React.PureComponent {
     return (
       <Container>
         <Row>
-          <h1 className="light-purple-text">
-            Projects
-          </h1>
+          <h1 className="light-purple-text">Projects</h1>
         </Row>
         <Row />
         <Row>

@@ -8,13 +8,15 @@ class AboutMe extends React.PureComponent {
       <Container fluid className="AboutMe">
         <Row>
           <Col>
-            <h1 className="light-purple-text">
-              About Me
-            </h1>
+            <h1 className="light-purple-text">About Me</h1>
           </Col>
         </Row>
         <Row>
-          <Col xs={{size: 11, offset: 1}} sm={{size:12, offset: 0}} md={{size:3, offset: 0}}>
+          <Col
+            xs={{ size: 11, offset: 1 }}
+            sm={{ size: 12, offset: 0 }}
+            md={{ size: 3, offset: 0 }}
+          >
             <img src={Me} />
           </Col>
           <Col>

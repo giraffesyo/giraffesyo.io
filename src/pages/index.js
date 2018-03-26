@@ -24,8 +24,11 @@ class Home extends React.PureComponent {
       <div>
         <Container>
           <Row>
-            
-            <Col xs="12" md={{offset:5, size: 7}} lg={{offset:8, size:4}} >
+            <Col
+              xs="12"
+              md={{ offset: 5, size: 7 }}
+              lg={{ offset: 8, size: 4 }}
+            >
               <SecondaryNavigation
                 callback={this.changeActiveItem}
                 activeItem={activeItem}

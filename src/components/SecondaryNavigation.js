@@ -10,14 +10,34 @@ class SecondaryNavigation extends React.PureComponent {
     const { activeItem } = this.props
     return (
       <Nav justified>
-        <NavItem  className="light-purple-text">
-          <NavLink className={styles.button} name='About Me' onClick={this.props.callback} active={activeItem === 'About Me'}>About Me</NavLink>
+        <NavItem className="light-purple-text">
+          <NavLink
+            className={styles.button}
+            name="About Me"
+            onClick={this.props.callback}
+            active={activeItem === 'About Me'}
+          >
+            About Me
+          </NavLink>
         </NavItem>
         <NavItem onClick={this.props.callback} className="light-purple-text">
-          <NavLink className={styles.button} name='Projects' active={activeItem === 'Projects'}>Projects</NavLink>
+          <NavLink
+            className={styles.button}
+            name="Projects"
+            active={activeItem === 'Projects'}
+          >
+            Projects
+          </NavLink>
         </NavItem>
         <NavItem className="light-purple-text">
-          <NavLink className={styles.button} name='Photos' onClick={this.props.callback} active={activeItem === 'Photos'}>Photos</NavLink>
+          <NavLink
+            className={styles.button}
+            name="Photos"
+            onClick={this.props.callback}
+            active={activeItem === 'Photos'}
+          >
+            Photos
+          </NavLink>
         </NavItem>
       </Nav>
     )
