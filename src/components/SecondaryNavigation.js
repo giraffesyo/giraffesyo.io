@@ -1,4 +1,5 @@
 import React from 'react'
+import { navigateTo } from 'gatsby-link'
 import { Navbar, Nav, NavItem, NavLink } from 'reactstrap'
 import styles from './SecondaryNavigation.module.css'
 
@@ -24,14 +25,15 @@ class SecondaryNavigation extends React.PureComponent {
           <NavItem className={`light-purple-text ${styles.large}`}>
             <NavLink
               className={styles.button}
-              name="Blog"
-              onClick={this.props.callback}
-              active={activeItem === 'Blog'}
+              onClick={() => navigateTo({ pathname: '/blog' })}
             >
               Blog
             </NavLink>
           </NavItem>
-          <NavItem onClick={this.props.callback} className={`light-purple-text ${styles.large}`}>
+          <NavItem
+            onClick={this.props.callback}
+            className={`light-purple-text ${styles.large}`}
+          >
             <NavLink
               className={styles.button}
               name="Projects"

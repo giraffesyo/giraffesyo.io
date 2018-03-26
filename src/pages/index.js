@@ -1,4 +1,5 @@
 import React from 'react'
+import { navigateTo } from 'gatsby-link'
 import { Projects } from '../components/Projects'
 import { BlogExcerpts } from '../components/BlogExcerpts'
 import { SecondaryNavigation } from '../components/SecondaryNavigation'
@@ -11,7 +12,9 @@ class Home extends React.PureComponent {
   constructor(props) {
     super(props)
     this.changeActiveItem = this.changeActiveItem.bind(this)
-    const activeItem = this.props.location.activeItem ? this.props.location.activeItem : "About Me"
+    const activeItem = this.props.location.activeItem
+      ? this.props.location.activeItem
+      : 'About Me'
     this.state = { activeItem }
   }
   changeActiveItem(e) {
@@ -24,7 +27,7 @@ class Home extends React.PureComponent {
     return (
       <Container>
         <Row>
-          <Col xs={12} >
+          <Col xs={12}>
             <SecondaryNavigation
               callback={this.changeActiveItem}
               activeItem={activeItem}
@@ -53,9 +56,9 @@ class Home extends React.PureComponent {
               <Photos />
             </Col>
           </Row>
-        ) : activeItem === 'Blog' ? (
-          <div></div>
-        ): <div>You broke it...</div>}
+        ) : (
+          <div>You broke it...</div>
+        )}
       </Container>
     )
   }
@@ -65,7 +68,10 @@ export default Home
 
 export const blogExcerptsQuery = graphql`
   query blogExcerptsQuery {
-    allMarkdownRemark(limit: 2, sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      limit: 2
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           id
