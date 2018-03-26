@@ -138,3 +138,7 @@ a:hover.light-purple-text {
   -webkit-filter: invert(1);
   filter: invert(1);
 }
+
+.nav-link.active {
+  border-bottom: 1px solid rgb(190, 135, 190);
+}
