@@ -1,24 +1,25 @@
 import React from 'react'
-import { Grid, Header, Image } from 'semantic-ui-react'
-import Me from 'images/MichaelMcQuadeGiraffesyo.jpg'
-import 'styles/styles.css'
+import { Container, Row, Col } from 'reactstrap'
+import Me from '../images/MichaelMcQuadeGiraffesyo.jpg'
 
 class AboutMe extends React.PureComponent {
   render() {
     return (
-      <Grid container stackable className="AboutMe">
-        <Grid.Row>
-          <Grid.Column>
-            <Header size={'large'} className="light-purple-text">
-              About Me
-            </Header>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column width={5}>
-            <Image src={Me} />
-          </Grid.Column>
-          <Grid.Column width={11}>
+      <Container fluid className="AboutMe">
+        <Row>
+          <Col>
+            <h1 className="light-purple-text">About Me</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col
+            xs={{ size: 11, offset: 1 }}
+            sm={{ size: 12, offset: 0 }}
+            md={{ size: 3, offset: 0 }}
+          >
+            <img src={Me} />
+          </Col>
+          <Col>
             <p>I'm Michael McQuade.</p>
             <p>
               I'm a Computer Science student at Oklahoma State University.
@@ -30,9 +31,9 @@ class AboutMe extends React.PureComponent {
               a pizza place. Now, I'm finally doing what I love, learning to
               code!
             </p>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+          </Col>
+        </Row>
+      </Container>
     )
   }
 }

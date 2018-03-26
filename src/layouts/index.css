@@ -21,37 +21,6 @@ nav {
   background-color: rgb(30, 30, 30) !important;
 }
 
-.secondary.menu .item {
-  font-size: 1.5em !important;
-}
-
-.secondary.menu .active.item {
-  border-radius: 0 !important;
-  border-color: rgb(255, 255, 255) !important;
-  border-bottom: 1.5px solid white;
-  background-color: inherit !important;
-}
-
-@media screen and (max-width: 1023px) {
-  .secondary.menu .item {
-    font-size: 0.9em !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .secondary.menu .item {
-    font-size: 1.5em !important;
-  }
-}
-
-/*.secondary-nav {
-  background-color: rgb(30, 30, 30) !important;
-}
-
-.secondary-nav > div {
-  background-color: rgb(60, 60, 60) !important;
-}*/
-
 .navbar-brand {
   font-size: 3em;
   font-weight: 600;
@@ -64,12 +33,6 @@ nav {
 
 .blog h6.orange-text {
   text-align: right;
-}
-
-@media screen and (max-width: 767px) {
-  .navbar-brand {
-    font-size: 1em;
-  }
 }
 
 .fa {
@@ -94,6 +57,15 @@ nav {
 .fa-github,
 .fa-github:hover {
   color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    font-size: 0.9em;
+  }
+  .fa {
+    font-size: 2em;
+  }
 }
 
 .light-blue-text {
@@ -137,4 +109,8 @@ a:hover.light-purple-text {
 .PrairieDog {
   -webkit-filter: invert(1);
   filter: invert(1);
+}
+
+.nav-link.active {
+  border-bottom: 1px solid rgb(255, 255, 255);
 }

@@ -1,16 +1,16 @@
 import React from 'react'
-import { Grid, Header} from 'semantic-ui-react'
+import { Container, Row} from 'reactstrap'
 
 class Photos extends React.PureComponent {
   render() {
     return (
-      <Grid container columns="equal">
-        <Grid.Row>
-          <Header size={'large'} className="light-purple-text">
+      <Container>
+        <Row>
+          <h1 className="light-purple-text">
             Photos
-          </Header>
-        </Grid.Row>
-      </Grid>
+          </h1>
+        </Row>
+      </Container>
     )
   }
 }
