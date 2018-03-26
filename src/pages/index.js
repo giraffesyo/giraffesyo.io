@@ -5,7 +5,7 @@ import { SecondaryNavigation } from '../components/SecondaryNavigation'
 import { AboutMe } from '../components/AboutMe'
 import { Photos } from '../components/Photos'
 
-import { Container, Row, Col} from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
 
 class Home extends React.PureComponent {
   constructor(props) {
@@ -24,8 +24,8 @@ class Home extends React.PureComponent {
       <div>
         <Container>
           <Row>
-            <Col width={11} />
-            <Col width={5}>
+            
+            <Col xs="12" md={{offset:5, size: 7}} lg={{offset:8, size:4}} >
               <SecondaryNavigation
                 callback={this.changeActiveItem}
                 activeItem={activeItem}
