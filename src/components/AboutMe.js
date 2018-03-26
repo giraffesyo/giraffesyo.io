@@ -5,8 +5,8 @@ import Me from '../images/MichaelMcQuadeGiraffesyo.jpg'
 class AboutMe extends React.PureComponent {
   render() {
     return (
-      <Container fluid className="AboutMe">
-        <Row>
+      <Container className="AboutMe">
+        <Row nogutters>
           <Col>
             <h1 className="light-purple-text">About Me</h1>
           </Col>

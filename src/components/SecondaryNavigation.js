@@ -11,7 +11,7 @@ class SecondaryNavigation extends React.PureComponent {
     return (
       <Navbar expand="xs">
         <Nav className="ml-auto" navbar>
-          <NavItem className="light-purple-text">
+          <NavItem className={`light-purple-text ${styles.large}`}>
             <NavLink
               className={styles.button}
               name="About Me"
@@ -21,7 +21,7 @@ class SecondaryNavigation extends React.PureComponent {
               About
             </NavLink>
           </NavItem>
-          <NavItem className="light-purple-text">
+          <NavItem className={`light-purple-text ${styles.large}`}>
             <NavLink
               className={styles.button}
               name="Blog"
@@ -31,7 +31,7 @@ class SecondaryNavigation extends React.PureComponent {
               Blog
             </NavLink>
           </NavItem>
-          <NavItem onClick={this.props.callback} className="light-purple-text">
+          <NavItem onClick={this.props.callback} className={`light-purple-text ${styles.large}`}>
             <NavLink
               className={styles.button}
               name="Projects"
@@ -40,7 +40,7 @@ class SecondaryNavigation extends React.PureComponent {
               Projects
             </NavLink>
           </NavItem>
-          <NavItem className="light-purple-text">
+          <NavItem className={`light-purple-text ${styles.large}`}>
             <NavLink
               className={styles.button}
               name="Photos"
