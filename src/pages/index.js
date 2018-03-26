@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Projects } from '../components/Projects'
 import { BlogExcerpts } from '../components/BlogExcerpts'
 import { SecondaryNavigation } from '../components/SecondaryNavigation'
@@ -21,36 +21,39 @@ class Home extends React.PureComponent {
   render() {
     const { activeItem } = this.state
     return (
-      <div>
-        <Container>
+      <Container>
+        <Row>
+          <Col xs="12" md={{ offset: 5, size: 7 }} lg={{ offset: 8, size: 4 }}>
+            <SecondaryNavigation
+              callback={this.changeActiveItem}
+              activeItem={activeItem}
+            />
+          </Col>
+        </Row>
+
+        {activeItem === 'Projects' ? (
           <Row>
-            <Col
-              xs="12"
-              md={{ offset: 5, size: 7 }}
-              lg={{ offset: 8, size: 4 }}
-            >
-              <SecondaryNavigation
-                callback={this.changeActiveItem}
-                activeItem={activeItem}
-              />
+            <Col xs={12}>
+              <Projects />
             </Col>
           </Row>
+        ) : activeItem === 'About Me' ? (
           <Row>
-            <Col width={11}>
-              {activeItem === 'Projects' ? (
-                <Projects />
-              ) : activeItem === 'About Me' ? (
-                <AboutMe />
-              ) : (
-                <Photos />
-              )}
+            <Col xs={12} md={8}>
+              <AboutMe />
             </Col>
-            <Container width={5}>
+            <Col xs={12} md={4}>
               <BlogExcerpts />
-            </Container>
+            </Col>
           </Row>
-        </Container>
-      </div>
+        ) : (
+          <Row>
+            <Col xs={12}>
+              <Photos />
+            </Col>
+          </Row>
+        )}
+      </Container>
     )
   }
 }
