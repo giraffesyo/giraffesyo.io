@@ -19,6 +19,7 @@ class Home extends React.PureComponent {
   }
 
   render() {
+    const { data } = this.props
     const { activeItem } = this.state
     return (
       <Container>
@@ -43,7 +44,7 @@ class Home extends React.PureComponent {
               <AboutMe />
             </Col>
             <Col xs={12} md={4}>
-              <BlogExcerpts />
+              <BlogExcerpts data={data.allMarkdownRemark.edges} />
             </Col>
           </Row>
         ) : (
@@ -59,3 +60,21 @@ class Home extends React.PureComponent {
 }
 
 export default Home
+
+export const blogExcerptsQuery = graphql`
+  query blogExcerptsQuery {
+    allMarkdownRemark(limit: 2, sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+`

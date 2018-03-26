@@ -9,7 +9,7 @@ export default ({ data }) => {
         <div key={node.id}>
           <h3>
             {node.frontmatter.title}
-            <span color="#BBB">— {node.frontmatter.date}</span>
+            <span color="#FFF">— {node.frontmatter.date}</span>
           </h3>
           <p>{node.excerpt}</p>
         </div>
@@ -19,7 +19,7 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
       totalCount
       edges {
         node {
