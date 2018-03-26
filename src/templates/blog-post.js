@@ -14,6 +14,8 @@ export default ({ data }) => {
       </Row>
       <Row>
         <h1>{post.frontmatter.title}</h1>
+      </Row>
+      <Row>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </Row>
     </Container>
