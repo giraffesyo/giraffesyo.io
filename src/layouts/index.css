@@ -6,6 +6,10 @@ nav.primarynav {
   background-color: rgb(60, 60, 60);
 }
 
+.AboutMe h1{
+  font-weight: 200;
+}
+
 .AboutMe img {
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -18,7 +22,7 @@ nav.primarynav {
 
 .primarynav .navbar-brand {
   font-size: 3em;
-  font-weight: 600;
+  font-weight: 300;
   font-family: 'Nunito', sans-serif;
 }
 
