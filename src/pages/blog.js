@@ -25,7 +25,7 @@ export default ({ data }) => {
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Link
-            to={node.fields.slug}
+            to={node.frontmatter.path}
             css={{ textDecoration: `none`, color: `inherit` }}
           >
             <Row>
@@ -41,24 +41,20 @@ export default ({ data }) => {
     </Container>
   )
 }
-
-export const query = graphql`
-  query blogListQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
+          excerpt(pruneLength: 250)
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
             title
-            date(formatString: "DD MMMM, YYYY")
           }
-          fields {
-            slug
-          }
-          excerpt
         }
       }
     }
   }
-`
+`;
