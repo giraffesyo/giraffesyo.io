@@ -4,8 +4,6 @@ date: "2018-03-10"
 path: "2018-03-10-technology-in-the-markets"
 ---
 
-# Technology in the Markets
-
 The following is an assignment for a world cultures class I’m in. I was required to take note of the technology in two markets near the school:
 
 We took two field trips within our world cultures class to go see two very different markets, Mercado Villa Lázaro Cárdenas and [Paseo Acoxpa](http://paseoacoxpa.com/). The first one we visited, is more at home with what I thought a market in Mexico would look like before I actually came.
