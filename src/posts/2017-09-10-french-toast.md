@@ -1,0 +1,13 @@
+---
+title: "French Toast"
+date: "2017-09-10"
+path: "2017-09-10-french-toast"
+---
+
+![img_6141.jpg](https://mcquadeblog.files.wordpress.com/2017/09/img_6141-e1505101534652.jpg)
+
+I had wanted to make French Toast for a long time here but could never find powdered sugar.
+
+Finally found it, it's called azúcar glass for some reason...
+
+(sugar is azúcar but why glass?)
