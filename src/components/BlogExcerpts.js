@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 class BlogExcerpts extends React.PureComponent {
   render() {
@@ -12,8 +13,8 @@ class BlogExcerpts extends React.PureComponent {
         </h6>
 
         <p className="white-text">{node.excerpt}</p>
-        <h6 className="orange-text">
-          Read more
+        <h6>
+          <Link style={{float: 'right'}} className="orange-text" to={node.frontmatter.path}>Read more</Link>
         </h6>
       </div>
     ))

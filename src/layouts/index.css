@@ -6,7 +6,7 @@ nav.primarynav {
   background-color: rgb(60, 60, 60);
 }
 
-.AboutMe h1{
+.AboutMe h1 {
   font-weight: 200;
 }
 
@@ -28,10 +28,6 @@ nav.primarynav {
 
 .blog div {
   margin-bottom: 5vh;
-}
-
-.blog h6.orange-text {
-  text-align: right;
 }
 
 .fa {
@@ -115,7 +111,7 @@ a:hover.light-purple-text {
 }
 
 .nav-link:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .nav-link.active {
@@ -126,4 +122,6 @@ a:hover.light-purple-text {
   opacity: 1;
 }
 
-
+.blog a:hover.orange-text {
+  color: rgb(184, 85, 40);
+}
