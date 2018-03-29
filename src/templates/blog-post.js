@@ -4,7 +4,8 @@ import { Container, Row, Col } from 'reactstrap'
 import './blog-post.css'
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const { markdownRemark } = data; // data.markdownRemark holds our post data
+  const { frontmatter, html } = markdownRemark;
   return (
     <Container>
       <Row>
@@ -13,10 +14,10 @@ export default ({ data }) => {
         </Col>
       </Row>
       <Row>
-        <h1>{post.frontmatter.title}</h1>
+        <h1>{frontmatter.title}</h1>
       </Row>
       <Row>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </Row>
     </Container>
   )
