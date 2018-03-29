@@ -1,6 +1,6 @@
 {
-  "name": "Personal Site for Giraffesyo",
-  "description": "A personal website nad blog for Michael McQuade AKA Giraffesyo",
+  "name": "giraffesyo-personal",
+  "description": "A personal website and blog for Michael McQuade AKA Giraffesyo",
   "version": "1.0.0",
   "author": "Michael McQuade <giraffesyo@gmail.com>",
   "dependencies": {
