@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "Personal Site for Giraffesyo",
+  "description": "A personal website nad blog for Michael McQuade AKA Giraffesyo",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Michael McQuade <giraffesyo@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
@@ -18,7 +18,7 @@
     "typography-theme-fairy-gates": "^0.15.11"
   },
   "keywords": [
-    "gatsby"
+    "giraffesyo", "Michael McQuade", "react", "gatsby"
   ],
   "license": "MIT",
   "scripts": {
