@@ -1,7 +1,7 @@
 ---
 title: "Tec flooded once more"
 date: "2017-09-10"
-path: "2017-09-10-tec-flooded-once-more"
+path: "/2017-09-10-tec-flooded-once-more"
 ---
 
 ![IMG_6084.JPG](https://mcquadeblog.files.wordpress.com/2017/09/img_6084.jpg)

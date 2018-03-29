@@ -1,7 +1,7 @@
 ---
 title: "French Toast"
 date: "2017-09-10"
-path: "2017-09-10-french-toast"
+path: "/2017-09-10-french-toast"
 ---
 
 ![img_6141.jpg](https://mcquadeblog.files.wordpress.com/2017/09/img_6141-e1505101534652.jpg)

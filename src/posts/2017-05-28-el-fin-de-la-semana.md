@@ -1,6 +1,6 @@
 ---
 title: "el fin de la semana"
-path: "2017-05-28-el-fin-de-la-semana"
+path: "/2017-05-28-el-fin-de-la-semana"
 date: "2017-05-28"
 ---
 

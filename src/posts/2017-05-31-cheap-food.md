@@ -1,6 +1,6 @@
 ---
 title: "Cheap food"
-path: "2017-05-31-cheap-food"
+path: "/2017-05-31-cheap-food"
 date: "2017-05-31"
 ---
 

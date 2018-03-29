@@ -1,7 +1,7 @@
 ---
 title: "Welcome, Josh"
 date: "2017-05-24"
-path: "2017-05-24-welcome-josh"
+path: "/2017-05-24-welcome-josh"
 ---
 
 After picking Josh up from the airport we headed to the apartment we were going to rent.
