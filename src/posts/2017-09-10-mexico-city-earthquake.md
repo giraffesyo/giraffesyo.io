@@ -1,6 +1,6 @@
 ---
 title: "Mexico City Earthquake"
-path: "/2017-09-10-mexico-city-earthquake"
+path: "/blog/2017-09-10-mexico-city-earthquake"
 date: "2017-09-10"
 ---
 

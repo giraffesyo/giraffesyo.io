@@ -1,10 +1,10 @@
 ---
 title: "Tec flooded once more"
 date: "2017-09-10"
-path: "/2017-09-10-tec-flooded-once-more"
+path: "/blog/2017-09-10-tec-flooded-once-more"
 ---
 
-![IMG_6084.JPG](https://mcquadeblog.files.wordpress.com/2017/09/img_6084.jpg)
+![IMG_6084.JPG](https://mcquadeblog.files.wordpress.com/blog/2017/09/img_6084.jpg)
 
 I was at school to work on my robot vision partial exam. It began to rain like every other day and then I started to hear a loud noise in the background. Josh asked me what it was and I said it sounded like a vacuum.
 

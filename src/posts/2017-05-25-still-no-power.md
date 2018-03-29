@@ -1,12 +1,12 @@
 ---
 title: "Still no power :("
 date: "2017-05-25"
-path: "/2017-05-25-still-no-power"
+path: "/blog/2017-05-25-still-no-power"
 ---
 
 After waking up, I immediately realized there was still no power in the apartment. I got out of bed at around 10 or 11 AM. Josh was still sleeping but I woke him up. We both started unpacking our bags into our closets. We were both pretty hungry since neither of us had eaten anything since La Casa de Toño. Jessica recommended that we try to go to Acoxpa, an outdoor mall nearby. We walked to Acoxpa, a straight shot down the street and decided to eat McDonalds.
 
-![IMG_4340.JPG](https://mcquadeblog.files.wordpress.com/2017/05/img_4340.jpg?w=4032)
+![IMG_4340.JPG](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4340.jpg?w=4032)
 
 This was my first time fully ordering without Jessica's help. I didn't quite get it right either, proof of my failure was that I ordered 2 mcdoubles without onions and 2 mctrio meals (basicaly a mcdouble with an extra piece of meat). Instead of getting 4 burgers and two sets of drink and fries, we got 3 burgers, a mctrio and two mcdoubles, and three drinks and three fries. Well, pretty close, but I went back and ordered the extra burger we wanted.
 
@@ -16,7 +16,7 @@ I ordered us 2 chocolate dipped cones from Dairy Queen and after finishing those
 
 Josh wanted to buy a fan for the apartment since there is no air conditioning at the house. We looked at them at Best Buy but they were all pretty expensive, 90$ for small fans since they were fancy brands. He wanted more of a standard fan so we decided to look somewhere else.
 
-![IMG_4343.JPG](https://mcquadeblog.files.wordpress.com/2017/05/img_4343.jpg)
+![IMG_4343.JPG](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4343.jpg)
 
 Still without power, we wanted to stay out and walk around to get a feel for the rest of our area. We decided to walk from Acoxpa to Mega, a big grocery store across the street from our school campus.
 
@@ -28,13 +28,13 @@ We left Raul, and we made it to Mega now. We walked around a bit, looking for fa
 
 We walked across the street so I could show Josh the campus and charge our phones some more. There is a tall wall surrounding the entire school and at each gate into the school there is a security guard checking identification. You must have a school-issued ID to enter. I talked to the guard and told him we had orientation tomorrow and that we were coming to look around. He told us he would let us in if we gave him our IDs. We traded our OSU ID cards for a badge that read "Visitante".
 
-![IMG_4348.JPG](https://mcquadeblog.files.wordpress.com/2017/05/img_4348.jpg)
+![IMG_4348.JPG](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4348.jpg)
 
 We went to the library and sat down, charging our phones while Josh talked to his mom and I talked to Jessica. She was out with her parents and we wanted to go see a movie with her but we weren't decided on what to go see. She said her dad wanted to go with us and he picked a movie, "Mio o de nadie." The english title is Unforgettable.
 
 We couldn't go back to the apartment because it started to rain, and the movie was in 30 minutes, so we waited for Jessica and her family to finish eating at Chili's and they picked us up at school. We went to the movie theater Cinepolis at Acoxpa.
 
-![IMG_4342.JPG](https://mcquadeblog.files.wordpress.com/2017/05/img_4342.jpg?w=3724)
+![IMG_4342.JPG](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4342.jpg?w=3724)
 
 The power in the lobby of the movie theater was flickering because of the rain and so I was nervous that it might interrupt the movie, but we didn't have any problems.
 
