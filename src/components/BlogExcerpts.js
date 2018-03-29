@@ -6,7 +6,7 @@ class BlogExcerpts extends React.PureComponent {
     const { data } = this.props
     const excerpts = data.map(({ node }) => (
       <div key={node.id}>
-        <h4 className="light-blue-text code-font">{node.frontmatter.title}</h4>
+        <Link to={node.frontmatter.path}><h4 className="light-blue-text code-font">{node.frontmatter.title}</h4></Link>
         <h6 className="green-text code-font">
           {'//'}
           {node.frontmatter.date}
