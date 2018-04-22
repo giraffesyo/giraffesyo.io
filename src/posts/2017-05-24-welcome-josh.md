@@ -6,7 +6,7 @@ path: "/blog/2017-05-24-welcome-josh"
 
 After picking Josh up from the airport we headed to the apartment we were going to rent.
 
-![IMG_4338.JPG](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4338.jpg)
+![IMG_4338.JPG](https://i.stack.imgur.com/x7KMb.jpg)
 
 It wasn't possible to fit the car down the street we would live on, so Jessica and her family dropped us off at a nearby street where we could walk to the apartment. I had already texted Lizbeth, the girl managing the apartment while the owner Magaly was in France. She was waiting for us at the end of the street next to a giant metal red door. The street was very narrow, only room enough for small cars to fit, and there were small cars lined up on the side of it all the way down. One side of the street is lined with building, mostly houses but some appear to be businesses of sorts from the noises heard within. Walking past one such place I can hear the noise of paint being sprayed, and there are giant metal doors, I assume they are painting cars. The other side of the street is a giant stone wall, which is shutting off access to a soccer field. Half-way down the street built into the wall is a catholic shrine.
 
