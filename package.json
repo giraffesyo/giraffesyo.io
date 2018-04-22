@@ -9,7 +9,9 @@
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-plugin-sharp": "^1.6.43",
     "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-remark-images": "^1.5.62",
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.37",
     "gh-pages": "^1.1.0",
@@ -18,7 +20,10 @@
     "typography-theme-fairy-gates": "^0.15.11"
   },
   "keywords": [
-    "giraffesyo", "Michael McQuade", "react", "gatsby"
+    "giraffesyo",
+    "Michael McQuade",
+    "react",
+    "gatsby"
   ],
   "license": "MIT",
   "scripts": {

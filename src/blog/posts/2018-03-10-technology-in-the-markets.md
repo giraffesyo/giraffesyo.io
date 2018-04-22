@@ -10,9 +10,9 @@ We took two field trips within our world cultures class to go see two very diffe
 
 ## Mercado Villa Lázaro Cárdenas
 
-![Mercado Villa Lázaro Cárdenas](./posts/images/2018-03-10/bananas.jpg "Mercado Villa Lázaro Cárdenas")
+![Mercado Villa Lázaro Cárdenas](images/2018-03-10/bananas.jpg 'Mercado Villa Lázaro Cárdenas')
 
-Owing to the fact that it was located inside a two-story building, it's not quite a _tianguis,_or street market, but it had quite a similar feel to it. There was definitely technology within the market, but not what'd you normally think of when that word comes to mind.
+Owing to the fact that it was located inside a two-story building, it's not quite a _tianguis_, or street market, but it had quite a similar feel to it. There was definitely technology within the market, but not what'd you normally think of when that word comes to mind.
 
 ![](https://i.stack.imgur.com/b7TIw.jpg)
 
@@ -36,7 +36,7 @@ Enter, Paseo Acoxpa, a modern shopping mall.
 
 ![](https://i.stack.imgur.com/VV199.jpg)
 
-The technology seen within Paseo Acoxpa _is_ what the average person thinks of nowadays when that word is thrown around.
+The technology seen within Paseo Acoxpa *is* what the average person thinks of nowadays when that word is thrown around.
 
 Modern electronics are everywhere. The kiosks have employees who are using tablets. The cash registers are touch screen devices. There are screens with advertisements in the walkways. Some of the fast-food restaurants in the food court give you buzzers to let you know when your order is ready.
 
