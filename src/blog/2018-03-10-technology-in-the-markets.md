@@ -10,7 +10,9 @@ We took two field trips within our world cultures class to go see two very diffe
 
 ## Mercado Villa Lázaro Cárdenas
 
-![](https://i.stack.imgur.com/ivmoJ.jpg)Owing to the fact that it was located inside a two-story building, it's not quite a _tianguis,_or street market, but it had quite a similar feel to it. There was definitely technology within the market, but not what'd you normally think of when that word comes to mind.
+![Mercado Villa Lázaro Cárdenas](./posts/images/2018-03-10/bananas.jpg "Mercado Villa Lázaro Cárdenas")
+
+Owing to the fact that it was located inside a two-story building, it's not quite a _tianguis,_or street market, but it had quite a similar feel to it. There was definitely technology within the market, but not what'd you normally think of when that word comes to mind.
 
 ![](https://i.stack.imgur.com/b7TIw.jpg)
 
