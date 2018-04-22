@@ -26,7 +26,7 @@ export default ({ data }) => {
         <div key={node.id}>
           <Link
             to={node.frontmatter.path}
-            css={{ textDecoration: `none`, color: `inherit` }}
+            style={{ textDecoration: `none`, color: `inherit` }}
           >
             <Row>
               <h2>{node.frontmatter.title}</h2>
@@ -34,7 +34,7 @@ export default ({ data }) => {
             <Row>
               <h6 className="green-text"> {node.frontmatter.date}</h6>
             </Row>
-            <p style={{ 'margin-left': '0' }}>{node.excerpt}</p>
+            <p style={{ marginLeft: 0 }}>{node.excerpt}</p>
           </Link>
         </div>
       ))}
