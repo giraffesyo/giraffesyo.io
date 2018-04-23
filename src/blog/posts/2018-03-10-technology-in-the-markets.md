@@ -16,7 +16,9 @@ Owing to the fact that it was located inside a two-story building, it's not quit
 
 ![Old Radio](../images/2018-03-10/oldradio.jpg 'Old radio found in the Mercado')
 
-Electronics were scarce within the market. From a single old TV setup, a microwave, a stereo that looked like the one my mom used to teach skating classes with 15 years ago, and the lights inside the building and a few other random electronics, most of the tech here was for manual use.![Shopworkers cutting meat](../images/2018-03-10/meat.jpg 'Shopworkers cutting meat')
+Electronics were scarce within the market. From a single old TV setup, a microwave, a stereo that looked like the one my mom used to teach skating classes with 15 years ago, and the lights inside the building and a few other random electronics, most of the tech here was for manual use.!
+
+[Shopworkers cutting meat](../images/2018-03-10/meat.jpg 'Shopworkers cutting meat')
 
 As an example, the more frequently seen technology within the market included meat grinders, sinks, knives, baskets, scales, plastic chairs, and gas stoves.
 
