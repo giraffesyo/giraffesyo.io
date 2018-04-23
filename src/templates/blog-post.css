@@ -1,4 +1,4 @@
-h1{
+h1 {
   color: rgb(74, 156, 216);
 }
 h2 {
@@ -9,7 +9,7 @@ h3 {
   color: rgb(184, 85, 40);
 }
 p {
-  color: rgb(255,255,255)
+  color: rgb(255, 255, 255);
 }
 
 img {
@@ -23,7 +23,7 @@ figcaption {
 }
 
 li {
-  color: rgb(68,129,75);
+  color: rgb(68, 129, 75);
 }
 
 .bottom {
@@ -32,4 +32,12 @@ li {
 
 .content {
   margin-top: 10px;
+}
+
+a,
+a:hover {
+  color: rgb(150, 200, 250);
+}
+a:hover {
+  text-decoration: none;
 }
