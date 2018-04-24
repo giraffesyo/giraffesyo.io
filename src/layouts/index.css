@@ -125,3 +125,7 @@ a:hover.light-purple-text {
 .blog a:hover.orange-text {
   color: rgb(184, 85, 40);
 }
+
+.blog .dark-blue-text {
+  text-align: left;
+}
