@@ -23,6 +23,7 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 590,
               showCaptions: true,
+              backgroundColor: 'rgb(30,30,30)',
             },
           },
         ],
