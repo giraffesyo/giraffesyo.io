@@ -2,6 +2,7 @@
 title: "Still no power :("
 date: "2017-05-25"
 path: "/blog/2017-05-25-still-no-power"
+discussionId: "2017-05-25-still-no-power"
 ---
 
 After waking up, I immediately realized there was still no power in the apartment. I got out of bed at around 10 or 11 AM. Josh was still sleeping but I woke him up. We both started unpacking our bags into our closets. We were both pretty hungry since neither of us had eaten anything since La Casa de Toño. Jessica recommended that we try to go to Acoxpa, an outdoor mall nearby. We walked to Acoxpa, a straight shot down the street and decided to eat McDonalds.

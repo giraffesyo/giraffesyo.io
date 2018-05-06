@@ -2,6 +2,7 @@ import React from 'react'
 import { BlogSecondaryNavigation } from '../components/BlogSecondaryNavigation'
 import { Container, Row, Col } from 'reactstrap'
 import './blog-post.css'
+import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard'
 
 export default ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
@@ -30,6 +31,11 @@ export default ({ data }) => {
       <Row className="content">
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Row>
+      <Row>
+        <Col>
+          <TalkyardCommentsIframe discussionId={frontmatter.discussionId} />
+        </Col>
+      </Row>
     </Container>
   )
 }
@@ -42,6 +48,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        discussionId
       }
       timeToRead
       wordCount {

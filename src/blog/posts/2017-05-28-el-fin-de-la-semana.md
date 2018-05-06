@@ -2,6 +2,7 @@
 title: "el fin de la semana"
 path: "/blog/2017-05-28-el-fin-de-la-semana"
 date: "2017-05-28"
+discussionId: "2017-05-28-el-fin-de-la-semana"
 ---
 
 Finally, the weekend is here. It is so nice to wake up in the apartment and have power, at last. I hope that this isn't a common problem at this apartment.

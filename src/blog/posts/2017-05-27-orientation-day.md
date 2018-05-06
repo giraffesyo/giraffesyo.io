@@ -2,6 +2,7 @@
 title: "Orientation day!"
 date: "2017-05-27"
 path: "/blog/2017-05-27-orientation-day"
+discussionId: "2017-05-27-orientation-day"
 ---
 
 Today was the first day that I will go to school "officially"! I woke up at about 7:15 when Josh knocked on my door. I had overslept my alarm and it had been going off for about 30 minutes, probably very annoyingly to our neighbors since it is so loud. We slept in the other apartment because it had power. I was relieved to be able to wake up with a charged phone and to be able to turn on some lights.

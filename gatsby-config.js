@@ -43,5 +43,11 @@ module.exports = {
         path: `${__dirname}/src/blog/posts`,
       },
     },
+    {
+      resolve: `@debiki/gatsby-plugin-talkyard`,
+      options: {
+        talkyardServerUrl: 'https://comments-for-giraffesyo-io.talkyard.net',
+      },
+    },
   ],
 }

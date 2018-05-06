@@ -2,6 +2,7 @@
 title: "French Toast"
 date: "2017-09-10"
 path: "/blog/2017-09-10-french-toast"
+discussionId: "2017-09-10-french-toast"
 ---
 
 ![img_6141.jpg](https://mcquadeblog.files.wordpress.com/blog/2017/09/img_6141-e1505101534652.jpg)

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Michael McQuade <giraffesyo@gmail.com>",
   "dependencies": {
+    "@debiki/gatsby-plugin-talkyard": "^0.5.5",
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
     "gatsby": "^1.9.241",

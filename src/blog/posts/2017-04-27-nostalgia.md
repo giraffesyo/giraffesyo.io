@@ -2,6 +2,7 @@
 title: "Nostalgia"
 date: "2017-04-27"
 path: "/blog/2017-04-27-nostalgia"
+discussionId: "2017-04-27-nostalgia"
 --- 
 
 Hello! April is coming to a close. There are two weeks left of school. I'm sitting in my apartment on campus at OSU and feeling nostalgic. I've only been here for two semesters now, and I'm saying goodbye for a year. I'm turning another page, starting a new chapter. I feel like this time I've got the story on the right track. I'm so glad to be in school and to be pursuing Computer Science finally. Working customer service for the rest of my life was not the future I had planned out.
