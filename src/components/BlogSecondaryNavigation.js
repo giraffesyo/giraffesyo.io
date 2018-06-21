@@ -4,6 +4,7 @@ import { Navbar, Nav, NavItem, NavLink } from 'reactstrap'
 import styles from './SecondaryNavigation.module.css'
 
 class BlogSecondaryNavigation extends React.PureComponent {
+  //todo: just use this one navigation component instead of both (this one should work for both since it passes the active items)
   render() {
     return (
       <Navbar expand="xs">
@@ -29,6 +30,7 @@ class BlogSecondaryNavigation extends React.PureComponent {
           </NavItem>
           <NavItem className={`light-purple-text ${styles.large}`}>
             <NavLink
+              hidden
               className={styles.button}
               onClick={() =>
                 navigateTo({ pathname: '/', activeItem: 'Projects' })
@@ -37,7 +39,7 @@ class BlogSecondaryNavigation extends React.PureComponent {
               Projects
             </NavLink>
           </NavItem>
-          <NavItem className={`light-purple-text ${styles.large}`}>
+          <NavItem hidden className={`light-purple-text ${styles.large}`}>
             <NavLink
               className={styles.button}
               onClick={() =>

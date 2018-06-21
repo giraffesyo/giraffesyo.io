@@ -34,7 +34,7 @@ class SecondaryNavigation extends React.PureComponent {
             onClick={this.props.callback}
             className={`light-purple-text ${styles.large}`}
           >
-            <NavLink
+            <NavLink hidden
               className={styles.button}
               name="Projects"
               active={activeItem === 'Projects'}
@@ -42,7 +42,7 @@ class SecondaryNavigation extends React.PureComponent {
               Projects
             </NavLink>
           </NavItem>
-          <NavItem className={`light-purple-text ${styles.large}`}>
+          <NavItem hidden className={`light-purple-text ${styles.large}`}>
             <NavLink
               className={styles.button}
               name="Photos"
