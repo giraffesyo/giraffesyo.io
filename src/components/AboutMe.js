@@ -31,7 +31,7 @@ class AboutMe extends React.PureComponent {
             <p>
               My experiences have been varied, from customer service to managing
               a pizza place. Now, I'm finally doing what I love, learning to
-              code!  I'm currently working as an Junior
+              code!  I'm currently working as a Junior
               Developer at Foundation Software in Strongsville, Ohio, and will
               return to finish my senior year this August. I expect to graduate May 2019.
             </p>
