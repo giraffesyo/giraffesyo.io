@@ -3,12 +3,16 @@ import { BlogSecondaryNavigation } from '../components/BlogSecondaryNavigation'
 import { Container, Row, Col } from 'reactstrap'
 import './blog-post.css'
 import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard'
+import Helmet from 'react-helmet'
 
 export default ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html, wordCount, timeToRead } = markdownRemark
   return (
     <Container>
+      <Helmet title={`${frontmatter.title} - giraffesyo.io`}>
+        <html lang="en" />>
+      </Helmet>
       <Row>
         <Col xs={12}>
           <BlogSecondaryNavigation />

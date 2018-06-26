@@ -1,10 +1,10 @@
 import React from 'react'
-import { navigateTo } from 'gatsby-link'
 import { Projects } from '../components/Projects'
 import { BlogExcerpts } from '../components/BlogExcerpts'
 import { SecondaryNavigation } from '../components/SecondaryNavigation'
 import { AboutMe } from '../components/AboutMe'
 import { Photos } from '../components/Photos'
+import Helmet from 'react-helmet'
 
 import { Container, Row, Col } from 'reactstrap'
 
@@ -26,6 +26,9 @@ class Home extends React.PureComponent {
     const { activeItem } = this.state
     return (
       <Container>
+        <Helmet title="giraffesyo.io - Michael McQuade's Personal Site and blog">
+          <html lang="en" />
+        </Helmet>
         <Row>
           <Col xs={12}>
             <SecondaryNavigation

@@ -2,10 +2,14 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { BlogSecondaryNavigation } from '../components/BlogSecondaryNavigation'
 import { Container, Row, Col } from 'reactstrap'
+import Helmet from 'react-helmet'
 
 export default ({ data }) => {
   return (
     <Container>
+      <Helmet title="Blog - giraffesyo.io">
+        <html lang="en" />
+      </Helmet>
       <Row>
         <Col xs={12}>
           <BlogSecondaryNavigation />
