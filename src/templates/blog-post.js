@@ -7,10 +7,10 @@ import Helmet from 'react-helmet'
 
 export default ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html, wordCount, timeToRead } = markdownRemark
+  const { frontmatter, html, wordCount, timeToRead, excerpt } = markdownRemark
   return (
     <Container>
-      <Helmet title={`${frontmatter.title} - giraffesyo.io`}>
+      <Helmet title={`${frontmatter.title} - giraffesyo.io`} meta={[{name: 'description', content: `${excerpt}`}]}>
         <html lang="en" />>
       </Helmet>
       <Row>
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt(pruneLength: 100)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path

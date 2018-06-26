@@ -7,7 +7,7 @@ import Helmet from 'react-helmet'
 export default ({ data }) => {
   return (
     <Container>
-      <Helmet title="Blog - giraffesyo.io">
+      <Helmet title="Blog - giraffesyo.io" meta={[{name: 'description', content: `Michael McQuade's personal blog: Generally non-technical blog posts from Michael's life.`}]}>
         <html lang="en" />
       </Helmet>
       <Row>

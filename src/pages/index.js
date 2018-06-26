@@ -26,7 +26,7 @@ class Home extends React.PureComponent {
     const { activeItem } = this.state
     return (
       <Container>
-        <Helmet title="giraffesyo.io - Michael McQuade's Personal Site and blog">
+        <Helmet title="giraffesyo.io - Michael McQuade's Personal Site and blog" meta={[{name: 'description', content: `Michael McQuade's personal site: Michael is a computer science student at Oklahoma State University and has a passion for web devleopment. `}]}>
           <html lang="en" />
         </Helmet>
         <Row>
