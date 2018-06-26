@@ -17,7 +17,7 @@ class AboutMe extends React.PureComponent {
             sm={{ size: 12, offset: 0 }}
             md={{ size: 3, offset: 0 }}
           >
-            <img src={Me} />
+            <img src={Me} alt="Michael Giraffesyo McQuade and a giraffe, photo taken at bioparque in the State of Mexico, Mexico" />
           </Col>
           <Col>
             <p>I'm Michael McQuade.</p>
