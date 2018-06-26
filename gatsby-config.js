@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Michael McQuade',
+    title: 'giraffesyo.io - Michael McQuade',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
