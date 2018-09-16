@@ -10,16 +10,11 @@ class SecondaryNavigation extends React.PureComponent {
   render() {
     const { location } = this.props
     let activeItem
-    console.log(location)
-    switch (location.pathname) {
-      case '/':
-        activeItem = 'About Me'
-        break
-      case '/blog':
-        activeItem = 'Blog'
-        break
-      default:
-        break
+    if (location.pathname === '/') {
+      activeItem = 'About Me'
+    } else {
+      //TODO: dont make Blog the catch all
+      activeItem = 'Blog'
     }
     return (
       <Navbar expand="xs">
