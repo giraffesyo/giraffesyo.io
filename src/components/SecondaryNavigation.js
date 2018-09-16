@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigateTo } from 'gatsby-link'
+import { navigate } from 'gatsby-link'
 import { Navbar, Nav, NavItem, NavLink } from 'reactstrap'
 import styles from './SecondaryNavigation.module.css'
 
@@ -8,7 +8,14 @@ class SecondaryNavigation extends React.PureComponent {
     this.state.changeActiveItem({ activeItem: name })
 
   render() {
-    const { activeItem } = this.props
+    const { location } = this.props
+    let activeItem
+    if (location.pathname === '/') {
+      activeItem = 'About Me'
+    } else {
+      //TODO: dont make Blog the catch all
+      activeItem = 'Blog'
+    }
     return (
       <Navbar expand="xs">
         <Nav className="ml-auto" navbar>
@@ -16,7 +23,7 @@ class SecondaryNavigation extends React.PureComponent {
             <NavLink
               className={styles.button}
               name="About Me"
-              onClick={this.props.callback}
+              onClick={() => navigate('/')}
               active={activeItem === 'About Me'}
             >
               About
@@ -25,31 +32,10 @@ class SecondaryNavigation extends React.PureComponent {
           <NavItem className={`light-purple-text ${styles.large}`}>
             <NavLink
               className={styles.button}
-              onClick={() => navigateTo({ pathname: '/blog' })}
+              onClick={() => navigate('/blog')}
+              active={activeItem === 'Blog'}
             >
               Blog
-            </NavLink>
-          </NavItem>
-          <NavItem
-            onClick={this.props.callback}
-            className={`light-purple-text ${styles.large}`}
-          >
-            <NavLink hidden
-              className={styles.button}
-              name="Projects"
-              active={activeItem === 'Projects'}
-            >
-              Projects
-            </NavLink>
-          </NavItem>
-          <NavItem hidden className={`light-purple-text ${styles.large}`}>
-            <NavLink
-              className={styles.button}
-              name="Photos"
-              onClick={this.props.callback}
-              active={activeItem === 'Photos'}
-            >
-              Photos
             </NavLink>
           </NavItem>
         </Nav>

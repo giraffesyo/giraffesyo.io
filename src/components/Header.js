@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
 class Header extends React.PureComponent {
   render() {
