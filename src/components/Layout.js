@@ -1,13 +1,18 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'font-awesome/css/font-awesome.min.css'
-import './Layout.css'
-import { Header } from '../components/Header'
+import 'bootstrap-css-only'
 
-export default ({ children }) => (
-  <div>
-    <Header />
+import '../main.css'
+import { Header } from './Header'
 
-    {children}
-  </div>
-)
+class Layout extends React.PureComponent {
+  render() {
+    return (
+      <>
+        <Header />
+        <div className="container">{this.props.children}</div>
+      </>
+    )
+  }
+}
+
+export default Layout

@@ -9,7 +9,7 @@ export default props => {
   const { data } = props
   return (
     <Layout>
-      <Container>
+
         <Helmet
           title="Blog - giraffesyo.io"
           meta={[
@@ -21,11 +21,8 @@ export default props => {
         >
           <html lang="en" />
         </Helmet>
-        <Row>
-          <Col xs={12}>
             <SecondaryNavigation location={props.location} />
-          </Col>
-        </Row>
+
         <Row>
           <h1 className="dark-blue-text">
             {'<'}blog{'>'}
@@ -44,12 +41,13 @@ export default props => {
                 to={node.frontmatter.path}
                 style={{ textDecoration: `none`, color: `inherit` }}
               >
-                <h2 className='light-blue-text'>{node.frontmatter.title}</h2>
+                <h2 className="light-blue-text">{node.frontmatter.title}</h2>
               </Link>
             </Row>
             <Row>
               <h6 className="code-font green-text">
-                {'//'}{node.frontmatter.date}
+                {'//'}
+                {node.frontmatter.date}
               </h6>
             </Row>
             <Row>
@@ -71,7 +69,7 @@ export default props => {
             </Link>
           </div>
         ))}
-      </Container>
+
     </Layout>
   )
 }

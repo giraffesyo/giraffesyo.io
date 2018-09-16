@@ -1,3 +1,15 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+body {
+  background-color: #292929;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* Below is from Layout.css */
+
 body {
   background-color: rgb(30, 30, 30);
 }

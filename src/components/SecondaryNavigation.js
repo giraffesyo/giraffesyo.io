@@ -1,7 +1,16 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
-import { Navbar, Nav, NavItem, NavLink } from 'reactstrap'
+import { Navbar, Nav, NavItem } from 'reactstrap'
 import styles from './SecondaryNavigation.module.css'
+
+import styled from 'styled-components'
+
+const NavLink = styled.div`
+  padding: 1rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-bottom: ${props => (props.active ? '1px solid white' : 'none')};
+`
 
 class SecondaryNavigation extends React.PureComponent {
   handleItemClick = (e, { name }) =>
