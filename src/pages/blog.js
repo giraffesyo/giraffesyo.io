@@ -44,7 +44,7 @@ export default props => {
                 to={node.frontmatter.path}
                 style={{ textDecoration: `none`, color: `inherit` }}
               >
-                <h2>{node.frontmatter.title}</h2>
+                <h2 className='light-blue-text'>{node.frontmatter.title}</h2>
               </Link>
             </Row>
             <Row>
