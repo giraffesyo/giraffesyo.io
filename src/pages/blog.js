@@ -49,7 +49,7 @@ export default props => {
             </Row>
             <Row>
               <h6 className="code-font green-text">
-                //{node.frontmatter.date}
+                {'//'}{node.frontmatter.date}
               </h6>
             </Row>
             <Row>

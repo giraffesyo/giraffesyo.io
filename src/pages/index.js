@@ -1,9 +1,7 @@
 import React from 'react'
-import { Projects } from '../components/Projects'
 import { BlogExcerpts } from '../components/BlogExcerpts'
 import { SecondaryNavigation } from '../components/SecondaryNavigation'
 import { AboutMe } from '../components/AboutMe'
-import { Photos } from '../components/Photos'
 import Layout from '../components/Layout'
 import Helmet from 'react-helmet'
 

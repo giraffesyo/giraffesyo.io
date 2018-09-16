@@ -25,7 +25,7 @@ export default props => {
         <h1>{frontmatter.title}</h1>
       </Row>
       <Row className="date">
-        <h6 className="green-text code-font">//{frontmatter.date}</h6>
+  <h6 className="green-text code-font">{'//'}{frontmatter.date}</h6>
       </Row>
       <Row className="bottom">
         <h6 className="light-blue-text code-font">
