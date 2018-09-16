@@ -8,7 +8,19 @@ class SecondaryNavigation extends React.PureComponent {
     this.state.changeActiveItem({ activeItem: name })
 
   render() {
-    const { activeItem } = this.props
+    const { location } = this.props
+    let activeItem
+    console.log('location: ', location)
+    switch (location.pathname) {
+      case '/':
+        activeItem = 'About Me'
+        break
+      case '/blog':
+        activeItem = 'Blog'
+        break
+      default:
+        break
+    }
     return (
       <Navbar expand="xs">
         <Nav className="ml-auto" navbar>
@@ -34,7 +46,8 @@ class SecondaryNavigation extends React.PureComponent {
             onClick={this.props.callback}
             className={`light-purple-text ${styles.large}`}
           >
-            <NavLink hidden
+            <NavLink
+              hidden
               className={styles.button}
               name="Projects"
               active={activeItem === 'Projects'}

@@ -42,8 +42,7 @@ class Home extends React.PureComponent {
           <Row>
             <Col xs={12}>
               <SecondaryNavigation
-                callback={this.changeActiveItem}
-                activeItem={activeItem}
+                location={this.props.location}
               />
             </Col>
           </Row>
