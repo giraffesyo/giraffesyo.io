@@ -10,21 +10,8 @@ import Helmet from 'react-helmet'
 import { Container, Row, Col } from 'reactstrap'
 
 class Home extends React.PureComponent {
-  constructor(props) {
-    super(props)
-    this.changeActiveItem = this.changeActiveItem.bind(this)
-    const activeItem = this.props.location.activeItem
-      ? this.props.location.activeItem
-      : 'About Me'
-    this.state = { activeItem }
-  }
-  changeActiveItem(e) {
-    this.setState({ activeItem: e.target.name })
-  }
-
   render() {
     const { data } = this.props
-    const { activeItem } = this.state
     return (
       <Layout>
         <Container>
@@ -41,36 +28,17 @@ class Home extends React.PureComponent {
           </Helmet>
           <Row>
             <Col xs={12}>
-              <SecondaryNavigation
-                location={this.props.location}
-              />
+              <SecondaryNavigation location={this.props.location} />
             </Col>
           </Row>
-
-          {activeItem === 'Projects' ? (
-            <Row>
-              <Col xs={12}>
-                <Projects />
-              </Col>
-            </Row>
-          ) : activeItem === 'About Me' ? (
-            <Row>
-              <Col xs={12} md={8}>
-                <AboutMe />
-              </Col>
-              <Col xs={12} md={4}>
-                <BlogExcerpts data={data.allMarkdownRemark.edges} />
-              </Col>
-            </Row>
-          ) : activeItem === 'Photos' ? (
-            <Row>
-              <Col xs={12}>
-                <Photos />
-              </Col>
-            </Row>
-          ) : (
-            <div>You broke it...</div>
-          )}
+          <Row>
+            <Col xs={12} md={8}>
+              <AboutMe />
+            </Col>
+            <Col xs={12} md={4}>
+              <BlogExcerpts data={data.allMarkdownRemark.edges} />
+            </Col>
+          </Row>
         </Container>
       </Layout>
     )

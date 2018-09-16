@@ -1,11 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { BlogSecondaryNavigation } from '../components/BlogSecondaryNavigation'
+import { SecondaryNavigation } from '../components/SecondaryNavigation'
 import { Container, Row, Col } from 'reactstrap'
 import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 
-export default ({ data }) => {
+export default props => {
+  const { data } = props
   return (
     <Layout>
       <Container>
@@ -22,7 +23,7 @@ export default ({ data }) => {
         </Helmet>
         <Row>
           <Col xs={12}>
-            <BlogSecondaryNavigation />
+            <SecondaryNavigation location={props.location} />
           </Col>
         </Row>
         <Row>

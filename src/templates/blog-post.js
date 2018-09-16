@@ -1,21 +1,24 @@
 import React from 'react'
-import { BlogSecondaryNavigation } from '../components/BlogSecondaryNavigation'
+import { SecondaryNavigation } from '../components/SecondaryNavigation'
 import { Container, Row, Col } from 'reactstrap'
 import './blog-post.css'
 import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard'
 import Helmet from 'react-helmet'
 
-export default ({ data }) => {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
+export default props => {
+  const { markdownRemark } = props.data // props.data.markdownRemark holds our post data
   const { frontmatter, html, wordCount, timeToRead, excerpt } = markdownRemark
   return (
     <Container>
-      <Helmet title={`${frontmatter.title} - giraffesyo.io`} meta={[{name: 'description', content: `${excerpt}`}]}>
+      <Helmet
+        title={`${frontmatter.title} - giraffesyo.io`}
+        meta={[{ name: 'description', content: `${excerpt}` }]}
+      >
         <html lang="en" />>
       </Helmet>
       <Row>
         <Col xs={12}>
-          <BlogSecondaryNavigation />
+          <SecondaryNavigation location={props.location} />
         </Col>
       </Row>
       <Row>
