@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigateTo } from 'gatsby-link'
+import { navigate } from 'gatsby-link'
 import { Navbar, Nav, NavItem, NavLink } from 'reactstrap'
 import styles from './SecondaryNavigation.module.css'
 
@@ -13,7 +13,7 @@ class BlogSecondaryNavigation extends React.PureComponent {
             <NavLink
               className={styles.button}
               onClick={() =>
-                navigateTo({ pathname: '/', activeItem: 'About Me' })
+                navigate({ pathname: '/', activeItem: 'About Me' })
               }
             >
               About
@@ -23,7 +23,7 @@ class BlogSecondaryNavigation extends React.PureComponent {
             <NavLink
               className={styles.button}
               active
-              onClick={() => navigateTo({ pathname: '/blog' })}
+              onClick={() => navigate({ pathname: '/blog' })}
             >
               Blog
             </NavLink>
@@ -33,7 +33,7 @@ class BlogSecondaryNavigation extends React.PureComponent {
               hidden
               className={styles.button}
               onClick={() =>
-                navigateTo({ pathname: '/', activeItem: 'Projects' })
+                navigate({ pathname: '/', activeItem: 'Projects' })
               }
             >
               Projects
@@ -43,7 +43,7 @@ class BlogSecondaryNavigation extends React.PureComponent {
             <NavLink
               className={styles.button}
               onClick={() =>
-                navigateTo({ pathname: '/', activeItem: 'Photos' })
+                navigate({ pathname: '/', activeItem: 'Photos' })
               }
             >
               Photos
