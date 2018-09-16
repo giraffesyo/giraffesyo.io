@@ -1,20 +1,19 @@
 {
   "name": "giraffesyo-personal",
-  "description": "A personal website and blog for Michael McQuade AKA Giraffesyo",
-  "version": "1.0.0",
+  "description": "A personal website and blog for Michael McQuade",
   "author": "Michael McQuade <giraffesyo@gmail.com>",
   "dependencies": {
     "@debiki/gatsby-plugin-talkyard": "^0.5.5",
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
-    "gatsby": "^1.9.241",
-    "gatsby-link": "^1.6.39",
-    "gatsby-plugin-react-helmet": "^2.0.8",
-    "gatsby-plugin-sharp": "^1.6.43",
-    "gatsby-plugin-typography": "^1.7.18",
-    "gatsby-remark-images": "^1.5.62",
-    "gatsby-source-filesystem": "^1.5.27",
-    "gatsby-transformer-remark": "^1.7.37",
+    "gatsby": "next",
+    "gatsby-link": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-sharp": "next",
+    "gatsby-plugin-typography": "next",
+    "gatsby-remark-images": "next",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-remark": "next",
     "gh-pages": "^1.1.0",
     "react-helmet": "^5.2.0",
     "reactstrap": "^5.0.0-beta.3",
@@ -23,8 +22,10 @@
   "keywords": [
     "giraffesyo",
     "Michael McQuade",
-    "react",
-    "gatsby"
+    "resume",
+    "personal",
+    "blog",
+    "cv"
   ],
   "license": "MIT",
   "scripts": {
