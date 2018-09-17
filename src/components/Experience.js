@@ -20,7 +20,7 @@ class Experience extends React.PureComponent {
         <Project title="Foundation Software" images={foundation}>
           <p>
             Completed an 8-week summer internshp at Foundation Software. During
-            my time there I create an internal label printer application using
+            my time there I created an internal label printer application using
             create-react-app, Microsoft SQL Server, Windows Integrated Security
             (Windows Auth), and Express.js. I also created a proof-of-concept
             rewrite of their marketing website, foundationsoft.com using
