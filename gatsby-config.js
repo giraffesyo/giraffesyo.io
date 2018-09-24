@@ -6,7 +6,18 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-styled-components`, // In your gatsby-config.js
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-44000145-5',
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Any additional create only fields (optional)
+        sampleRate: 5,
+        siteSpeedSampleRate: 10
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
