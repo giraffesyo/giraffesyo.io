@@ -22,7 +22,9 @@ class Education extends React.PureComponent {
           <div className="col">
             <Degree title={degree.title} subtitle={degree.subtitle} />
           </div>
-          <div className="col">{Schools}</div>
+          <div className="row">
+            <div className="col">{Schools}</div>
+          </div>
         </div>
       </>
     )

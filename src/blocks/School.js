@@ -14,8 +14,8 @@ const School = props => {
   const { image, alt } = props
   return (
     <SchoolRow className="row">
-      <div className="col-12 col-md-2">
-        {image && <img alt={alt + " logo"} src={props.image} />}
+      <div className="col-6 ml-auto mr-auto ml-md-0 mr-md-0 col-md-2">
+        {image && <img alt={alt + ' logo'} src={props.image} />}
       </div>
       <div className="col-12 col-md-10">
         <h3 className="mt-4 mt-md-0 text-center text-md-left">
