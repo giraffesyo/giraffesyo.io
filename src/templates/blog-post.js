@@ -1,6 +1,6 @@
 import React from 'react'
 import { SecondaryNavigation } from '../components/SecondaryNavigation'
-import { Container, Row, Col } from 'reactstrap'
+import { Row, Col } from 'reactstrap'
 import './blog-post.css'
 import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard'
 import Helmet from 'react-helmet'
