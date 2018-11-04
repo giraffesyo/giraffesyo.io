@@ -1,7 +1,7 @@
 ---
 title: "ConocoPhillips Innovation Challenge"
 date: "2018-09-16"
-path: "/blog/2019-09-16-conoco-phillips-innovation-challenge"
+path: "/blog/2018-09-16-conoco-phillips-innovation-challenge"
 discussionId: "2018-09-16-conoco-phillips-innovation-challenge"
 ---
 
