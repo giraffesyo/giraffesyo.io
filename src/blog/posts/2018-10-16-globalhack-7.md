@@ -3,6 +3,7 @@ title: "Globalhack VII"
 date: "2018-10-16"
 path: "/blog/2018-10-16-Globalhack-7"
 discussionId: "2018-10-16-Globalhack-7"
+hidden: false
 ---
 
 Globalhack 7 was a crazy weekend. Packed into a stadium with hundreds of contestants, our team fought off sleep in order to try and create something awesome for immigrants and refugees within the US.

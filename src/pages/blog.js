@@ -14,10 +14,9 @@ export default props => {
         meta={[
           {
             name: 'description',
-            content: `Michael McQuade's personal blog: Generally non-technical blog posts from Michael's life.`
-          }
-        ]}
-      >
+            content: `Michael McQuade's personal blog: Generally non-technical blog posts from Michael's life.`,
+          },
+        ]}>
         <html lang="en" />
       </Helmet>
       <SecondaryNavigation location={props.location} />
@@ -40,8 +39,7 @@ export default props => {
           <Row style={{ clear: 'both' }}>
             <Link
               to={node.frontmatter.path}
-              style={{ textDecoration: `none`, color: `inherit` }}
-            >
+              style={{ textDecoration: `none`, color: `inherit` }}>
               <h2 className="light-blue-text">{node.frontmatter.title}</h2>
             </Link>
           </Row>
@@ -62,8 +60,7 @@ export default props => {
           </Row>
           <Link
             to={node.frontmatter.path}
-            style={{ textDecoration: `none`, color: `inherit` }}
-          >
+            style={{ textDecoration: `none`, color: `inherit` }}>
             <Row style={{ float: 'right' }} className="orange-text">
               Read more...
             </Row>
@@ -75,7 +72,10 @@ export default props => {
 }
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { hidden: { eq: false } } }
+    ) {
       edges {
         node {
           id
@@ -84,6 +84,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             title
+            hidden
           }
           timeToRead
         }

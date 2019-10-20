@@ -3,6 +3,7 @@ title: "ConocoPhillips Innovation Challenge"
 date: "2018-09-16"
 path: "/blog/2018-09-16-conoco-phillips-innovation-challenge"
 discussionId: "2018-09-16-conoco-phillips-innovation-challenge"
+hidden: false
 ---
 
 This past weekend was very exciting. About two months ago I was notified that I had been chosen to participate in the ConocoPhillips innovation challenge. I remember that I was so excited to get that news seeing as they had mentioned there would be job opportunities and prizes for attending.

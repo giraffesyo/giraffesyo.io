@@ -3,6 +3,7 @@ title: "British Royal Family"
 date: "2018-04-22"
 path: "/blog/2018-04-22-british-royal-family"
 discussionId: "2018-04-22-british-royal-family"
+hidden: false
 ---
 
 During my Understanding World Cultures class, I found it very interesting how big the British Royal Family was when one of the girls in the class presented over it. I checked it out online and found this chart on Khan Academy:

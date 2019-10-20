@@ -3,6 +3,7 @@ title: "Mexico City Earthquake"
 path: "/blog/2017-09-10-mexico-city-earthquake"
 date: "2017-09-10"
 discussionId: "2017-09-10-mexico-city-earthquake"
+hidden: false
 ---
 
 It wasn't very late but I had fallen asleep early. I woke up to Jessica's mom yelling her name over and over and the howling of alarms off in the distance. There were no lights. Jessica said there was an earthquake and began to ran downstairs as I got up, still in an unaware, just-awoken state. I went over into the next room to grab shoes and saw the dresser rocking back and forth as if it was about to fall over. The house was shaking so much I had trouble standing. I walked to the stairs and each step I felt like I was taking a step off a boat, or walking through a fun house. The staircase was shaking so much it was surely going to collapse after each step I took.

@@ -3,6 +3,7 @@ title: "Tae Kwon Do"
 date: "2017-05-30"
 path: "/blog/2017-05-30-tae-kwon-do"
 discussionId: "2017-05-30-tae-kwon-do"
+hidden: false
 ---
 
 This week is our first week of classes here in Mexico! We're enrolled in a Tae Kwon Do class which starts at 8AM, super early for me. The class is an hour and a half long. Since normally I'm not one to do much physical exercise this has been a lot of effort to get started. I feel goofy with my kicks because I can't really stretch my leg out the way everyone else does. I haven't memorized the exercises that we do in the morning so I feel a little awkward running through those trying to copy what the others are doing, but I have a feeling I'll get the hang of this with more time.
