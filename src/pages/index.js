@@ -12,6 +12,7 @@ import { SectionHeader } from '../blocks/SectionHeader'
 import { Education } from '../components/Education'
 import { Experience } from '../components/Experience'
 import { SecondaryNavigation } from '../components/SecondaryNavigation'
+import { Certifications } from '../components/Certifications'
 
 const education = {
   schools: [
@@ -83,6 +84,11 @@ class Home extends React.PureComponent {
         <div className='row'>
           <div className='col'>
             <Experience />
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col'>
+            <Certifications />
           </div>
         </div>
       </Layout>
