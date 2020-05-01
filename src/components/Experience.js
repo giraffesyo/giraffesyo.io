@@ -17,7 +17,21 @@ class Experience extends React.PureComponent {
     return (
       <>
         <SectionHeader>Experience</SectionHeader>
-        <Project title="Foundation Software" images={foundation}>
+        <Project title='ConocoPhillips'>
+          <p>
+            System administrator for Linux high performance computing cluster
+            with over 5000 compute nodes. About 20% of my time is spent
+            maintaining and supporting the existing infrastructure within our
+            HPC environment. The rest of my time is spent working on PoCs,
+            creating and improving processes, and designing, developing, and
+            implementing internal software. Technologies used include: CentOS,
+            Ubuntu, Node.js, PostgreSQL, MySQL, Git, GitLab, Python, Anaconda
+            (python notebooks), Zeppelin, Docker, Singularity, Bash, Cobbler,
+            oVirt, Next.js, React.js, Gradle, Maven, Jenkins, Artifactory,
+            Cisco, AWS, bestpractical request-tracker, ServiceNow, GLPI, OCS
+          </p>
+        </Project>
+        <Project title='Foundation Software' images={foundation}>
           <p>
             Completed an 8-week summer internshp at Foundation Software. During
             my time there I created an internal label printer application using
@@ -28,12 +42,12 @@ class Experience extends React.PureComponent {
             6.2 seconds to 800ms over the current site.
           </p>
         </Project>
-        <Project images={okchihuahuas} title="Prairie Glade Chihuahuas Web App">
+        <Project images={okchihuahuas} title='Prairie Glade Chihuahuas Web App'>
           {' '}
           <p>
             Developed a web app for an Oklahoma Chihuahua Kennel. The web app
             uses{' '}
-            <a href="https://github.com/facebook/create-react-app">
+            <a href='https://github.com/facebook/create-react-app'>
               create-react-app
             </a>{' '}
             and has an express.js backend, utilizing a PostgresQL database. The
@@ -45,7 +59,7 @@ class Experience extends React.PureComponent {
           </p>
           <p>
             Project is live at{' '}
-            <a href="https://okchihuahuas.com">https://okchihuahuas.com</a>
+            <a href='https://okchihuahuas.com'>https://okchihuahuas.com</a>
           </p>{' '}
         </Project>
       </>

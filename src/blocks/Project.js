@@ -9,14 +9,15 @@ const ProjectWrapper = styled.div`
 class Project extends React.PureComponent {
   render() {
     const {
-      props: { title, images, children }
+      props: { title, images, children },
     } = this
     return (
-      <ProjectWrapper className="row">
-        <div className="col-12 col-md-4">
-          <ProjectSlider images={images} alt={title} />
+      <ProjectWrapper className='row'>
+        <div className='col-12 col-md-4'>
+          {images && <ProjectSlider images={images} alt={title} />}
+          {!images && <div className='text-center h1'>{title}</div>}
         </div>
-        <div className="col-12 col-md-8 mt-4 mt-md-0">{children}</div>
+        <div className='col-12 col-md-8 mt-4 mt-md-0'>{children}</div>
       </ProjectWrapper>
     )
   }

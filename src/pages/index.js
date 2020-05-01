@@ -22,8 +22,8 @@ const education = {
     },
   ],
   degree: {
-    title: 'B.S. in Computer Science',
-    subtitle: '(expected May 2019)',
+    title: 'Bachelor of Science, Computer Science',
+    subtitle: '3.70 GPA',
   },
 }
 
@@ -61,30 +61,17 @@ class Home extends React.PureComponent {
             />
           </div>
           <div className='col-12 col-md-8 mt-4 mt-md-0'>
-            <p>I'm Michael McQuade. </p>
-
+            <p>I'm Michael McQuade.</p>
             <p>
-              I'm a Computer Science student at Oklahoma State University. I
-              spent the last year studying my major abroad in Mexico City,
-              Mexico. The experience helped me broaden my horizons as a denizen
-              of the world while learning Computer Science from the most
-              prestigious school in Mexico.
+              Hello! I am a full-stack software engineer working with modern
+              application development technologies such as: TypeScript, Node.js,
+              React.js, Express, PostgreSQL, MySQL, and much more.
             </p>
             <p>
-              My experiences have been varied, from technical support to helping
-              people with fraud at Apple iTunes. Now, I'm finally doing what I
-              love, learning to code!
-            </p>
-            <p>
-              I have found that as a programmer, I am solving new problems every
-              day. Because of this, work really feels like a game where I just
-              have to find the answer to the current level, and when you reach a
-              level you've already beaten, the answer is ever so clear.
-            </p>
-            <p>
-              Over the summer I did a software development internship at
-              Foundation Software in Strongsville, Ohio. Now, I'm back in
-              classes and expect to graduate May 2019.
+              I'm available for freelance software engineering and web
+              development work, if you need help with a project, please feel
+              free to contact me at
+              <a href='mailto:hello@giraffesyo.io' />
             </p>
           </div>
         </div>
