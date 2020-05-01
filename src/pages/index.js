@@ -18,43 +18,49 @@ const education = {
     { name: 'Oklahoma State University', logo: osuLogo },
     {
       name: 'Monterrey Institute of Technology and Higher Education',
-      logo: tecLogo
-    }
+      logo: tecLogo,
+    },
   ],
-  degree: { title: 'B.S. in Computer Science', subtitle: '(expected May 2019)' }
+  degree: {
+    title: 'B.S. in Computer Science',
+    subtitle: '(expected May 2019)',
+  },
 }
 
 class Home extends React.PureComponent {
   render() {
     const {
       props: {
-        data: { file: { childImageSharp: { sizes: MyPhoto } } },
-        location
-      }
+        data: {
+          file: {
+            childImageSharp: { sizes: MyPhoto },
+          },
+        },
+        location,
+      },
     } = this
     return (
       <Layout>
         <Helmet
-          title="giraffesyo.io - Michael McQuade's Personal Site and blog"
+          title="giraffesyo.io - Michael McQuade's Personal Site"
           meta={[
             {
               name: 'description',
-              content: `Michael McQuade's personal site: Michael is a computer science student at Oklahoma State University and has a passion for web devleopment. `
-            }
-          ]}
-        >
-          <html lang="en" />
+              content: `Michael McQuade's personal site: Michael is a computer science student at Oklahoma State University and has a passion for web devleopment. `,
+            },
+          ]}>
+          <html lang='en' />
         </Helmet>
         <SecondaryNavigation location={location} />
         <SectionHeader>About Me</SectionHeader>
-        <div className="row">
-          <div className="col-12 col-md-4">
+        <div className='row'>
+          <div className='col-12 col-md-4'>
             <Image
               sizes={MyPhoto}
-              alt="Developer Michael McQuade (giraffesyo) with a live giraffe in Mexico"
+              alt='Developer Michael McQuade (giraffesyo) with a live giraffe in Mexico'
             />
           </div>
-          <div className="col-12 col-md-8 mt-4 mt-md-0">
+          <div className='col-12 col-md-8 mt-4 mt-md-0'>
             <p>I'm Michael McQuade. </p>
 
             <p>
@@ -82,13 +88,13 @@ class Home extends React.PureComponent {
             </p>
           </div>
         </div>
-        <div className="row">
-          <div className="col">
+        <div className='row'>
+          <div className='col'>
             <Education schools={education.schools} degree={education.degree} />
           </div>
         </div>
-        <div className="row">
-          <div className="col">
+        <div className='row'>
+          <div className='col'>
             <Experience />
           </div>
         </div>

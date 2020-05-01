@@ -9,7 +9,7 @@ const NavLink = styled.div`
   padding: 1rem;
   cursor: pointer;
   box-sizing: border-box;
-  border-bottom: ${props => (props.active ? '1px solid white' : 'none')};
+  border-bottom: ${(props) => (props.active ? '1px solid white' : 'none')};
 `
 
 class SecondaryNavigation extends React.PureComponent {
@@ -26,25 +26,15 @@ class SecondaryNavigation extends React.PureComponent {
       activeItem = 'Blog'
     }
     return (
-      <Navbar expand="xs">
-        <Nav className="ml-auto" navbar>
+      <Navbar expand='xs'>
+        <Nav className='ml-auto' navbar>
           <NavItem className={`light-purple-text ${styles.large}`}>
             <NavLink
               className={styles.button}
-              name="About Me"
+              name='About Me'
               onClick={() => navigate('/')}
-              active={activeItem === 'About Me'}
-            >
+              active={activeItem === 'About Me'}>
               About
-            </NavLink>
-          </NavItem>
-          <NavItem className={`light-purple-text ${styles.large}`}>
-            <NavLink
-              className={styles.button}
-              onClick={() => navigate('/blog')}
-              active={activeItem === 'Blog'}
-            >
-              Blog
             </NavLink>
           </NavItem>
         </Nav>
