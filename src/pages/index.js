@@ -47,7 +47,7 @@ class Home extends React.PureComponent {
           meta={[
             {
               name: 'description',
-              content: `Michael McQuade's personal site: Michael is a computer science student at Oklahoma State University and has a passion for web devleopment. `,
+              content: `Michael McQuade's personal site: Michael is a full-stack software engineer with a passion for web and augmented reality devleopment located in Houston, TX.`,
             },
           ]}>
           <html lang='en' />
