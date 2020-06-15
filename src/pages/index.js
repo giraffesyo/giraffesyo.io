@@ -62,9 +62,9 @@ class Home extends React.PureComponent {
             />
           </div>
           <div className='col-12 col-md-8 mt-4 mt-md-0'>
-            <p>I'm Michael McQuade.</p>
+            <p>Hello! I'm Michael McQuade.</p>
             <p>
-              Hello! I am a full-stack software engineer working with modern
+              I am a full-stack software engineer working with modern
               application development technologies such as: TypeScript, Node.js,
               React.js, Express, PostgreSQL, MySQL, and much more.
             </p>
