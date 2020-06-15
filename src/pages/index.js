@@ -71,8 +71,8 @@ class Home extends React.PureComponent {
             <p>
               I'm available for freelance software engineering and web
               development work, if you need help with a project, please feel
-              free to contact me at
-              <a href='mailto:hello@giraffesyo.io' />
+              free to
+              <a href='mailto:hello@giraffesyo.io'>contact me.</a>
             </p>
           </div>
         </div>
