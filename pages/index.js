@@ -1,13 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Helmet from 'react-helmet'
-
-import Image from 'gatsby-image'
-
-import tecLogo from '../images/tec.svg'
-import osuLogo from '../images/osu.svg'
-import 'typeface-raleway'
-
+import Image from 'next/image'
 import { SectionHeader } from '../blocks/SectionHeader'
 import { Education } from '../components/Education'
 import { Experience } from '../components/Experience'
@@ -16,10 +10,10 @@ import { Certifications } from '../components/Certifications'
 
 const education = {
   schools: [
-    { name: 'Oklahoma State University', logo: osuLogo },
+    { name: 'Oklahoma State University', logo: '/images/osu.svg' },
     {
       name: 'Monterrey Institute of Technology and Higher Education',
-      logo: tecLogo,
+      logo: '/images/tec.svg',
     },
   ],
   degree: {
@@ -30,16 +24,6 @@ const education = {
 
 class Home extends React.PureComponent {
   render() {
-    const {
-      props: {
-        data: {
-          file: {
-            childImageSharp: { sizes: MyPhoto },
-          },
-        },
-        location,
-      },
-    } = this
     return (
       <Layout>
         <Helmet
@@ -49,15 +33,16 @@ class Home extends React.PureComponent {
               name: 'description',
               content: `Michael McQuade's personal site: Michael is a full-stack software engineer with a passion for web and augmented reality devleopment located in Houston, TX.`,
             },
-          ]}>
+          ]}
+        >
           <html lang='en' />
         </Helmet>
-        <SecondaryNavigation location={location} />
+        <SecondaryNavigation />
         <SectionHeader>About Me</SectionHeader>
         <div className='row'>
           <div className='col-12 col-md-4'>
             <Image
-              sizes={MyPhoto}
+              src='/images/michaelmcquade.jpg'
               alt='Developer Michael McQuade (giraffesyo) with a live giraffe in Mexico'
             />
           </div>
@@ -71,7 +56,7 @@ class Home extends React.PureComponent {
             <p>
               I'm available for freelance software engineering and web
               development work, if you need help with a project, please feel
-              free to 
+              free to
               <a href='mailto:hello@giraffesyo.io'>contact me.</a>
             </p>
           </div>
@@ -95,17 +80,5 @@ class Home extends React.PureComponent {
     )
   }
 }
-
-export const query = graphql`
-  query AboutMeQuery {
-    file(relativePath: { eq: "michaelmcquade.jpg" }) {
-      childImageSharp {
-        sizes {
-          ...GatsbyImageSharpSizes
-        }
-      }
-    }
-  }
-`
 
 export default Home

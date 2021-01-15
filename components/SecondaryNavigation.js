@@ -1,8 +1,7 @@
 import React from 'react'
-import { navigate } from 'gatsby-link'
 import { Navbar, Nav, NavItem } from 'reactstrap'
 import styles from './SecondaryNavigation.module.css'
-
+import Link from 'next/link'
 import styled from 'styled-components'
 
 const NavLink = styled.div`
@@ -13,11 +12,15 @@ const NavLink = styled.div`
 `
 
 class SecondaryNavigation extends React.PureComponent {
+  location = { pathname: '/' }
+
   handleItemClick = (e, { name }) =>
     this.state.changeActiveItem({ activeItem: name })
 
   render() {
-    const { location } = this.props
+    //FIXME: Harcoded this in transition to Next.js
+
+    const location = this.location
     let activeItem
     if (location.pathname === '/') {
       activeItem = 'About Me'
@@ -32,9 +35,11 @@ class SecondaryNavigation extends React.PureComponent {
             <NavLink
               className={styles.button}
               name='About Me'
-              onClick={() => navigate('/')}
-              active={activeItem === 'About Me'}>
-              About
+              active={activeItem === 'About Me'}
+            >
+              <Link href='/'>
+                <a>About</a>
+              </Link>
             </NavLink>
           </NavItem>
         </Nav>

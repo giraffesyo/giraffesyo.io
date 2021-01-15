@@ -3,8 +3,6 @@ import React from 'react'
 import { SectionHeader } from '../blocks/SectionHeader'
 import { Project } from '../blocks/Project'
 
-import AWSCloudPractitionerBadge from '../images/AWS-CloudPractitioner.png'
-
 class Certifications extends React.PureComponent {
   render() {
     return (
@@ -12,7 +10,8 @@ class Certifications extends React.PureComponent {
         <SectionHeader>Certifications</SectionHeader>
         <Project
           title='AWS Certified Cloud Practitioner'
-          images={[AWSCloudPractitionerBadge]}>
+          images={['/images/AWS-CloudPractitioner.png']}
+        >
           <h1>AWS Certified Cloud Practitioner</h1>
           <h3>Awarded 4/8/2020</h3>
           <p>

@@ -1,16 +1,15 @@
 import React from 'react'
 
-import okchihuahuas1 from '../images/projects/okchihuahuas1.jpeg'
-import okchihuahuas2 from '../images/projects/okchihuahuas2.jpeg'
-import okchihuahuas3 from '../images/projects/okchihuahuas3.jpeg'
-import foundation from '../images/projects/foundation.png'
-
 import { SectionHeader } from '../blocks/SectionHeader'
 import { Project } from '../blocks/Project'
 
 //TODO: move the imports of images into index and pass down as prop,
 //TODO: import the images using graphql so we lazy load
-const okchihuahuas = [okchihuahuas1, okchihuahuas2, okchihuahuas3]
+const okchihuahuas = [
+  '/images/projects/okchihuahuas1.jpeg',
+  '/images/projects/okchihuahuas2.jpeg',
+  '/images/projects/okchihuahuas3.jpeg',
+]
 
 class Experience extends React.PureComponent {
   render() {
@@ -31,7 +30,10 @@ class Experience extends React.PureComponent {
             Cisco, AWS, bestpractical request-tracker, ServiceNow, GLPI, OCS
           </p>
         </Project>
-        <Project title='Foundation Software' images={foundation}>
+        <Project
+          title='Foundation Software'
+          images={'/images/projects/foundation.png'}
+        >
           <p>
             Completed an 8-week summer internshp at Foundation Software. During
             my time there I created an internal label printer application using
