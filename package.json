@@ -5,16 +5,19 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.7.1",
     "bootstrap-css-only": "^4.1.1",
+    "gray-matter": "^4.0.2",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.0.5",
     "react-slick": "^0.23.1",
     "reactstrap": "^5.0.0-beta.3",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^3.4.6",
-    "typeface-raleway": "^0.0.54",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "typeface-raleway": "^0.0.54"
   },
   "keywords": [
     "giraffesyo",

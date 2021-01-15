@@ -42,6 +42,8 @@ class Home extends React.PureComponent {
         <div className='row'>
           <div className='col-12 col-md-4'>
             <Image
+              height={3024}
+              width={4032}
               src='/images/michaelmcquade.jpg'
               alt='Developer Michael McQuade (giraffesyo) with a live giraffe in Mexico'
             />
