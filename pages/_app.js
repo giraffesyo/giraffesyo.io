@@ -1,5 +1,4 @@
-// import App from 'next/app'
-
+import 'tailwindcss/tailwind.css'
 import 'typeface-raleway'
 import 'bootstrap-css-only'
 
