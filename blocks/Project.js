@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProjectSlider } from '../blocks/ProjectSlider'
+import { ProjectSlider } from './ProjectSlider'
 import styled from 'styled-components'
 
 const ProjectWrapper = styled.div`

@@ -5,11 +5,10 @@
 
 # testing
 /coverage
-.cache/*
+.next
 
 # production
 /build
-/public
 
 # misc
 .DS_Store
