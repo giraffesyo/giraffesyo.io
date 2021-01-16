@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { SectionHeader } from '../blocks/SectionHeader'
-import { Project } from '../blocks/Project'
+import { Project } from './project'
 
 //TODO: move the imports of images into index and pass down as prop,
 //TODO: import the images using graphql so we lazy load
@@ -15,7 +14,7 @@ class Experience extends React.PureComponent {
   render() {
     return (
       <>
-        <SectionHeader>Experience</SectionHeader>
+        <div className='section-header'>Experience</div>
         <Project title='ConocoPhillips'>
           <p>
             System administrator for Linux high performance computing cluster

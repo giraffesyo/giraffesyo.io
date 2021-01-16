@@ -1,4 +1,5 @@
 import 'tailwindcss/tailwind.css'
+import '../styles/tailwind.css'
 import 'typeface-raleway'
 import '../styles/index.css'
 

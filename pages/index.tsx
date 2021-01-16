@@ -1,25 +1,10 @@
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import Image from 'next/image'
-import { SectionHeader } from '../blocks/SectionHeader'
-import { Education } from '../components/Education'
+import EducationSection from '../components/EducationSection'
 import { Experience } from '../components/Experience'
 import { SecondaryNavigation } from '../components/SecondaryNavigation'
 import { Certifications } from '../components/Certifications'
-
-const education = {
-  schools: [
-    { name: 'Oklahoma State University', logo: '/images/osu.svg' },
-    {
-      name: 'Monterrey Institute of Technology and Higher Education',
-      logo: '/images/tec.svg',
-    },
-  ],
-  degree: {
-    title: 'Bachelor of Science, Computer Science',
-    subtitle: '3.70 GPA',
-  },
-}
 
 const IndexPage = () => {
   return (
@@ -34,7 +19,7 @@ const IndexPage = () => {
         <html lang='en' />
       </Head>
       <SecondaryNavigation />
-      <SectionHeader>About Me</SectionHeader>
+      <div className='section-header'>About Me</div>
       <div className='row'>
         <div className='col-12 col-md-4'>
           <Image
@@ -60,7 +45,7 @@ const IndexPage = () => {
       </div>
       <div className='row'>
         <div className='col'>
-          <Education schools={education.schools} degree={education.degree} />
+          <EducationSection />
         </div>
       </div>
       <div className='row'>

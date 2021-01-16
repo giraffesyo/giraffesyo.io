@@ -3,6 +3,7 @@
   "description": "A personal website and blog for Michael McQuade",
   "author": "Michael McQuade <giraffesyo@gmail.com>",
   "dependencies": {
+    "classnames": "^2.2.6",
     "gray-matter": "^4.0.2",
     "next": "latest",
     "react": "latest",
@@ -36,6 +37,7 @@
     "@types/react": "^17.0.0",
     "autoprefixer": "^10.2.1",
     "postcss": "^8.2.4",
+    "postcss-nested": "^5.0.3",
     "prettier": "^1.11.1",
     "tailwindcss": "^2.0.2",
     "typescript": "^4.1.3"

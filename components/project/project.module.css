@@ -1,0 +1,7 @@
+.project {
+  @apply mb-8;
+
+  ul li button::before {
+    @apply opacity-50 text-purple-code text-base !important;
+  }
+}

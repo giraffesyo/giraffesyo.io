@@ -1,13 +1,11 @@
 import React from 'react'
-
-import { SectionHeader } from '../blocks/SectionHeader'
-import { Project } from '../blocks/Project'
+import { Project } from './project'
 
 class Certifications extends React.PureComponent {
   render() {
     return (
       <>
-        <SectionHeader>Certifications</SectionHeader>
+        <div className='section-header'>Certifications</div>
         <Project
           title='AWS Certified Cloud Practitioner'
           images={['/images/AWS-CloudPractitioner.png']}

@@ -1,0 +1,11 @@
+.section-header {
+  @apply text-purple-code text-center font-sans font-light text-4xl md:text-5xl;
+  letter-spacing: 0.5rem;
+
+  &:after {
+    content: '';
+    margin: 0 auto 2rem auto;
+    border-bottom: 0.375rem solid;
+    @apply border-purple-code w-4/5 block border-b-4;
+  }
+}
