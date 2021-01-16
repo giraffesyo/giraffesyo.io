@@ -59,12 +59,7 @@ const EducationSection: React.FC = () => {
     </div>
   ))
 
-  return (
-    <div className='mb-5'>
-      <div className='section-header'>Education</div>
-      {Schools}
-    </div>
-  )
+  return <> {Schools}</>
 }
 
 export default EducationSection

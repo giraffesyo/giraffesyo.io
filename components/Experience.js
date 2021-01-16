@@ -14,7 +14,6 @@ class Experience extends React.PureComponent {
   render() {
     return (
       <>
-        <div className='section-header'>Experience</div>
         <Project title='ConocoPhillips'>
           <p>
             System administrator for Linux high performance computing cluster

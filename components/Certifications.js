@@ -5,7 +5,6 @@ class Certifications extends React.PureComponent {
   render() {
     return (
       <>
-        <div className='section-header'>Certifications</div>
         <Project
           title='AWS Certified Cloud Practitioner'
           images={['/images/AWS-CloudPractitioner.png']}

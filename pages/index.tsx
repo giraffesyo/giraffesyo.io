@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import Head from 'next/head'
 import Image from 'next/image'
 import EducationSection from '../components/EducationSection'
+import AboutMeSection from '../components/AboutMeSection'
 import { Experience } from '../components/Experience'
 import { SecondaryNavigation } from '../components/SecondaryNavigation'
 import { Certifications } from '../components/Certifications'
@@ -19,44 +20,19 @@ const IndexPage = () => {
         <html lang='en' />
       </Head>
       <SecondaryNavigation />
-      <div className='section-header'>About Me</div>
-      <div className='row'>
-        <div className='col-12 col-md-4'>
-          <Image
-            height={3024}
-            width={4032}
-            src='/images/michaelmcquade.jpg'
-            alt='Developer Michael McQuade (giraffesyo) with a live giraffe in Mexico'
-          />
-        </div>
-        <div className='col-12 col-md-8 mt-4 mt-md-0'>
-          <p>Hello! I'm Michael McQuade.</p>
-          <p>
-            I am a full-stack software engineer working with modern application
-            development technologies such as: TypeScript, Node.js, React.js,
-            Express, PostgreSQL, MySQL, and much more.
-          </p>
-          <p>
-            I'm available for freelance software engineering and web development
-            work, if you need help with a project, please feel free to
-            <a href='mailto:hello@giraffesyo.io'>contact me.</a>
-          </p>
-        </div>
+      <div className='section-header'>{'<AboutMe />'}</div>
+      <AboutMeSection />
+      <div className='mb-5'>
+        <div className='section-header'>{'<Education />'}</div>
+        <EducationSection />
       </div>
-      <div className='row'>
-        <div className='col'>
-          <EducationSection />
-        </div>
+      <div className='flex flex-row flex-wrap'>
+        <div className='section-header w-full'>{'<Experience />'}</div>
+        <Experience />
       </div>
-      <div className='row'>
-        <div className='col'>
-          <Experience />
-        </div>
-      </div>
-      <div className='row'>
-        <div className='col'>
-          <Certifications />
-        </div>
+      <div className='flex flex-row'>
+        <div className='section-header'>{'<Certifications />'}</div>
+        <Certifications />
       </div>
     </Layout>
   )
