@@ -24,8 +24,10 @@ const AboutMeSection = () => {
         </p>
         <p className='my-1'>
           I'm available for freelance software engineering and web development
-          work, if you need help with a project, please feel free to
-          <a href='mailto:hello@giraffesyo.io'>contact me.</a>
+          work, if you need help with a project, please feel free to{' '}
+          <a className='text-blue-code' href='mailto:hello@giraffesyo.io'>
+            contact me.
+          </a>
         </p>
       </div>
     </div>
