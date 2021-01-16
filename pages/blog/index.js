@@ -96,12 +96,11 @@
 // `
 
 import Container from '../../components/vercel/container'
-import MoreStories from '../../components/vercel/more-stories'
 import HeroPost from '../../components/vercel/hero-post'
 import Intro from '../../components/vercel/intro'
 import Layout from '../../components/vercel/layout'
+import MoreStories from '../../components/vercel/more-stories'
 import { getAllPosts } from '../../lib/blogapi'
-import Head from 'next/head'
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0]
