@@ -1,11 +1,10 @@
-import Layout from '../components/Layout'
 import Head from 'next/head'
-import Image from 'next/image'
-import EducationSection from '../components/EducationSection'
 import AboutMeSection from '../components/AboutMeSection'
-import { Experience } from '../components/Experience'
-import { SecondaryNavigation } from '../components/SecondaryNavigation'
 import { Certifications } from '../components/Certifications'
+import EducationSection from '../components/EducationSection'
+import { Experience } from '../components/Experience'
+import Layout from '../components/Layout'
+import { SecondaryNavigation } from '../components/SecondaryNavigation'
 
 const IndexPage = () => {
   return (

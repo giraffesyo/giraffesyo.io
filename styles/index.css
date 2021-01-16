@@ -113,10 +113,6 @@ a:hover.light-purple-text {
   filter: invert(1);
 }
 
-.nav-item {
-  float: right;
-}
-
 .nav-link:hover {
   opacity: 0.5;
 }
