@@ -1,5 +1,3 @@
-import styles from './education.module.css'
-import cx from 'classnames'
 import Image from 'next/image'
 interface ISchool {
   name: string
