@@ -1,15 +1,14 @@
 import React from 'react'
-import { Navbar, Nav, NavItem } from 'reactstrap'
 import styles from './SecondaryNavigation.module.css'
 import Link from 'next/link'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
-const NavLink = styled.div`
-  padding: 1rem;
-  cursor: pointer;
-  box-sizing: border-box;
-  border-bottom: ${(props) => (props.active ? '1px solid white' : 'none')};
-`
+// const NavLink = styled.div`
+//   padding: 1rem;
+//   cursor: pointer;
+//   box-sizing: border-box;
+//   border-bottom: ${(props) => (props.active ? '1px solid white' : 'none')};
+// `
 
 class SecondaryNavigation extends React.PureComponent {
   location = { pathname: '/' }
@@ -29,10 +28,10 @@ class SecondaryNavigation extends React.PureComponent {
       activeItem = 'Blog'
     }
     return (
-      <Navbar expand='xs'>
-        <Nav className='ml-auto' navbar>
-          <NavItem className={`light-purple-text ${styles.large}`}>
-            <NavLink
+      <div expand='xs'>
+        <div className='ml-auto' navbar>
+          <div className={`light-purple-text ${styles.large}`}>
+            <div
               className={styles.button}
               name='About Me'
               active={activeItem === 'About Me'}
@@ -40,10 +39,10 @@ class SecondaryNavigation extends React.PureComponent {
               <Link href='/'>
                 <a>About</a>
               </Link>
-            </NavLink>
-          </NavItem>
-        </Nav>
-      </Navbar>
+            </div>
+          </div>
+        </div>
+      </div>
     )
   }
 }

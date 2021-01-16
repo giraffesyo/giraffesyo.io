@@ -1,8 +1,7 @@
 import 'tailwindcss/tailwind.css'
 import 'typeface-raleway'
-import 'bootstrap-css-only'
+import '../styles/index.css'
 
-import '../main.css'
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
