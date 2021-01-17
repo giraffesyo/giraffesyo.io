@@ -95,6 +95,15 @@ const getDurationStringFromDateTimes = (
   return durationStr
 }
 
+const getIntervalStringFromDateTimes = (
+  earlierDT: DateTime,
+  laterDT?: DateTime
+) => {
+  return `${earlierDT.monthLong} ${earlierDT.year} - ${
+    laterDT ? laterDT.monthLong + ' ' + laterDT.year : 'Present'
+  }`
+}
+
 interface ITimelineProps {
   company: ICompany
 }
@@ -114,13 +123,10 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
   const companyStartDate = positions[0].startDate
   const companyEndDate = lastPosition.endDate
 
-  const stillEmployed = !companyEndDate
-
-  const companyDateStr = `${companyStartDate.monthLong} ${
-    companyStartDate.year
-  } - ${
-    stillEmployed ? 'Present' : companyEndDate.month + ' ' + companyEndDate.year
-  }`
+  const companyDateStr = getIntervalStringFromDateTimes(
+    companyStartDate,
+    companyEndDate
+  )
 
   const timeAtCompanyStr = getDurationStringFromDateTimes(
     companyStartDate,
@@ -144,11 +150,10 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
         {[...positions]
           .reverse()
           .map(({ name, details, startDate, endDate }) => {
-            const startDateStr = `${startDate.monthLong} ${startDate.year}`
-            const endDateStr = endDate
-              ? `${endDate.monthLong} ${endDate.year}`
-              : 'present'
-            const timeInPositionStr = startDateStr + ' - ' + endDateStr
+            const timeInPositionStr = getIntervalStringFromDateTimes(
+              startDate,
+              endDate
+            )
             const durationStr = getDurationStringFromDateTimes(
               startDate,
               endDate ?? now
