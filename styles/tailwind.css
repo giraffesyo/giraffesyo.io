@@ -9,3 +9,8 @@
     @apply border-purple-code w-4/5 block border-b-4;
   }
 }
+
+.bullet-item::before {
+  content: '\00B7';
+  margin: 0 5px;
+}

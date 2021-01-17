@@ -77,6 +77,24 @@ const FoundationSoftware: ICompany = {
   },
 }
 
+const getDurationStringFromDateTimes = (
+  earlierDT: DateTime,
+  laterDT: DateTime
+): string => {
+  const lengthOfTime = laterDT.diff(earlierDT, ['years', 'months'])
+
+  const years = lengthOfTime.years
+  const months = Math.floor(lengthOfTime.months)
+
+  const yearsStr =
+    years !== 0 ? `${years} ${years > 1 ? 'years' : 'year'} ` : ''
+  const monthStr =
+    months !== 0 ? `${months} ${months > 1 ? 'months' : 'month'}` : ''
+  let durationStr = `${yearsStr}${monthStr}`
+  if (!durationStr) durationStr = 'Just started!'
+  return durationStr
+}
+
 interface ITimelineProps {
   company: ICompany
 }
@@ -98,24 +116,16 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
 
   const stillEmployed = !companyEndDate
 
-  const timeAtCompany = stillEmployed
-    ? now.diff(companyStartDate, ['years', 'months'])
-    : companyEndDate.diff(companyStartDate, ['years', 'months'])
-
-  const years = timeAtCompany.years
-  const months = Math.floor(timeAtCompany.months)
-
-  const yearsAtCompanyStr =
-    years !== 0 ? `${years} ${years > 1 ? 'years' : 'year'} ` : ''
-  const monthsAtCompanyStr =
-    months !== 0 ? `${months} ${months > 1 ? 'months' : 'month'}` : ''
-  let timeAtCompanyStr = `${yearsAtCompanyStr}${monthsAtCompanyStr}`
-  if (!timeAtCompanyStr) timeAtCompanyStr = 'Just started!'
   const companyDateStr = `${companyStartDate.monthLong} ${
     companyStartDate.year
   } - ${
     stillEmployed ? 'Present' : companyEndDate.month + ' ' + companyEndDate.year
   }`
+
+  const timeAtCompanyStr = getDurationStringFromDateTimes(
+    companyStartDate,
+    companyEndDate ?? now
+  )
   return (
     <div className='flex flex-row my-3 w-2/3'>
       <img
@@ -127,8 +137,10 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
 
       <div className='flex flex-col'>
         <span className='text-3xl w-full mr-2 '>{company.name}</span>
-        <span className='text-green-code'>{companyDateStr}</span>{' '}
-        <span>{timeAtCompanyStr}</span>
+        <div className='text-blue-code'>
+          <span>{companyDateStr}</span>
+          <span className='bullet-item italic'>{timeAtCompanyStr}</span>
+        </div>
         {[...positions]
           .reverse()
           .map(({ name, details, startDate, endDate }) => {
@@ -137,6 +149,10 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
               ? `${endDate.monthLong} ${endDate.year}`
               : 'present'
             const timeInPositionStr = startDateStr + ' - ' + endDateStr
+            const durationStr = getDurationStringFromDateTimes(
+              startDate,
+              endDate ?? now
+            )
             return (
               <div
                 key={company.name + name}
@@ -145,7 +161,10 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
                 <div className={cx(styles.timelinenode)}></div>
                 <div className={cx(styles.timelineitem, 'w-full')}>
                   <span className='text-xl text-red-500'>{name}</span>
-                  <span>{timeInPositionStr}</span>
+                  <div>
+                    <span>{timeInPositionStr}</span>
+                    <span className='bullet-item'>{durationStr}</span>
+                  </div>
                   {details}
                 </div>
               </div>
