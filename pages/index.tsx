@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import AboutMeSection from '../components/AboutMeSection'
-import { Certifications } from '../components/Certifications'
+import CertificationsSection from '../components/CertificationsSection'
 import EducationSection from '../components/EducationSection'
 import WorkExperienceSection from '../components/WorkExperienceSection'
 import Layout from '../components/Layout'
@@ -25,12 +25,12 @@ const IndexPage = () => {
         <EducationSection />
       </div>
       <div className='flex flex-row flex-wrap'>
-        <div className='section-header w-full'>{'<Experience />'}</div>
+        <div className='section-header'>{'<Experience />'}</div>
         <WorkExperienceSection />
       </div>
-      <div className='flex flex-row'>
+      <div className='flex flex-row flex-wrap w-full'>
         <div className='section-header'>{'<Certifications />'}</div>
-        <Certifications />
+        <CertificationsSection />
       </div>
     </Layout>
   )
