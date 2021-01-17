@@ -1,0 +1,27 @@
+.timelinenode {
+  width: 12px;
+  height: 12px;
+  backgorund-color: white;
+  display: block;
+  position: absolute;
+  border: 2px solid gray;
+  border-radius: 50%;
+  margin-right: 8px;
+  top: calc(8px + 1rem);
+  left: 0px;
+}
+
+.timelineitem {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.timelineitem::before {
+  content: '';
+  position: absolute;
+  height: calc(100% - 23px);
+  top: calc(25px + 1rem);
+  left: 5px;
+  width: 2px;
+  background-color: gray;
+}

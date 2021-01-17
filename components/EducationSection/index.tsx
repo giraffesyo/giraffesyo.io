@@ -3,7 +3,8 @@ interface ISchool {
   name: string
   logo: string
   degree?: {
-    title: string
+    type: string
+    major?: string
     subtitle: string
   }
 }
@@ -11,25 +12,27 @@ interface ISchool {
 const schools: ISchool[] = [
   {
     name: 'University of Houston',
-    logo: '/images/uh.svg',
+    logo: '/images/education/uh.svg',
     degree: {
-      title: 'Master of Science, Computer Science',
+      type: 'Master of Science',
+      major: 'Computer Sience',
       subtitle: 'In progress',
     },
   },
   {
     name: 'Oklahoma State University',
-    logo: '/images/osu.svg',
+    logo: '/images/education/osu.svg',
     degree: {
-      title: 'Bachelor of Science, Computer Science',
+      type: 'Bachelor of Science',
+      major: 'Computer Science',
       subtitle: '3.70 GPA',
     },
   },
   {
     name: 'Monterrey Institute of Technology and Higher Education',
-    logo: '/images/tec.svg',
+    logo: '/images/education/tec.svg',
     degree: {
-      title: 'Full year international study abroad',
+      type: 'Full year international study abroad',
       subtitle: '',
     },
   },
@@ -52,8 +55,13 @@ const EducationSection: React.FC = () => {
         )}
       </div>
       <div className='ml-10'>
-        <div className='-semibold text-orange-code text-2xl'>{school.name}</div>
-        <div className='text-blue-code'>{school.degree.title}</div>
+        <div className='font-semibold text-orange-code text-2xl'>
+          {school.name}
+        </div>
+        <div className='text-blue-code'>
+          <strong className='font-semibold'>{school.degree.type}</strong>
+          {school.degree.major && ','} {school.degree.major}
+        </div>
         <div className='text-green-code'>{school.degree.subtitle}</div>
       </div>
     </div>

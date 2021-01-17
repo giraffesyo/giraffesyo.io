@@ -2,9 +2,9 @@ import Head from 'next/head'
 import AboutMeSection from '../components/AboutMeSection'
 import { Certifications } from '../components/Certifications'
 import EducationSection from '../components/EducationSection'
-import { Experience } from '../components/Experience'
+import WorkExperienceSection from '../components/WorkExperienceSection'
 import Layout from '../components/Layout'
-import { SecondaryNavigation } from '../components/SecondaryNavigation'
+// import { SecondaryNavigation } from '../components/SecondaryNavigation'
 
 const IndexPage = () => {
   return (
@@ -18,8 +18,8 @@ const IndexPage = () => {
         />
         <html lang='en' />
       </Head>
-      <SecondaryNavigation />
-      <div className='section-header'>{'<AboutMe />'}</div>
+      {/* <SecondaryNavigation /> */}
+      <div className='section-header mt-2'>{'<AboutMe />'}</div>
       <AboutMeSection />
       <div className='mb-5'>
         <div className='section-header'>{'<Education />'}</div>
@@ -27,7 +27,7 @@ const IndexPage = () => {
       </div>
       <div className='flex flex-row flex-wrap'>
         <div className='section-header w-full'>{'<Experience />'}</div>
-        <Experience />
+        <WorkExperienceSection />
       </div>
       <div className='flex flex-row'>
         <div className='section-header'>{'<Certifications />'}</div>
