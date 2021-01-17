@@ -45,7 +45,7 @@ const ConocoPhillips: ICompany = {
         </p>
       ),
       startDate: DateTime.fromISO('2019-06-01T08:00:00-06:00'),
-      endDate: DateTime.fromISO('2020-11-31T05:00:00-06:00'),
+      endDate: DateTime.fromISO('2020-11-30T17:00:00-06:00'),
     },
     {
       name: 'Cloud Architect',
@@ -56,7 +56,7 @@ const ConocoPhillips: ICompany = {
 }
 
 const FoundationSoftware: ICompany = {
-  name: 'FoundationSoftware',
+  name: 'Foundation Software',
   imgSrc: '/images/workexperience/foundation.svg',
   location: 'Strongsville, OH',
   positions: {
@@ -98,23 +98,24 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
 
   const stillEmployed = !companyEndDate
 
-  const timeAtCompanyInterval = stillEmployed
-    ? Interval.fromDateTimes(companyStartDate, now)
-    : Interval.fromDateTimes(companyStartDate, companyEndDate)
+  const timeAtCompany = stillEmployed
+    ? now.diff(companyStartDate, ['years', 'months'])
+    : companyEndDate.diff(companyStartDate, ['years', 'months'])
 
-  const yearsAtCompany = timeAtCompanyInterval.count('years')
+  const years = timeAtCompany.years
+  const months = Math.floor(timeAtCompany.months)
+
   const yearsAtCompanyStr =
-    yearsAtCompany !== 0
-      ? `${yearsAtCompany} ${yearsAtCompany > 1 ? 'years' : 'year'} `
-      : ''
-  const monthsAtCompany = timeAtCompanyInterval.count('months')
+    years !== 0 ? `${years} ${years > 1 ? 'years' : 'year'} ` : ''
   const monthsAtCompanyStr =
-    monthsAtCompany !== 0
-      ? `${monthsAtCompany} ${monthsAtCompany > 1 ? 'months' : 'month'}`
-      : ''
+    months !== 0 ? `${months} ${months > 1 ? 'months' : 'month'}` : ''
   let timeAtCompanyStr = `${yearsAtCompanyStr}${monthsAtCompanyStr}`
   if (!timeAtCompanyStr) timeAtCompanyStr = 'Just started!'
-
+  const companyDateStr = `${companyStartDate.monthLong} ${
+    companyStartDate.year
+  } - ${
+    stillEmployed ? 'Present' : companyEndDate.month + ' ' + companyEndDate.year
+  }`
   return (
     <div className='flex flex-row my-3 w-2/3'>
       <img
@@ -126,13 +127,14 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
 
       <div className='flex flex-col'>
         <span className='text-3xl w-full mr-2 '>{company.name}</span>
-        <span className='text-green-code'>{timeAtCompanyStr}</span>
+        <span className='text-green-code'>{companyDateStr}</span>{' '}
+        <span>{timeAtCompanyStr}</span>
         {[...positions]
           .reverse()
           .map(({ name, details, startDate, endDate }) => {
             const startDateStr = `${startDate.monthLong} ${startDate.year}`
             const endDateStr = endDate
-              ? `${endDate.month} ${endDate.year}`
+              ? `${endDate.monthLong} ${endDate.year}`
               : 'present'
             const timeInPositionStr = startDateStr + ' - ' + endDateStr
             return (
