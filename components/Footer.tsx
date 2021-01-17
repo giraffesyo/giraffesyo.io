@@ -39,6 +39,7 @@ const Footer: React.FC<IFooterProps> = ({ outerClassnames }) => {
           </Link>
         </li>
       </ul>
+
       <div className='text-purple-code font-light text-4xl'>
         Michael McQuade
       </div>
