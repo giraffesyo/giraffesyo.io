@@ -6,7 +6,7 @@ class Layout extends React.PureComponent {
   render() {
     return (
       <>
-        <div className='container'>{this.props.children}</div>
+        <div className='container mx-auto'>{this.props.children}</div>
         <Footer />
       </>
     )
