@@ -1,36 +1,67 @@
 import Image from 'next/image'
 import styles from './workexperiencesection.module.css'
 import cx from 'classnames'
-
+import { DateTime, Interval } from 'luxon'
+import { useEffect, useState } from 'react'
 // const okchihuahuas = [
 //   '/images/projects/okchihuahuas1.jpeg',
 //   '/images/projects/okchihuahuas2.jpeg',
 //   '/images/projects/okchihuahuas3.jpeg',
 // ]
 
-const COPPositions: IPosition[] = [
-  { name: 'Cloud Architect', details: <p>Cloud architect at big company</p> },
-  {
-    name: 'High Performance Computing',
-    details: (
-      <p>
-        System administrator for Linux high performance computing cluster with
-        over 5000 compute nodes. About 20% of my time is spent maintaining and
-        supporting the existing infrastructure within our HPC environment. The
-        rest of my time is spent working on PoCs, creating and improving
-        processes, and designing, developing, and implementing internal
-        software. Technologies used include: CentOS, Ubuntu, Node.js,
-        PostgreSQL, MySQL, Git, GitLab, Python, Anaconda (python notebooks),
-        Zeppelin, Docker, Singularity, Bash, Cobbler, oVirt, Next.js, React.js,
-        Gradle, Maven, Jenkins, Artifactory, Cisco, AWS, bestpractical
-        request-tracker, ServiceNow, GLPI, OCS
-      </p>
-    ),
-  },
-]
+interface IPosition {
+  name: string
+  details: JSX.Element
+  startDate: DateTime
+  endDate?: DateTime
+}
 
-const FoundationPosition: IPosition[] = [
-  {
+interface ICompany {
+  name: string
+  location: string
+  imgSrc: string
+  positions: IPosition[] | IPosition
+}
+
+const ConocoPhillips: ICompany = {
+  name: 'ConocoPhillips',
+  imgSrc: '/images/workexperience/conocophillips.svg',
+  location: 'Houston, TX',
+  positions: [
+    {
+      name: 'High Performance Computing',
+      details: (
+        <p>
+          System administrator for Linux high performance computing cluster with
+          over 5000 compute nodes. About 20% of my time is spent maintaining and
+          supporting the existing infrastructure within our HPC environment. The
+          rest of my time is spent working on PoCs, creating and improving
+          processes, and designing, developing, and implementing internal
+          software. Technologies used include: CentOS, Ubuntu, Node.js,
+          PostgreSQL, MySQL, Git, GitLab, Python, Anaconda (python notebooks),
+          Zeppelin, Docker, Singularity, Bash, Cobbler, oVirt, Next.js,
+          React.js, Gradle, Maven, Jenkins, Artifactory, Cisco, AWS,
+          bestpractical request-tracker, ServiceNow, GLPI, OCS
+        </p>
+      ),
+      startDate: DateTime.fromISO('2019-06-01T08:00:00-06:00'),
+      endDate: DateTime.fromISO('2020-11-31T05:00:00-06:00'),
+    },
+    {
+      name: 'Cloud Architect',
+      details: <p>Cloud architect at big company</p>,
+      startDate: DateTime.fromISO('2020-12-01T08:00:00-06:00'),
+    },
+  ],
+}
+
+const FoundationSoftware: ICompany = {
+  name: 'FoundationSoftware',
+  imgSrc: '/images/workexperience/foundation.svg',
+  location: 'Strongsville, OH',
+  positions: {
+    startDate: DateTime.fromISO('2018-05-15T08:00:00-06:00'),
+    endDate: DateTime.fromISO('2018-08-21T05:00:00-06:00'),
     name: 'Software Engineering Intern',
     details: (
       <p>
@@ -44,45 +75,80 @@ const FoundationPosition: IPosition[] = [
       </p>
     ),
   },
-]
-
-interface IPosition {
-  name: string
-  details: JSX.Element
 }
 
 interface ITimelineProps {
-  imgSrc: string
-  companyName: string
-  timeAtCompany: string
-  positions: IPosition[]
+  company: ICompany
 }
 
-const Timeline: React.FC<ITimelineProps> = ({
-  imgSrc,
-  companyName,
-  timeAtCompany,
-  positions,
-}) => {
+const Timeline: React.FC<ITimelineProps> = ({ company }) => {
+  const [now, setNow] = useState(DateTime.local())
+  useEffect(() => {
+    setNow(DateTime.local())
+  }, [])
+
+  const positions = Array.isArray(company.positions)
+    ? company.positions
+    : [company.positions]
+
+  const lastPosition = positions[positions.length - 1]
+
+  const companyStartDate = positions[0].startDate
+  const companyEndDate = lastPosition.endDate
+
+  const stillEmployed = !companyEndDate
+
+  const timeAtCompanyInterval = stillEmployed
+    ? Interval.fromDateTimes(companyStartDate, now)
+    : Interval.fromDateTimes(companyStartDate, companyEndDate)
+
+  const yearsAtCompany = timeAtCompanyInterval.count('years')
+  const yearsAtCompanyStr =
+    yearsAtCompany !== 0
+      ? `${yearsAtCompany} ${yearsAtCompany > 1 ? 'years' : 'year'} `
+      : ''
+  const monthsAtCompany = timeAtCompanyInterval.count('months')
+  const monthsAtCompanyStr =
+    monthsAtCompany !== 0
+      ? `${monthsAtCompany} ${monthsAtCompany > 1 ? 'months' : 'month'}`
+      : ''
+  let timeAtCompanyStr = `${yearsAtCompanyStr}${monthsAtCompanyStr}`
+  if (!timeAtCompanyStr) timeAtCompanyStr = 'Just started!'
+
   return (
-    <div className='flex flex-row my-3 w-2/3 '>
-      <div className='h-full w-full relative '>
-        <Image src={imgSrc} alt={companyName + ' logo'} layout='fill' />
-      </div>
+    <div className='flex flex-row my-3 w-2/3'>
+      <img
+        width='100'
+        height='100'
+        src={company.imgSrc}
+        alt={company.name + ' logo'}
+      />
+
       <div className='flex flex-col'>
-        <span className='text-3xl w-full mr-2 '>{companyName}</span>
-        <span className='text-green-code'>{timeAtCompany}</span>
-        {positions.map(({ name, details }) => {
-          return (
-            <div className='flex flex-row items-center relative'>
-              <div className={cx(styles.timelinenode)}></div>
-              <div className={cx(styles.timelineitem, 'w-full')}>
-                <span className='text-xl text-red-500'>{name}</span>
-                {details}
+        <span className='text-3xl w-full mr-2 '>{company.name}</span>
+        <span className='text-green-code'>{timeAtCompanyStr}</span>
+        {[...positions]
+          .reverse()
+          .map(({ name, details, startDate, endDate }) => {
+            const startDateStr = `${startDate.monthLong} ${startDate.year}`
+            const endDateStr = endDate
+              ? `${endDate.month} ${endDate.year}`
+              : 'present'
+            const timeInPositionStr = startDateStr + ' - ' + endDateStr
+            return (
+              <div
+                key={company.name + name}
+                className='flex flex-row items-center relative'
+              >
+                <div className={cx(styles.timelinenode)}></div>
+                <div className={cx(styles.timelineitem, 'w-full')}>
+                  <span className='text-xl text-red-500'>{name}</span>
+                  <span>{timeInPositionStr}</span>
+                  {details}
+                </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
       </div>
     </div>
   )
@@ -91,20 +157,14 @@ const Timeline: React.FC<ITimelineProps> = ({
 const WorkExperienceSection: React.FC = () => {
   return (
     <div className='flex flex-col w-full items-center'>
-      <Timeline
-        positions={COPPositions}
-        companyName='ConocoPhillips'
-        timeAtCompany='1 year 8 months'
-        imgSrc='/images/workexperience/conocophillips.svg'
-      />
-      <Timeline
-        positions={FoundationPosition}
-        companyName='Foundation Software'
-        timeAtCompany='3 months'
-        imgSrc='/images/workexperience/foundation.svg'
-      />
+      <Timeline company={ConocoPhillips} />
+      <Timeline company={FoundationSoftware} />
+    </div>
+  )
+}
 
-      {/* <Project images={okchihuahuas} title='Prairie Glade Chihuahuas Web App'>
+{
+  /* <Project images={okchihuahuas} title='Prairie Glade Chihuahuas Web App'>
         <p>
           Developed a web app for an Oklahoma Chihuahua Kennel. The web app uses{' '}
           <a href='https://github.com/facebook/create-react-app'>
@@ -116,9 +176,7 @@ const WorkExperienceSection: React.FC = () => {
           knowledge. In addition, it was important that the site was responsive,
           allowing the client to add dogs from their mobile device.
         </p>
-      </Project> */}
-    </div>
-  )
+      </Project> */
 }
 
 export default WorkExperienceSection
