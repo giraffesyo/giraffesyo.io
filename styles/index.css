@@ -1,35 +1,7 @@
 @import '~slick-carousel/slick/slick.css';
 @import '~slick-carousel/slick/slick-theme.css';
 
-body {
-  background-color: #292929;
-  color: #fff;
-  font-family: 'Raleway', sans-serif;
-}
-
 /* Below is from Layout.css */
-
-body {
-  background-color: rgb(30, 30, 30);
-}
-
-nav.primarynav {
-  background-color: rgb(60, 60, 60);
-}
-
-.AboutMe h1 {
-  font-weight: 200;
-}
-
-.AboutMe img {
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
-}
-
-.AboutMe p {
-  color: white;
-}
 
 .primarynav .navbar-brand {
   font-size: 3em;
@@ -39,73 +11,6 @@ nav.primarynav {
 
 .blog div {
   margin-bottom: 5vh;
-}
-
-.fa {
-  font-size: 3em;
-  border-radius: 50%;
-}
-
-.fa:hover {
-  opacity: 0.5;
-}
-
-.fa-twitter,
-.fa-twitter:hover {
-  color: rgb(85, 172, 238);
-}
-
-.fa-linkedin,
-.fa-linkedin:hover {
-  color: rgb(0, 123, 181);
-}
-
-.fa-github,
-.fa-github:hover {
-  color: rgb(255, 255, 255);
-}
-
-@media screen and (max-width: 767px) {
-  .primarynav .navbar-brand {
-    font-size: 0.9em;
-  }
-  .fa {
-    font-size: 2em;
-  }
-}
-
-.light-blue-text {
-  color: rgb(150, 220, 250);
-}
-
-.dark-blue-text {
-  color: rgb(74, 156, 216);
-}
-
-a:hover.dark-blue-text {
-  color: rgb(74, 156, 216);
-  opacity: 0.8;
-}
-
-.light-purple-text {
-  color: rgb(190, 135, 190) !important;
-}
-
-a:hover.light-purple-text {
-  color: rgb(190, 135, 190) !important;
-  opacity: 0.8;
-}
-
-.green-text {
-  color: rgb(68, 129, 75);
-}
-
-.white-text {
-  color: rgb(255, 255, 255);
-}
-
-.code-font {
-  font-family: monaco, Consolas, 'Lucida Console', monospace;
 }
 
 .PrairieDog {

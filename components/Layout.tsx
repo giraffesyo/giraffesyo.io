@@ -37,7 +37,7 @@ const Layout: React.FC = (props) => {
       >
         <FaYinYang />
       </div>
-      <div className='container mx-auto mb-32'>{props.children}</div>
+      <div className='container mx-auto mb-32 '>{props.children}</div>
       <Footer />
     </>
   )

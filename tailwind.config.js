@@ -17,13 +17,14 @@ module.exports = {
         green: { code: '#6A9955' },
         gray: {
           codelight: '#292929',
-          codedark: '#1e1e1e',
+          codedark: 'rgb(30, 30, 30)',
           codelightest: '#3c3c3c',
         },
         orange: { code: 'rgb(184, 85, 40)' },
       },
       fontFamily: {
         sans: ['Raleway', 'sans-serif'],
+        code: ['monaco', 'Consolas', 'Lucida Console', 'monospace'],
       },
     },
   },

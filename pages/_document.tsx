@@ -16,7 +16,7 @@ class MyDocument extends Document {
             }}
           ></script>
         </Head>
-        <body>
+        <body className='dark:bg-gray-codedark dark:text-white'>
           <script dangerouslySetInnerHTML={{ __html: '0' }} />
           <Main />
           <NextScript />
