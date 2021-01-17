@@ -16,7 +16,6 @@ const IndexPage = () => {
           name='description'
           content={`Michael McQuade's personal site: Michael is a full-stack software engineer with a passion for web and augmented reality devleopment located in Houston, TX.`}
         />
-        <html lang='en' />
       </Head>
       {/* <SecondaryNavigation /> */}
       <div className='section-header mt-2'>{'<AboutMe />'}</div>
