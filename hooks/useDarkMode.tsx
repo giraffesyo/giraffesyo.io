@@ -18,10 +18,10 @@ const getCurrentTheme = (): ThemeType => {
     ? 'dark'
     : 'light'
   const theme = localStorage.theme ?? systemPreference
-  console.log(
-    `system pref: ${systemPreference}, local storage: ${localStorage.theme} get current theme returned `,
-    theme
-  )
+  // console.log(
+  //   `system pref: ${systemPreference}, local storage: ${localStorage.theme} get current theme returned `,
+  //   theme
+  // )
   return theme
 }
 
@@ -35,7 +35,7 @@ const useDarkMode = (): [
   const [theme, setTheme] = useState<ThemeType>()
 
   const toggleTheme = useCallback(() => {
-    console.log('toggle theme called, theme was', theme)
+    // console.log('toggle theme called, theme was', theme)
     if (theme === 'dark') {
       setTheme('light')
     } else if (theme === 'light') {
