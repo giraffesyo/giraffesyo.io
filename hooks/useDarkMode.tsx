@@ -1,6 +1,6 @@
 import { SetStateAction, useCallback, useEffect, useState } from 'react'
 
-const switchTheme = (theme) => {
+const switchTheme = (theme: ThemeType) => {
   // if (!window) return
   if (theme === 'light') {
     localStorage.setItem('theme', 'light')
