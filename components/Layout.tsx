@@ -18,7 +18,7 @@ const Layout: React.FC = (props) => {
   return (
     <>
       <div
-        className='absolute right-0 mr-3 text-2xl cursor-pointer'
+        className='fixed right-0 mr-3 text-2xl cursor-pointer'
         onClick={toggleTheme}
       >
         <FaYinYang />
