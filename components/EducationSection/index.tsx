@@ -69,7 +69,9 @@ const EducationSection: React.FC = () => {
           <strong className='font-semibold'>{school.degree.type}</strong>
           {school.degree.major && ','} {school.degree.major}
         </div>
-        <div className='text-green-code'>{school.degree.subtitle}</div>
+        <div className='text-black italic dark:text-green-code'>
+          {school.degree.subtitle}
+        </div>
       </div>
     </div>
   ))

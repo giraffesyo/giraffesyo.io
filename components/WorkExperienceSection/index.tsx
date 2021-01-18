@@ -167,7 +167,9 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
                 <div className={cx(styles.timelineitem, 'w-full')}>
                   <span className='text-xl text-red-500'>{name}</span>
                   <div>
-                    <span>{timeInPositionStr}</span>
+                    <span className='text-blue-code dark:text-green-code'>
+                      {timeInPositionStr}
+                    </span>
                     <span className='bullet-item'>{durationStr}</span>
                   </div>
                   {details}
