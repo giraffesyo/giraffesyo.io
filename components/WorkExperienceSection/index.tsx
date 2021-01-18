@@ -49,7 +49,7 @@ const ConocoPhillips: ICompany = {
     },
     {
       name: 'Cloud Architect',
-      details: <p>Cloud architect at big company</p>,
+      details: <p></p>,
       startDate: DateTime.fromISO('2020-12-01T08:00:00-06:00'),
     },
   ],
