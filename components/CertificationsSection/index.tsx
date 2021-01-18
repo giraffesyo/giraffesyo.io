@@ -14,8 +14,14 @@ const Certification: React.FC<ICertificationProps> = ({
   href,
 }) => {
   return (
-    <div className='flex flex-row'>
-      <img src={imgSrc} alt={name} width={200} height={200} />
+    <div className='flex flex-col md:flex-row '>
+      <img
+        className='self-center'
+        src={imgSrc}
+        alt={name}
+        width={200}
+        height={200}
+      />
       <div className='flex flex-col items-center justify-center'>
         <span className='font-semibold'>{name}</span>
         <span className='text-green-code'>Awarded {awardDate}</span>
@@ -29,7 +35,7 @@ const Certification: React.FC<ICertificationProps> = ({
 
 const CertificationsSection: React.FC = () => {
   return (
-    <div className='w-full flex flex-col md:flex-row justify-center text-center'>
+    <div className='w-full flex flex-col md:flex-row justify-center text-center items-center'>
       <Certification
         href='https://www.youracclaim.com/badges/37a99ac7-8e80-4693-8c09-48c709d9c8f9/public_url'
         imgSrc='/images/certifications/aws_cloud_practitioner_badge.png'
