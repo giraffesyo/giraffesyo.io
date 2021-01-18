@@ -1,16 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Footer from './Footer'
 import { FaYinYang } from 'react-icons/fa'
-import useDarkMode from '../hooks/useDarkMode'
+
+const toggleTheme = (theme: 'light' | 'dark') => {
+  if (theme === 'dark') {
+    localStorage.theme = 'light'
+    document.querySelector('html').classList.remove('dark')
+  } else {
+    localStorage.theme = 'dark'
+    document.querySelector('html').classList.add('dark')
+  }
+}
 
 const Layout: React.FC = (props) => {
-  const [theme, setTheme, toggleTheme] = useDarkMode()
+  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+
+  const ToggleDarkMode = () => {
+    // find out if they have a darkmode setting already
+    if ('theme' in localStorage) {
+      // reverse whatever it is
+      const theme = localStorage.theme
+      toggleTheme(theme)
+    } else {
+      // get their current system settings
+      const theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+      toggleTheme(theme)
+    }
+  }
+  // set initialTheme
+  useEffect(() => {
+    setTheme(
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+    )
+  }, [])
+  // update state when theme changes
+  useEffect(() => {
+    setTheme(localStorage.theme)
+  }, [theme])
+
   return (
     <>
       <div
         className='absolute right-0 mr-3 text-2xl cursor-pointer'
-        onClick={toggleTheme}
+        onClick={ToggleDarkMode}
       >
         <FaYinYang />
       </div>
