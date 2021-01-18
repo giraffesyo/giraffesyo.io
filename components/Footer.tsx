@@ -5,11 +5,11 @@ interface IFooterProps {
   outerClassNames?: string
 }
 
-const Footer: React.FC<IFooterProps> = ({ outerClassnames }) => {
+const Footer: React.FC<IFooterProps> = ({ outerClassNames }) => {
   return (
     <div
       className={cx(
-        outerClassnames,
+        outerClassNames,
         'flex flex-row justify-between fixed bottom-0 bg-gray-codelightest w-full p-2'
       )}
     >
