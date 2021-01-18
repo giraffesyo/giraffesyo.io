@@ -13,8 +13,8 @@ import Link from 'next/link'
 class SecondaryNavigation extends React.PureComponent {
   location = { pathname: '/' }
 
-  handleItemClick = (e, { name }) =>
-    this.state.changeActiveItem({ activeItem: name })
+  // handleItemClick = (e, { name }) =>
+  //   this.state.changeActiveItem({ activeItem: name })
 
   render() {
     //FIXME: Harcoded this in transition to Next.js
@@ -28,13 +28,13 @@ class SecondaryNavigation extends React.PureComponent {
       activeItem = 'Blog'
     }
     return (
-      <div expand='xs'>
-        <div className='ml-auto' navbar>
+      <div>
+        <div className='ml-auto'>
           <div className={`light-purple-text ${styles.large}`}>
             <div
               className={styles.button}
-              name='About Me'
-              active={activeItem === 'About Me'}
+              // name='About Me'
+              // active={activeItem === 'About Me'}
             >
               <Link href='/'>
                 <a>About</a>
