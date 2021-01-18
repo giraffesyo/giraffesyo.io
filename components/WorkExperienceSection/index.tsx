@@ -133,7 +133,7 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
     companyEndDate ?? now
   )
   return (
-    <div className='flex flex-row my-3 w-2/3'>
+    <div className='flex flex-row my-3 w-2/3 dark'>
       <img
         width='100'
         height='100'

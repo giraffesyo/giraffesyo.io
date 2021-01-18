@@ -15,3 +15,7 @@
   content: '\00B7';
   margin: 0 5px;
 }
+
+.invert {
+  filter: invert(100%);
+}
