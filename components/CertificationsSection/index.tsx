@@ -29,7 +29,7 @@ const Certification: React.FC<ICertificationProps> = ({
 
 const CertificationsSection: React.FC = () => {
   return (
-    <div className='w-full flex flex-row justify-center'>
+    <div className='w-full flex flex-col md:flex-row justify-center text-center'>
       <Certification
         href='https://www.youracclaim.com/badges/37a99ac7-8e80-4693-8c09-48c709d9c8f9/public_url'
         imgSrc='/images/certifications/aws_cloud_practitioner_badge.png'

@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const AboutMeSection = () => {
   return (
-    <div className='flex flex-row items-center justify-center w-full'>
+    <div className='flex flex-col md:flex-row items-center justify-center w-full'>
       <div className='h-64 w-64 relative'>
         <Image
           className='rounded-full'
@@ -15,7 +15,7 @@ const AboutMeSection = () => {
           alt='Developer Michael McQuade (giraffesyo)'
         />
       </div>
-      <div className='w-1/2 ml-8 '>
+      <div className='md:w-1/2 mx-3 my-2 md:ml-8 '>
         <p className='text-2xl text-blue-code'>Hello! I'm Michael McQuade.</p>
         <p className='my-1'>
           I am a full-stack <strong>software engineer</strong> working with

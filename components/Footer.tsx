@@ -13,7 +13,7 @@ const Footer: React.FC<IFooterProps> = ({ outerClassnames }) => {
         'flex flex-row justify-between fixed bottom-0 bg-gray-codelightest w-full p-2'
       )}
     >
-      <ul className='text-5xl flex flex-row'>
+      <ul className='text-3xl md:text-5xl flex flex-row'>
         <li className='mx-2 text-white hover:opacity-80'>
           <Link href='https://github.com/giraffesyo'>
             <a target='_blank' rel='noopener'>
@@ -40,7 +40,7 @@ const Footer: React.FC<IFooterProps> = ({ outerClassnames }) => {
         </li>
       </ul>
 
-      <div className='text-purple-code font-light text-4xl'>
+      <div className='text-purple-code font-light text-xl md:text-4xl'>
         Michael McQuade
       </div>
     </div>

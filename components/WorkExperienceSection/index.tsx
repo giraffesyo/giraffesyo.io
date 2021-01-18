@@ -133,7 +133,7 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
     companyEndDate ?? now
   )
   return (
-    <div className='flex flex-row my-3 w-2/3 dark'>
+    <div className='flex flex-col md:flex-row my-3 w-5/6 md:w-2/3'>
       <img
         width='100'
         height='100'
@@ -182,7 +182,7 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
 
 const WorkExperienceSection: React.FC = () => {
   return (
-    <div className='flex flex-col w-full items-center'>
+    <div className='flex flex-col w-full items-center mb-10'>
       <Timeline company={ConocoPhillips} />
       <Timeline company={FoundationSoftware} />
     </div>

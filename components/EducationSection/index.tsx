@@ -48,10 +48,10 @@ const EducationSection: React.FC = () => {
   console.log(theme)
   const Schools = schools.map((school) => (
     <div
-      className='grid grid-cols-2 w-2/3 ml-auto mr-auto  items-center my-4'
+      className='grid md:grid-cols-2 w-full md:w-2/3 ml-auto mr-auto  items-center my-4'
       key={school.name}
     >
-      <div className='h-32 w-64 relative justify-self-end'>
+      <div className='h-32 w-64 relative justify-self-center md:justify-self-end'>
         <Image
           quality={80}
           layout='fill'
