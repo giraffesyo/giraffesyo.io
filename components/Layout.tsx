@@ -4,16 +4,6 @@ import Footer from './Footer'
 import { FaYinYang } from 'react-icons/fa'
 import useDarkMode from '../hooks/useDarkMode'
 
-const toggleTheme = (theme: 'light' | 'dark') => {
-  if (theme === 'dark') {
-    localStorage.theme = 'light'
-    document.querySelector('html').classList.remove('dark')
-  } else if (theme === 'light') {
-    localStorage.theme = 'dark'
-    document.querySelector('html').classList.add('dark')
-  }
-}
-
 const Layout: React.FC = (props) => {
   const [theme, setTheme, toggleDarkMode] = useDarkMode()
 
