@@ -62,7 +62,7 @@ const EducationSection: React.FC = () => {
         />
       </div>
       <div className='ml-10'>
-        <div className='font-semibold text-orange-code text-2xl'>
+        <div className='font-semibold dark:text-orange-code text-2xl'>
           {school.name}
         </div>
         <div className='text-blue-code'>

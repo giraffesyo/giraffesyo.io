@@ -22,7 +22,7 @@ const Certification: React.FC<ICertificationProps> = ({
       />
       <div className='flex flex-col items-center justify-center'>
         <span className='font-semibold'>{name}</span>
-        <span className='text-green-code'>Awarded {awardDate}</span>
+        <span className='dark:text-green-code'>Awarded {awardDate}</span>
         <a className='text-blue-code' href={href}>
           View credential
         </a>
