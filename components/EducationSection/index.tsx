@@ -1,7 +1,10 @@
+import { useTheme } from 'next-themes'
 import Image from 'next/image'
+// import useDarkMode from '../../hooks/useDarkMode'
 interface ISchool {
   name: string
   logo: string
+  darklogo?: string
   degree?: {
     type: string
     major?: string
@@ -13,6 +16,7 @@ const schools: ISchool[] = [
   {
     name: 'University of Houston',
     logo: '/images/education/uh.svg',
+    darklogo: '/images/education/uh_dark.svg',
     degree: {
       type: 'Master of Science',
       major: 'Computer Sience',
@@ -31,6 +35,7 @@ const schools: ISchool[] = [
   {
     name: 'Monterrey Institute of Technology and Higher Education',
     logo: '/images/education/tec.svg',
+    darklogo: '/images/education/tec_dark.svg',
     degree: {
       type: 'Full year international study abroad',
       subtitle: '',
@@ -39,20 +44,22 @@ const schools: ISchool[] = [
 ]
 
 const EducationSection: React.FC = () => {
+  const { theme } = useTheme()
+  console.log(theme)
   const Schools = schools.map((school) => (
     <div
       className='grid grid-cols-2 w-2/3 ml-auto mr-auto  items-center my-4'
       key={school.name}
     >
       <div className='h-32 w-64 relative justify-self-end'>
-        {school.logo && (
-          <Image
-            quality={80}
-            layout='fill'
-            alt={school.name + ' logo'}
-            src={school.logo}
-          />
-        )}
+        <Image
+          quality={80}
+          layout='fill'
+          alt={school.name + ' logo'}
+          src={
+            theme === 'dark' && school.darklogo ? school.darklogo : school.logo
+          }
+        />
       </div>
       <div className='ml-10'>
         <div className='font-semibold text-orange-code text-2xl'>

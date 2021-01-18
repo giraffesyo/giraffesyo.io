@@ -1,17 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 
 import Footer from './Footer'
 import { FaYinYang } from 'react-icons/fa'
-import useDarkMode from '../hooks/useDarkMode'
+import { useTheme } from 'next-themes'
 
 const Layout: React.FC = (props) => {
-  const [theme, setTheme, toggleDarkMode] = useDarkMode()
+  const { theme, setTheme } = useTheme()
+
+  const toggleTheme = useCallback(() => {
+    if (theme === 'light') {
+      setTheme('dark')
+    } else if (theme === 'dark') {
+      setTheme('light')
+    }
+  }, [theme])
 
   return (
     <>
       <div
         className='absolute right-0 mr-3 text-2xl cursor-pointer'
-        onClick={toggleDarkMode}
+        onClick={toggleTheme}
       >
         <FaYinYang />
       </div>
