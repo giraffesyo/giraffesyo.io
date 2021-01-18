@@ -10,7 +10,7 @@ const Footer: React.FC<IFooterProps> = ({ outerClassNames }) => {
     <div
       className={cx(
         outerClassNames,
-        'flex flex-row justify-between fixed bottom-0 bg-gray-codelightest w-full p-2'
+        'flex flex-row justify-between fixed bottom-0 bg-gray-900 dark:bg-gray-codelightest w-full p-2'
       )}
     >
       <ul className='text-3xl md:text-5xl flex flex-row'>
@@ -40,7 +40,7 @@ const Footer: React.FC<IFooterProps> = ({ outerClassNames }) => {
         </li>
       </ul>
 
-      <div className='text-purple-code font-light text-xl md:text-4xl'>
+      <div className='text-white dark:text-purple-code font-light text-xl md:text-4xl'>
         Michael McQuade
       </div>
     </div>
