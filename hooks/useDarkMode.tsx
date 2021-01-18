@@ -28,9 +28,9 @@ const getCurrentTheme = (): ThemeType => {
 type ThemeType = 'light' | 'dark'
 
 const useDarkMode = (): [
-  ThemeType,
-  React.Dispatch<SetStateAction<ThemeType>>,
-  () => void
+  currentTheme: ThemeType,
+  setTheme: React.Dispatch<SetStateAction<ThemeType>>,
+  toggleTheme: () => void
 ] => {
   const [theme, setTheme] = useState<ThemeType>()
 
@@ -51,7 +51,7 @@ const useDarkMode = (): [
   useEffect(() => {
     switchTheme(theme)
   }, [theme])
-  return [theme, setTheme, toggleTheme]
+  return [ theme, setTheme, toggleTheme]
 }
 
 export default useDarkMode
