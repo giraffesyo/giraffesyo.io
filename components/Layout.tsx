@@ -8,7 +8,7 @@ const toggleTheme = (theme: 'light' | 'dark') => {
   if (theme === 'dark') {
     localStorage.theme = 'light'
     document.querySelector('html').classList.remove('dark')
-  } else {
+  } else if (theme === 'light') {
     localStorage.theme = 'dark'
     document.querySelector('html').classList.add('dark')
   }
