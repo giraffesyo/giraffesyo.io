@@ -143,8 +143,10 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
 
       <div className='flex flex-col'>
         <span className='text-3xl w-full mr-2 '>{company.name}</span>
-        <div className='text-blue-code'>
-          <span>{companyDateStr}</span>
+        <div>
+          <span className='text-blue-700 font-normal dark:text-blue-code'>
+            {companyDateStr}
+          </span>
           <span className='bullet-item italic'>{timeAtCompanyStr}</span>
         </div>
         {[...positions]
@@ -167,10 +169,10 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
                 <div className={cx(styles.timelineitem, 'w-full')}>
                   <span className='text-xl text-red-500'>{name}</span>
                   <div>
-                    <span className='text-blue-code dark:text-green-code'>
+                    <span className=' text-blue-700 font-normal dark:text-green-code'>
                       {timeInPositionStr}
                     </span>
-                    <span className='bullet-item'>{durationStr}</span>
+                    <span className='italic bullet-item'>{durationStr}</span>
                   </div>
                   {details}
                 </div>
