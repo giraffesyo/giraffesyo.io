@@ -32,9 +32,13 @@ const ConocoPhillips: ICompany = {
       name: 'High Performance Computing',
       details: (
         <div>
-          <h3 className='font-semibold'>Cluster information aggregrator</h3>
+          <h3 className='font-semibold dark:text-purple-code'>
+            Cluster information aggregrator
+          </h3>
           <div className='ml-5'>
-            <strong className='font-medium'>Background: </strong>
+            <strong className='font-medium dark:text-blue-code'>
+              Background:{' '}
+            </strong>
             During my time in this position, the HPC had over 5,000 compute
             nodes. With such a large amount of computers, and a small team, it
             can be hard to keep track of everything. In order to remediate this,
@@ -66,18 +70,20 @@ const ConocoPhillips: ICompany = {
               GraphQL access to the PostgresQL database
             </li>
           </ul>
-          <h3 className='font-semibold'>
+          <h3 className='font-semibold dark:text-purple-code'>
             Visual cluster information interface
           </h3>
           <div>
-            <strong className='font-medium'>Background: </strong> While the data
-            in the information aggregator I created was easier to access than
-            previously, it still required access it via API, SQL, or GraphQL. It
-            would be easier if there was some visual way to interpret the
-            information. Because of this, I created a React.js application which
-            was a visual representation of our data center, as if you were
-            looking at it from a top-down view. You can drill down into
-            individual racks, and then into servers, and see real time
+            <strong className='font-medium dark:text-blue-code'>
+              Background:{' '}
+            </strong>{' '}
+            While the data in the information aggregator I created was easier to
+            access than previously, it still required access it via API, SQL, or
+            GraphQL. It would be easier if there was some visual way to
+            interpret the information. Because of this, I created a React.js
+            application which was a visual representation of our data center, as
+            if you were looking at it from a top-down view. You can drill down
+            into individual racks, and then into servers, and see real time
             information about those servers. The views of the servers are color
             coded by either power usage, CPU usage, or temperature, so you can
             easily identify racks or nodes with outliers.
@@ -137,9 +143,13 @@ const FoundationSoftware: ICompany = {
     name: 'Software Engineering Intern',
     details: (
       <div>
-        <h3 className='font-semibold'>Marketing website rewrite</h3>
+        <h3 className='font-semibold dark:text-purple-code'>
+          Marketing website rewrite
+        </h3>
         <div className='ml-5'>
-          <strong className='font-medium'>Background: </strong>
+          <strong className='font-medium dark:text-blue-code'>
+            Background:{' '}
+          </strong>
           Their marketing website was hosted on WordPress and had been hacked
           repeatedly, creating a negative image for the company. They asked if I
           had any ideas and I proposed switching the site to use Gatsby.js, as
@@ -160,13 +170,17 @@ const FoundationSoftware: ICompany = {
             bugs along the way
           </li>
         </ul>
-        <h3 className='font-semibold'>UPS Label Printer</h3>
+        <h3 className='font-semibold dark:text-purple-code'>
+          UPS Label Printer
+        </h3>
         <div className='ml-5'>
-          <strong className='font-medium'>Background: </strong>As part of their
-          business, Foundation Software mails paychecks to thousands of
-          customers per week. The process of printing the labels for this was
-          done with Microsoft Word and folders. This project replaced that
-          process with an automated system.
+          <strong className='font-medium dark:text-blue-code'>
+            Background:{' '}
+          </strong>
+          As part of their business, Foundation Software mails paychecks to
+          thousands of customers per week. The process of printing the labels
+          for this was done with Microsoft Word and folders. This project
+          replaced that process with an automated system.
         </div>
         <ul className='list-disc ml-10'>
           <li>
