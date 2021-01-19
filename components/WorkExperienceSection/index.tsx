@@ -64,15 +64,57 @@ const FoundationSoftware: ICompany = {
     endDate: DateTime.fromISO('2018-08-21T05:00:00-06:00'),
     name: 'Software Engineering Intern',
     details: (
-      <p>
-        Completed an 8-week summer internshp at Foundation Software. During my
-        time there I created an internal label printer application using
-        create-react-app, Microsoft SQL Server, Windows Integrated Security
-        (Windows Auth), and Express.js. I also created a proof-of-concept
-        rewrite of their marketing website, foundationsoft.com using Gatsby.js.
-        This POC demonstrated an improvement of load times from 6.2 seconds to
-        800ms over the current site.
-      </p>
+      <div>
+        <div className='font-semibold'>Marketing website rewrite</div>
+        <div className='ml-5'>
+          <strong className='font-medium'>Background: </strong>
+          Their marketing website was hosted on WordPress and had been hacked
+          repeatedly, creating a negative image for the company. They asked if I
+          had any ideas and I proposed switching the site to use Gatsby.js, as
+          statically generated sites are inherently more secure.
+        </div>
+        <ul className='list-disc'>
+          <li className='ml-5'>
+            Utilized Gatsby.js to improve page load speeds from 6.2 seconds on
+            Wordpress down to 800 ms
+          </li>
+          <li className='ml-5'>Transitioned site to Netlify CDN</li>
+          <li className='ml-5'>
+            Setup instance of Netlify CMS, an open source CMS which is powered
+            by Git. This allowed managing pages with the Microsoft TFS.
+          </li>
+          <li className='ml-5'>
+            Rewrote 40 pages into React.js components and containers, fixing UI
+            bugs along the way
+          </li>
+        </ul>
+        <div className='font-semibold'>UPS Label Printer</div>
+        <div className='ml-5'>
+          <strong className='font-medium'>Background: </strong>As part of their
+          business, Foundation Software mails paychecks to thousands of
+          customers per week. The process of printing the labels for this was
+          done with Microsoft Word and folders. This project replaced that
+          process with an automated system.
+        </div>
+        <ul className='list-disc'>
+          <li className='ml-5'>
+            Created internal label printer application which interfaces with a
+            UPS label printer.
+          </li>
+          <li className='ml-5'>
+            ETL existing labels from thousands of word documents into a new MS
+            SQL database using PowerShell.
+          </li>
+          <li className='ml-5'>
+            Bootstrapped CentOS 7 server to host Node.js/Express app to serve
+            the React frontend
+          </li>
+          <li className='ml-5'>
+            Created Electron version which could access the MSSQL database using
+            Windows Integrated Security (active directory SSO on Windows).
+          </li>
+        </ul>
+      </div>
     ),
   },
 }
