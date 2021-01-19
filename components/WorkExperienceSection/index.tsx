@@ -123,15 +123,15 @@ const ConocoPhillips: ICompany = {
             ]}
           >
             While the data in the information aggregator I created was easier to
-            access than previously, it still required access it via API, SQL, or
-            GraphQL. It would be easier if there was some visual way to
-            interpret the information. Because of this, I created a React.js
-            application which was a visual representation of our data center, as
-            if you were looking at it from a top-down view. You can drill down
-            into individual racks, and then into servers, and see real time
-            information about those servers. The views of the servers are color
-            coded by either power usage, CPU usage, or temperature, so you can
-            easily identify racks or nodes with outliers.
+            access than previously, it still required users to access it via
+            API, SQL, or GraphQL. It would be easier if there was some visual
+            way to interpret the information. Because of this, I created a
+            React.js application which was a visual representation of our data
+            center, as if you were looking at it from a top-down view. You can
+            drill down into individual racks, and then into servers, and see
+            real time information about those servers. The views of the servers
+            are color coded by either power usage, CPU usage, or temperature, so
+            you can easily identify racks or nodes with outliers.
           </Project>
         </div>
       ),
