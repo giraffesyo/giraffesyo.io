@@ -70,7 +70,7 @@ const ConocoPhillips: ICompany = {
                 directly from the Node.js cache server
               </li>,
               <li>
-                Created "point-in-time" PostgresQL database which has a co py of
+                Created "point-in-time" PostgresQL database which has a copy of
                 all information in the cache server, allowing for alternative
                 querying
               </li>,
