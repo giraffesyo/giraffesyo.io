@@ -117,7 +117,7 @@ const ConocoPhillips: ICompany = {
         </div>
       ),
       startDate: DateTime.fromISO('2019-06-01T08:00:00-06:00'),
-      endDate: DateTime.fromISO('2020-11-30T17:00:00-06:00'),
+      endDate: DateTime.fromISO('2020-12-01T08:00:00-06:00'),
     },
     {
       name: 'Cloud Architect',
