@@ -31,18 +31,90 @@ const ConocoPhillips: ICompany = {
     {
       name: 'High Performance Computing',
       details: (
-        <p>
-          System administrator for Linux high performance computing cluster with
-          over 5000 compute nodes. About 20% of my time is spent maintaining and
-          supporting the existing infrastructure within our HPC environment. The
-          rest of my time is spent working on PoCs, creating and improving
-          processes, and designing, developing, and implementing internal
-          software. Technologies used include: CentOS, Ubuntu, Node.js,
-          PostgreSQL, MySQL, Git, GitLab, Python, Anaconda (python notebooks),
-          Zeppelin, Docker, Singularity, Bash, Cobbler, oVirt, Next.js,
-          React.js, Gradle, Maven, Jenkins, Artifactory, Cisco, AWS,
-          bestpractical request-tracker, ServiceNow, GLPI, OCS
-        </p>
+        <div>
+          <h3 className='font-semibold'>Cluster information aggregrator</h3>
+          <div className='ml-5'>
+            <strong className='font-medium'>Background: </strong>
+            During my time in this position, the HPC had over 5,000 compute
+            nodes. With such a large amount of computers, and a small team, it
+            can be hard to keep track of everything. In order to remediate this,
+            I created a software which aggregated data from all 5,000+ machines
+            into a single Node.js cache server and backing database.
+          </div>
+          <ul className='list-disc ml-10'>
+            <li>
+              Created Python script which runs and writes relevant system
+              information (cpu usage, temperatures, power consumption, etc.) to
+              networked filesystem every 3 minutes
+            </li>
+            <li>
+              Created a Node.js server which monitors mounted filesystem,
+              updating cache of cluster information. Server written in
+              TypeScript.
+            </li>
+            <li>
+              Created RESTful api using Express.js which served information
+              directly from the Node.js cache server
+            </li>
+            <li>
+              Created "point-in-time" PostgresQL database which has a co py of
+              all information in the cache server, allowing for alternative
+              querying
+            </li>
+            <li>
+              Setup an instance of Hasura using Docker, which allowed for
+              GraphQL access to the PostgresQL database
+            </li>
+          </ul>
+          <h3 className='font-semibold'>
+            Visual cluster information interface
+          </h3>
+          <div>
+            <strong className='font-medium'>Background: </strong> While the data
+            in the information aggregator I created was easier to access than
+            previously, it still required access it via API, SQL, or GraphQL. It
+            would be easier if there was some visual way to interpret the
+            information. Because of this, I created a React.js application which
+            was a visual representation of our data center, as if you were
+            looking at it from a top-down view. You can drill down into
+            individual racks, and then into servers, and see real time
+            information about those servers. The views of the servers are color
+            coded by either power usage, CPU usage, or temperature, so you can
+            easily identify racks or nodes with outliers.
+          </div>
+          <ul className='list-disc ml-10'>
+            <li>
+              Created React.js application which has drillable, color-coded view
+              of entire HPC cluster
+            </li>
+            <li>
+              Utilizes SWR to poll server for updated information, providing a
+              live updating experience for users
+            </li>
+            <li>
+              Secured access to the server using an Apache reverse proxy with
+              LDAP authentication against remote company AD server.
+            </li>
+            <li>
+              Created Ansible script to update certificates used for secure
+              access to the domain controller
+            </li>
+            <li>
+              Application connects using GraphQL to the backend Node.js caching
+              server
+            </li>
+            <li>Entire application written in TypeScript</li>
+            <li>
+              Since both frontend and backend were written in Typescript, types
+              were shared between backend and frontend using yarn workspaces
+            </li>
+            <li>
+              Created extensive documentation explaining design decisions, how
+              to access data, how to develop the application, and how to update
+              configuration
+            </li>
+          </ul>
+        </div>
       ),
       startDate: DateTime.fromISO('2019-06-01T08:00:00-06:00'),
       endDate: DateTime.fromISO('2020-11-30T17:00:00-06:00'),
@@ -65,7 +137,7 @@ const FoundationSoftware: ICompany = {
     name: 'Software Engineering Intern',
     details: (
       <div>
-        <div className='font-semibold'>Marketing website rewrite</div>
+        <h3 className='font-semibold'>Marketing website rewrite</h3>
         <div className='ml-5'>
           <strong className='font-medium'>Background: </strong>
           Their marketing website was hosted on WordPress and had been hacked
@@ -73,22 +145,22 @@ const FoundationSoftware: ICompany = {
           had any ideas and I proposed switching the site to use Gatsby.js, as
           statically generated sites are inherently more secure.
         </div>
-        <ul className='list-disc'>
-          <li className='ml-5'>
+        <ul className='list-disc ml-10'>
+          <li>
             Utilized Gatsby.js to improve page load speeds from 6.2 seconds on
             Wordpress down to 800 ms
           </li>
-          <li className='ml-5'>Transitioned site to Netlify CDN</li>
-          <li className='ml-5'>
+          <li>Transitioned site to Netlify CDN</li>
+          <li>
             Setup instance of Netlify CMS, an open source CMS which is powered
             by Git. This allowed managing pages with the Microsoft TFS.
           </li>
-          <li className='ml-5'>
+          <li>
             Rewrote 40 pages into React.js components and containers, fixing UI
             bugs along the way
           </li>
         </ul>
-        <div className='font-semibold'>UPS Label Printer</div>
+        <h3 className='font-semibold'>UPS Label Printer</h3>
         <div className='ml-5'>
           <strong className='font-medium'>Background: </strong>As part of their
           business, Foundation Software mails paychecks to thousands of
@@ -96,20 +168,20 @@ const FoundationSoftware: ICompany = {
           done with Microsoft Word and folders. This project replaced that
           process with an automated system.
         </div>
-        <ul className='list-disc'>
-          <li className='ml-5'>
+        <ul className='list-disc ml-10'>
+          <li>
             Created internal label printer application which interfaces with a
             UPS label printer.
           </li>
-          <li className='ml-5'>
+          <li>
             ETL existing labels from thousands of word documents into a new MS
             SQL database using PowerShell.
           </li>
-          <li className='ml-5'>
+          <li>
             Bootstrapped CentOS 7 server to host Node.js/Express app to serve
             the React frontend
           </li>
-          <li className='ml-5'>
+          <li>
             Created Electron version which could access the MSSQL database using
             Windows Integrated Security (active directory SSO on Windows).
           </li>
