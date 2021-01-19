@@ -31,14 +31,14 @@ interface IProjectProps {
 const Project: React.FC<IProjectProps> = ({ name, children, bullets }) => {
   return (
     <div>
-      <h3 className='font-semibold dark:text-purple-code'>{name}</h3>
-      <div className='ml-5'>
+      <h3 className='font-semibold dark:text-purple-code my-3'>{name}</h3>
+      <div className='md:ml-5 my-2'>
         <strong className='font-medium dark:text-blue-code'>
           Background:{' '}
         </strong>
         {children}
       </div>
-      <ul className='list-disc ml-10'>{bullets}</ul>
+      <ul className='list-disc ml-5 md:ml-10'>{bullets}</ul>
     </div>
   )
 }
