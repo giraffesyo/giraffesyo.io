@@ -45,7 +45,6 @@ const schools: ISchool[] = [
 
 const EducationSection: React.FC = () => {
   const { theme } = useTheme()
-  console.log(theme)
   const Schools = schools.map((school) => (
     <div
       className='grid md:grid-cols-2 w-full md:w-2/3 ml-auto mr-auto  items-center my-4'
