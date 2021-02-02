@@ -1,8 +1,7 @@
-import Image from 'next/image'
-import styles from './workexperiencesection.module.css'
 import cx from 'classnames'
-import { DateTime, Interval } from 'luxon'
+import { DateTime } from 'luxon'
 import { useEffect, useState } from 'react'
+import styles from './workexperiencesection.module.css'
 // const okchihuahuas = [
 //   '/images/projects/okchihuahuas1.jpeg',
 //   '/images/projects/okchihuahuas2.jpeg',
@@ -140,7 +139,33 @@ const ConocoPhillips: ICompany = {
     },
     {
       name: 'Cloud Architect',
-      details: <p></p>,
+      details: (
+        <div>
+          <Project
+            name='CDK Construct Library'
+            bullets={[
+              <li>Created CDK construct library in TypeScript</li>,
+              <li>Published package through Azure Artifacts</li>,
+              <li>
+                Library includes importable constructs for common use cases like
+                EC2, S3, ElasticBeanstalk, Lambda, RDS, etc.
+              </li>,
+              <li>
+                Library compiles to Python, JavaScript, and C# using AWS JSii
+              </li>,
+            ]}
+          >
+            Most of the resources created within our AWS environment were
+            architected from the console. This makes it hard to repeat the
+            process when other business units want a similar solution and hard
+            for new team members to understand the scope of a solution. In order
+            to solve this, we want to introduce CloudFormation and Cloud
+            Development Kit (CDK) options to the business units using the cloud.
+            However, it can be quite a bit of leg work to create a resource that
+            is compliant with the various security policies required.
+          </Project>
+        </div>
+      ),
       startDate: DateTime.fromISO('2020-12-01T08:00:00-06:00'),
     },
   ],
