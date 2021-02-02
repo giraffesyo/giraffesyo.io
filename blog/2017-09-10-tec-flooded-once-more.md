@@ -1,9 +1,9 @@
 ---
-title: "Tec flooded once more"
-date: "2017-09-10"
-path: "/blog/2017-09-10-tec-flooded-once-more"
-discussionId: "2017-09-10-tec-flooded-once-more"
-hidden: false
+title: 'Tec flooded once more'
+date: '2017-09-10'
+path: '/blog/2017-09-10-tec-flooded-once-more'
+discussionId: '2017-09-10-tec-flooded-once-more'
+hidden: true
 ---
 
 ![IMG_6084.JPG](https://mcquadeblog.files.wordpress.com/blog/2017/09/img_6084.jpg)

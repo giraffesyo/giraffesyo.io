@@ -1,9 +1,9 @@
 ---
-title: "Technology in the markets"
-date: "2018-03-10"
-path: "/blog/2018-03-10-technology-in-the-markets"
-discussionId: "2018-03-10-technology-in-the-markets"
-hidden: false
+title: 'Technology in the markets'
+date: '2018-03-10'
+path: '/blog/2018-03-10-technology-in-the-markets'
+discussionId: '2018-03-10-technology-in-the-markets'
+hidden: true
 ---
 
 The following is an assignment for a world cultures class I’m in. I was required to take note of the technology in two markets near the school:

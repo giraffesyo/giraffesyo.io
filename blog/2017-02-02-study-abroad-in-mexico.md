@@ -1,8 +1,8 @@
 ---
-title: "Study Abroad in Mexico"
-date: "2017-02-02"
-path: "/blog/2017-02-02-study-abroad-in-mexico"
-discussionId: "2017-02-02-study-abroad-in-mexico"
+title: 'Study Abroad in Mexico'
+date: '2017-02-02'
+path: '/blog/2017-02-02-study-abroad-in-mexico'
+discussionId: '2017-02-02-study-abroad-in-mexico'
 hidden: true
 ---
 

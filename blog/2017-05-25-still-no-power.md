@@ -1,9 +1,9 @@
 ---
-title: "Still no power :("
-date: "2017-05-25"
-path: "/blog/2017-05-25-still-no-power"
-discussionId: "2017-05-25-still-no-power"
-hidden: false
+title: 'Still no power :('
+date: '2017-05-25'
+path: '/blog/2017-05-25-still-no-power'
+discussionId: '2017-05-25-still-no-power'
+hidden: true
 ---
 
 After waking up, I immediately realized there was still no power in the apartment. I got out of bed at around 10 or 11 AM. Josh was still sleeping but I woke him up. We both started unpacking our bags into our closets. We were both pretty hungry since neither of us had eaten anything since La Casa de Toño. Jessica recommended that we try to go to Acoxpa, an outdoor mall nearby. We walked to Acoxpa, a straight shot down the street and decided to eat McDonalds.
@@ -14,9 +14,9 @@ This was my first time fully ordering without Jessica's help. I didn't quite get
 
 The burgers from McDonalds are pretty close to the taste in US, but the meat is a little bit different. While we were eating we didn't see a place to charge our phones, but after we finished we looked more and found a table in the food court next to an outlet in the ground. We both charged our phones to about 30% while talking and watching reruns of the world cup that were being played on a giant television. Josh said a television like that would probably cost about 8 million dollars, wow.
 
-I ordered us 2 chocolate dipped cones from Dairy Queen and after finishing those we decided to go a Best Buy thats located in Acoxpa. Josh is still employed there so we wanted to see if he could use his employee discount there. We went inside and noticed immediately how expensive electronics were. Some video games were 90$, and the Nintendo Switch instead of 299$ was 555$ after conversion from pesos. I asked someone if we could use the register to check employee discount and he said no, and brought me over to a manager. The manager spoke English and asked about it, we told him Josh was an employee in the United States and if he could get the discount. They told us yes. He said it was 10% here in Mexico, which is crazy because the discount is so much better in the United States. We told him about the US discount but I wasn't quite sure he understood because he didn't seem surprised or anything.
+I ordered us 2 chocolate dipped cones from Dairy Queen and after finishing those we decided to go a Best Buy thats located in Acoxpa. Josh is still employed there so we wanted to see if he could use his employee discount there. We went inside and noticed immediately how expensive electronics were. Some video games were 90$, and the Nintendo Switch instead of 299$ was 555\$ after conversion from pesos. I asked someone if we could use the register to check employee discount and he said no, and brought me over to a manager. The manager spoke English and asked about it, we told him Josh was an employee in the United States and if he could get the discount. They told us yes. He said it was 10% here in Mexico, which is crazy because the discount is so much better in the United States. We told him about the US discount but I wasn't quite sure he understood because he didn't seem surprised or anything.
 
-Josh wanted to buy a fan for the apartment since there is no air conditioning at the house. We looked at them at Best Buy but they were all pretty expensive, 90$ for small fans since they were fancy brands. He wanted more of a standard fan so we decided to look somewhere else.
+Josh wanted to buy a fan for the apartment since there is no air conditioning at the house. We looked at them at Best Buy but they were all pretty expensive, 90\$ for small fans since they were fancy brands. He wanted more of a standard fan so we decided to look somewhere else.
 
 ![IMG_4343.JPG](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4343.jpg)
 

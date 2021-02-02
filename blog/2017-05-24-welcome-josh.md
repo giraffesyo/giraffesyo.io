@@ -1,9 +1,9 @@
 ---
-title: "Welcome, Josh"
-date: "2017-05-24"
-path: "/blog/2017-05-24-welcome-josh"
-discussionId: "2017-05-24-welcome-josh"
-hidden: false
+title: 'Welcome, Josh'
+date: '2017-05-24'
+path: '/blog/2017-05-24-welcome-josh'
+discussionId: '2017-05-24-welcome-josh'
+hidden: true
 ---
 
 After picking Josh up from the airport we headed to the apartment we were going to rent.
@@ -16,7 +16,7 @@ When we reached Lizbeth she asked us if we wanted to do the paperwork now or lat
 
 After setting our stuff down, Lizbeth says something about how there was a problem due to the rain and the lights on the streets are out. She left to go print the contracts out. We immediately noticed that there was no power and I started to wonder if maybe I didn't quite understand what she meant correctly. I sent her a text and it turns out, she meant that there was no power in the whole street because of some rain the day before. I asked her where she was and she said she was at an office. I asked if we could charge our phone and she came back to get us. We followed Lizbeth to an office a few streets away from where we lived. The office didn't look like much from the outside, it was a building painted in an intense blue color. We walked inside and were in a room with a desk, Lizbeth told us to go upstairs to do the contracts and we walked through a door into a much bigger room with cement floors. We walked upstairs and into another room above the one we were just in. The room had a big table like you'd see in a movie where board members would sit around. Except the chairs were all different types and Josh broke one when he sat down. We didn't let her know, just kept that secret. We reviewed the contracts, signed, gave her the money, got a receipt and stayed there to charge my phone since there was no power still at our apartment. After getting my battery some charge, we both wanted to get some food.
 
-I really wanted to take Josh to a restaurant I had been to several times, but we also needed to get him phone service. We Ubered over to Jessica's house and walked with her to AT&T. It was a really long wait, the entire store was filled with people waiting for help. Once we were able to get help Josh got an amazing deal on phone service. 200 USD for an entire year with unlimited data per month to be used on social networks (Facebook, Messenger, Snapchat, Instagram, Uber, Twitter) and 5.5GB on all other data, plus unlimited roaming and calls to Mexico, United States, and Canada. There is no way you can get a plan like that in the United States, so I was amazed. The plan I had gotten at AT&T in Mexico was pretty good, but since he signed a year contract he got a much better deal. I paid 40$ for two months of service, with only 3GB of data, but I didn't know about that plan when I signed up. I will probably end up switching to that same plan once the two months I paid for are over.
+I really wanted to take Josh to a restaurant I had been to several times, but we also needed to get him phone service. We Ubered over to Jessica's house and walked with her to AT&T. It was a really long wait, the entire store was filled with people waiting for help. Once we were able to get help Josh got an amazing deal on phone service. 200 USD for an entire year with unlimited data per month to be used on social networks (Facebook, Messenger, Snapchat, Instagram, Uber, Twitter) and 5.5GB on all other data, plus unlimited roaming and calls to Mexico, United States, and Canada. There is no way you can get a plan like that in the United States, so I was amazed. The plan I had gotten at AT&T in Mexico was pretty good, but since he signed a year contract he got a much better deal. I paid 40\$ for two months of service, with only 3GB of data, but I didn't know about that plan when I signed up. I will probably end up switching to that same plan once the two months I paid for are over.
 
 After we got done with getting service, it was already about 7 PM.  Jessica, Josh, and I walked to La Casa de Toño, a Mexican food restaurant which sells great sopes and fried quesadillas. The quesadillas there, despite the name, don't come with cheese unless you ask for it. So far, this is my favorite restaurant in Mexico City. I really love the taste of the food, and the speed of the service. I ordered us a couple sope's and some quesadillas. We also all had a michelada.
 

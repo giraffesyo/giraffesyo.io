@@ -1,9 +1,9 @@
 ---
-title: "Orientation day!"
-date: "2017-05-27"
-path: "/blog/2017-05-27-orientation-day"
-discussionId: "2017-05-27-orientation-day"
-hidden: false
+title: 'Orientation day!'
+date: '2017-05-27'
+path: '/blog/2017-05-27-orientation-day'
+discussionId: '2017-05-27-orientation-day'
+hidden: true
 ---
 
 Today was the first day that I will go to school "officially"! I woke up at about 7:15 when Josh knocked on my door. I had overslept my alarm and it had been going off for about 30 minutes, probably very annoyingly to our neighbors since it is so loud. We slept in the other apartment because it had power. I was relieved to be able to wake up with a charged phone and to be able to turn on some lights.
@@ -20,7 +20,7 @@ We approached the security and I explained to the guard that we had an orientati
 
 After getting past security we went up to the auditorium and there was a table setup where people from the school were waiting on us. One of them led Josh, some others, and I to the copy room in order to make copies of our FMM and passport. They asked me for 50 cents to make the copy but I didn't have any change so a girl that came with us paid for us. I overheard her talking and it seems that girl was Mexican, and it turns out she was on a national exchange for her "study abroad" trip instead of actually going to another country.![IMG_4355](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_43551.jpg?w=169)
 
-We headed back and received a folder to put our documents in which we'd turn in later. We still had about 20 minutes until we had to be in the auditorium for the presentation so we quickly ran over to the cafeteria and bought some food. The food in the cafeteria was very cheap. Josh and I both ate for just over 2$ total. He had 3 pancakes and I had some chilaquiles with beans.
+We headed back and received a folder to put our documents in which we'd turn in later. We still had about 20 minutes until we had to be in the auditorium for the presentation so we quickly ran over to the cafeteria and bought some food. The food in the cafeteria was very cheap. Josh and I both ate for just over 2\$ total. He had 3 pancakes and I had some chilaquiles with beans.
 
 ![IMG_4356](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4356.jpg?w=169)
 
@@ -36,7 +36,7 @@ After the tour, we went with Jessica to Costco to buy some things. I bought some
 
 ![IMG_4351](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4351-e1495952364223.jpg?w=300)We left the apartment and walked to the main street to take an uber to Jessica's house, and someone tapped Josh on the shoulder. It was Raul again! He said hi and talked for a moment about if we went to school. We told him we were all done for the day. He left as our uber pulled up, we were amazed to have seen him again. We ubered over to Jessica's and watched Moana with her and then headed out to the party!
 
-![IMG_4372](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4372.jpg?w=169)The party was interesting indeed. They served many different dishes. The food was not to *any* of our tastes. It was what I would consider, I guess, "fancy food". The first dish was like a hamburger except instead of bread, meat and cheese, the buns were mushrooms, the cheese (was some cheese), and the meat was a tomato. :<![IMG_4373](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4373.jpg?w=169)
+![IMG_4372](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4372.jpg?w=169)The party was interesting indeed. They served many different dishes. The food was not to _any_ of our tastes. It was what I would consider, I guess, "fancy food". The first dish was like a hamburger except instead of bread, meat and cheese, the buns were mushrooms, the cheese (was some cheese), and the meat was a tomato. :<![IMG_4373](https://mcquadeblog.files.wordpress.com/blog/2017/05/img_4373.jpg?w=169)
 
 We stayed for a while and wanted to dance some, but we didn't want Josh to feel left out so we stayed at the table and talked. There was a live band which made me want to dance, even though I have no idea what I would be doing! Ha.
 

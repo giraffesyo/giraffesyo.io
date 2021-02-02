@@ -1,18 +1,18 @@
 ---
-title: "A semester in review"
-date: "2018-04-22"
-path: "/blog/2018-04-22-a-semester-in-review"
-discussionId: "2018-04-22-a-semester-in-review"
-hidden: false
+title: 'A semester in review'
+date: '2018-04-22'
+path: '/blog/2018-04-22-a-semester-in-review'
+discussionId: '2018-04-22-a-semester-in-review'
+hidden: true
 ---
 
 This semester was an awfully busy one. I ended up taking five classes:
 
-* Analysis and Design of Algorithms
-* Understaning World Cultures
-* Probability and Statistics for Engineering
-* Numerical Methods for Engineers
-* Interactive Design
+- Analysis and Design of Algorithms
+- Understaning World Cultures
+- Probability and Statistics for Engineering
+- Numerical Methods for Engineers
+- Interactive Design
 
 For me, this was a very full load and I did my best to keep up despite the different instruction methods at Tecnológico de Monterrey.
 
@@ -40,4 +40,4 @@ Within the first weeks of starting each class, I met several friends who I hope 
 
 I've met memorable people in each one of my classes. I heard before coming to Mexico that the majority of study abroad students only become friends with other foreign exchange students. However, while I met many foreign exchange students and have become close friends with some of them, I found that the majority of the friends I have made in Mexico are Mexican.
 
-No matter where my future takes me, I hope that I can always bring a bit of Mexico with me. 
+No matter where my future takes me, I hope that I can always bring a bit of Mexico with me.
