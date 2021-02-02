@@ -142,7 +142,7 @@ const ConocoPhillips: ICompany = {
       details: (
         <div>
           <Project
-            name='CDK Construct Library'
+            name='Cloud Development Kit (CDK) Construct Library'
             bullets={[
               <li>Created CDK construct library in TypeScript</li>,
               <li>Published package through Azure Artifacts</li>,
@@ -159,10 +159,10 @@ const ConocoPhillips: ICompany = {
             architected from the console. This makes it hard to repeat the
             process when other business units want a similar solution and hard
             for new team members to understand the scope of a solution. In order
-            to solve this, we want to introduce CloudFormation and Cloud
-            Development Kit (CDK) options to the business units using the cloud.
-            However, it can be quite a bit of leg work to create a resource that
-            is compliant with the various security policies required.
+            to solve this, we want to introduce CloudFormation and CDK options
+            to the business units using the cloud. However, it can be quite a
+            bit of leg work to create a resource that is compliant with the
+            various security policies required.
           </Project>
         </div>
       ),
