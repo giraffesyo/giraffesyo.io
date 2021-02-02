@@ -49,6 +49,8 @@ const ConocoPhillips: ICompany = {
   positions: [
     {
       name: 'High Performance Computing',
+      startDate: DateTime.fromISO('2019-06-01T08:00:00-06:00'),
+      endDate: DateTime.fromISO('2020-12-02T08:00:00-06:00'),
       details: (
         <div>
           <Project
@@ -134,8 +136,6 @@ const ConocoPhillips: ICompany = {
           </Project>
         </div>
       ),
-      startDate: DateTime.fromISO('2019-06-01T08:00:00-06:00'),
-      endDate: DateTime.fromISO('2020-12-01T08:00:00-06:00'),
     },
     {
       name: 'Cloud Architect',
