@@ -3,7 +3,7 @@ import '../styles/tailwind.css'
 import 'typeface-raleway'
 import '../styles/index.css'
 import { ThemeProvider } from 'next-themes'
-import type { AppProps} from 'next/app'
+import type { AppProps } from 'next/app'
 import { MDXProvider } from '@mdx-js/react'
 
 const App = ({ Component, pageProps }: AppProps) => {
