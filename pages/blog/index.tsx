@@ -1,103 +1,5 @@
-// import React from 'react'
-// import { SecondaryNavigation } from '../../components/SecondaryNavigation'
-// import { Row } from 'reactstrap'
-// import Helmet from 'react-helmet'
-// import Layout from '../../components/Layout'
-
-// export default (props) => {
-//   const { data } = props
-//   return (
-//     <Layout>
-//       <Helmet
-//         title='Blog - giraffesyo.io'
-//         meta={[
-//           {
-//             name: 'description',
-//             content: `Michael McQuade's personal blog: Generally non-technical blog posts from Michael's life.`,
-//           },
-//         ]}
-//       >
-//         <html lang='en' />
-//       </Helmet>
-//       <SecondaryNavigation location={props.location} />
-
-//       <Row>
-//         <h1 className='dark-blue-text'>
-//           {'<'}
-//           blog
-//           {'>'}
-//         </h1>
-//       </Row>
-//       <Row>
-//         <h4 className='green-text'>
-//           {'//'}
-//           {data.allMarkdownRemark.totalCount} Posts
-//         </h4>
-//       </Row>
-//       {data.allMarkdownRemark.edges.map(({ node }) => (
-//         <div key={node.id}>
-//           <Row style={{ clear: 'both' }}>
-//             <Link
-//               to={node.frontmatter.path}
-//               style={{ textDecoration: `none`, color: `inherit` }}
-//             >
-//               <h2 className='light-blue-text'>{node.frontmatter.title}</h2>
-//             </Link>
-//           </Row>
-//           <Row>
-//             <h6 className='code-font green-text'>
-//               {'//'}
-//               {node.frontmatter.date}
-//             </h6>
-//           </Row>
-//           <Row>
-//             <h6 className='orange-text code-font'>
-//               Read time: {node.timeToRead}{' '}
-//               {node.timeToRead > 1 ? 'minutes' : 'minute'}
-//             </h6>
-//           </Row>
-//           <Row>
-//             <p style={{ marginLeft: 0 }}>{node.excerpt}</p>
-//           </Row>
-//           <Link
-//             to={node.frontmatter.path}
-//             style={{ textDecoration: `none`, color: `inherit` }}
-//           >
-//             <Row style={{ float: 'right' }} className='orange-text'>
-//               Read more...
-//             </Row>
-//           </Link>
-//         </div>
-//       ))}
-//     </Layout>
-//   )
-// }
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     allMarkdownRemark(
-//       sort: { order: DESC, fields: [frontmatter___date] }
-//       filter: { frontmatter: { hidden: { eq: false } } }
-//     ) {
-//       edges {
-//         node {
-//           id
-//           excerpt(pruneLength: 250)
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             path
-//             title
-//             hidden
-//           }
-//           timeToRead
-//         }
-//       }
-//     }
-//   }
-// `
-
-import HeroPost from '../../components/vercel/hero-post'
 import Layout from '../../components/Layout'
-import MoreStories from '../../components/vercel/more-stories'
+import Link from 'next/link'
 import { getAllPosts } from '../../lib/blogapi'
 import Head from 'next/head'
 
@@ -116,9 +18,48 @@ export async function getStaticProps() {
   }
 }
 
+interface IPost {
+  slug: string
+  title: string
+  date: string
+  author?: string
+  excerpt?: string
+  wordCount?: number
+  minutesToRead?: number
+  timeToReadString?: string
+}
+
+export const Post: React.FC<IPost> = ({
+  author,
+  date,
+  excerpt,
+  slug,
+  title,
+  timeToReadString,
+}) => {
+  return (
+    <div className='w-3/4'>
+      <Link as={`/blog/${slug}`} href='/blog/[slug]'>
+        <a>
+          <h2 className='text-blue-code text-3xl font-medium'>{title}</h2>
+        </a>
+      </Link>
+      <h6 className='font-code text-green-code'>
+        {'//'}
+        {date}
+      </h6>
+      <h6 className='font-code text-orange-code'>{timeToReadString}</h6>
+      <p>{excerpt}</p>
+      <Link as={`/blog/${slug}`} href='/blog/[slug]'>
+        <a>
+          <div className='text-orange-code'>Read more...</div>
+        </a>
+      </Link>
+    </div>
+  )
+}
+
 export const BlogPostsIndexPage = ({ allPosts }) => {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
   return (
     <Layout>
       <Head>
@@ -129,17 +70,28 @@ export const BlogPostsIndexPage = ({ allPosts }) => {
           content='Software engineering blog - Technical posts about programming by Michael McQuade'
         />
       </Head>
-      {heroPost && (
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={{ name: 'Michael McQuade' }}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-      )}
-      {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+
+      <div className='flex flex-row flex-wrap w-full '>
+        <h1 className='section-header'>
+          {'<'}
+          blog
+          {'>'}
+        </h1>
+        <div className='flex flex-row flex-wrap justify-center'>
+          {allPosts.map(
+            ({ slug, title, date, author, excerpt, timeToReadString }) => (
+              <Post
+                timeToReadString={timeToReadString}
+                author={author}
+                date={date}
+                excerpt={excerpt}
+                slug={slug}
+                title={title}
+              />
+            )
+          )}
+        </div>
+      </div>
     </Layout>
   )
 }

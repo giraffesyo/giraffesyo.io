@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
+import readingTime from 'reading-time'
 
 const postsDirectory = join(process.cwd(), 'blog')
 
@@ -30,7 +31,14 @@ export function getPostBySlug(slug, fields = []) {
     }
   })
 
-  return items
+  const readingStats = readingTime(content)
+
+  return {
+    ...items,
+    minutesToRead: readingStats.minutes,
+    timeToReadString: readingStats.text,
+    wordCount: readingStats.words,
+  }
 }
 
 export function getAllPosts(fields = []) {

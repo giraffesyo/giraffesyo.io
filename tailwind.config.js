@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         purple: { code: '#b267e6' },
         blue: {
+          codelight: 'rgb(150, 220, 250)',
           code: '#4a9cd8',
           twitter: 'rgb(85, 172, 238)',
           linkedin: 'rgb(0, 123, 181)',
