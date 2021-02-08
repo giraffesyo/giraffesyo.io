@@ -40,9 +40,11 @@ const Footer: React.FC<IFooterProps> = ({ outerClassNames }) => {
         </li>
       </ul>
 
-      <div className='text-white dark:text-purple-code font-light text-xl md:text-4xl'>
-        Michael McQuade
-      </div>
+      <Link href='/'>
+        <a className='text-white dark:text-purple-code font-light text-xl md:text-4xl block'>
+          Michael McQuade
+        </a>
+      </Link>
     </div>
   )
 }
