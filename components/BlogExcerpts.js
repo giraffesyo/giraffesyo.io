@@ -1,7 +1,7 @@
-import React from 'react'
 import Link from 'next/link'
+import { PureComponent } from 'react'
 
-class BlogExcerpts extends React.PureComponent {
+class BlogExcerpts extends PureComponent {
   render() {
     const { data } = this.props
     const excerpts = data.map(({ node }) => (

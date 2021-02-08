@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useCallback } from 'react'
-
-import Footer from './Footer'
-import { FaYinYang } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
+import * as React from 'react'
+import { useCallback } from 'react'
+import { FaYinYang } from 'react-icons/fa'
+import Footer from './Footer'
 
 const Layout: React.FC = (props) => {
   const { theme, setTheme } = useTheme()

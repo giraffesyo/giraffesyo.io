@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from './SecondaryNavigation.module.css'
 import Link from 'next/link'
+import { PureComponent } from 'react'
+import styles from './SecondaryNavigation.module.css'
 // import styled from 'styled-components'
 
 // const NavLink = styled.div`
@@ -10,7 +10,7 @@ import Link from 'next/link'
 //   border-bottom: ${(props) => (props.active ? '1px solid white' : 'none')};
 // `
 
-class SecondaryNavigation extends React.PureComponent {
+class SecondaryNavigation extends PureComponent {
   location = { pathname: '/' }
 
   // handleItemClick = (e, { name }) =>
