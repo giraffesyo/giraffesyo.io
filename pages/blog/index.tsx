@@ -95,37 +95,11 @@
 //   }
 // `
 
-import Container from '../../components/vercel/container'
 import HeroPost from '../../components/vercel/hero-post'
-import Intro from '../../components/vercel/intro'
-import Layout from '../../components/vercel/layout'
+import Layout from '../../components/Layout'
 import MoreStories from '../../components/vercel/more-stories'
 import { getAllPosts } from '../../lib/blogapi'
-
-export default function Index({ allPosts }) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
-  return (
-    <>
-      <Layout>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={{ name: 'Michael McQuade' }}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
-  )
-}
+import Head from 'next/head'
 
 export async function getStaticProps() {
   const allPosts = getAllPosts([
@@ -141,3 +115,33 @@ export async function getStaticProps() {
     props: { allPosts },
   }
 }
+
+export const BlogPostsIndexPage = ({ allPosts }) => {
+  const heroPost = allPosts[0]
+  const morePosts = allPosts.slice(1)
+  return (
+    <Layout>
+      <Head>
+        <title>Blog - giraffesyo.io</title>
+        <meta
+          key='description'
+          name='description'
+          content='Software engineering blog - Technical posts about programming by Michael McQuade'
+        />
+      </Head>
+      {heroPost && (
+        <HeroPost
+          title={heroPost.title}
+          coverImage={heroPost.coverImage}
+          date={heroPost.date}
+          author={{ name: 'Michael McQuade' }}
+          slug={heroPost.slug}
+          excerpt={heroPost.excerpt}
+        />
+      )}
+      {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+    </Layout>
+  )
+}
+
+export default BlogPostsIndexPage

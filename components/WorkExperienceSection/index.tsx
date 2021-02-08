@@ -42,6 +42,10 @@ const Project: React.FC<IProjectProps> = ({ name, children, bullets }) => {
   )
 }
 
+interface IProjectBullets {
+  companyName: string
+}
+
 const ConocoPhillips: ICompany = {
   name: 'ConocoPhillips',
   imgSrc: '/images/workexperience/conocophillips.svg',
