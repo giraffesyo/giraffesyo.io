@@ -16,7 +16,7 @@ export function getPostBySlug(slug, fields = []) {
   const { data, content } = matter(fileContents)
 
   const items: Record<string, string> = {}
-
+  // console.log(data)
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
     if (field === 'slug') {
@@ -31,14 +31,19 @@ export function getPostBySlug(slug, fields = []) {
     }
   })
 
-  const readingStats = readingTime(content)
+  // if (!items.hasOwnProperty('excerpt')) {
+  //   items.excerpt = excerpt
+  // }
 
-  return {
+  const readingStats = readingTime(content)
+  const newItems = {
     ...items,
     minutesToRead: readingStats.minutes,
     timeToReadString: readingStats.text,
     wordCount: readingStats.words,
   }
+  console.log(newItems)
+  return newItems
 }
 
 export function getAllPosts(fields = []) {

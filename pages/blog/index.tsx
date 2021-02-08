@@ -11,6 +11,7 @@ export async function getStaticProps() {
     'author',
     'coverImage',
     'excerpt',
+    'hidden',
   ])
 
   return {
@@ -60,6 +61,7 @@ export const Post: React.FC<IPost> = ({
 }
 
 export const BlogPostsIndexPage = ({ allPosts }) => {
+  // console.log(allPosts)
   return (
     <Layout>
       <Head>
@@ -78,8 +80,9 @@ export const BlogPostsIndexPage = ({ allPosts }) => {
           {'>'}
         </h1>
         <div className='flex flex-row flex-wrap justify-center'>
-          {allPosts.map(
-            ({ slug, title, date, author, excerpt, timeToReadString }) => (
+          {allPosts
+            .filter((post) => !post.hidden)
+            .map(({ slug, title, date, author, excerpt, timeToReadString }) => (
               <Post
                 timeToReadString={timeToReadString}
                 author={author}
@@ -88,8 +91,7 @@ export const BlogPostsIndexPage = ({ allPosts }) => {
                 slug={slug}
                 title={title}
               />
-            )
-          )}
+            ))}
         </div>
       </div>
     </Layout>
