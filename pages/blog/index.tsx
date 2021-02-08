@@ -61,7 +61,6 @@ export const Post: React.FC<IPost> = ({
 }
 
 export const BlogPostsIndexPage = ({ allPosts }) => {
-  // console.log(allPosts)
   return (
     <Layout>
       <Head>

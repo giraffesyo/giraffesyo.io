@@ -16,7 +16,7 @@ export function getPostBySlug(slug, fields = []) {
   const { data, content } = matter(fileContents)
 
   const items: Record<string, string> = {}
-  // console.log(data)
+
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
     if (field === 'slug') {
@@ -42,7 +42,7 @@ export function getPostBySlug(slug, fields = []) {
     timeToReadString: readingStats.text,
     wordCount: readingStats.words,
   }
-  console.log(newItems)
+
   return newItems
 }
 
