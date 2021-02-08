@@ -3,6 +3,9 @@
   "description": "A personal website and blog for Michael McQuade",
   "author": "Michael McQuade <giraffesyo@gmail.com>",
   "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@next/mdx": "^10.0.6",
     "classnames": "^2.2.6",
     "gray-matter": "^4.0.2",
     "luxon": "^1.25.0",
