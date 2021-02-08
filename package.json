@@ -9,7 +9,7 @@
     "classnames": "^2.2.6",
     "gray-matter": "^4.0.2",
     "luxon": "^1.25.0",
-    "next": "latest",
+    "next": "^10.0.6",
     "next-themes": "^0.0.10",
     "react": "latest",
     "react-dom": "latest",
