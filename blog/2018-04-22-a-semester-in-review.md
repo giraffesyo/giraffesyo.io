@@ -34,7 +34,7 @@ I already spoke to Josh about it, that I'd like to start being this very charism
 
 # The people I've met
 
-![Friends from Understanding World Cultures](../images/2018-04-22/groupphoto.jpg 'Friends made in Understanding World Cultures')
+![Friends from Understanding World Cultures](/images/blog/2018-04-22/groupphoto.jpg 'Friends made in Understanding World Cultures')
 
 Within the first weeks of starting each class, I met several friends who I hope to stay in touch with in the future. The people I met come from a diverse background, from all across Mexico and from all different majors. It would be so nice if our future work somehow brings us together again. I cherish the connections that I've made during this past year, and think that these connections, over everything, are the most valuable resource that I have gained from studying abroad.
 

@@ -12,21 +12,21 @@ We took two field trips within our world cultures class to go see two very diffe
 
 ## Mercado Villa Lázaro Cárdenas
 
-![Mercado Villa Lázaro Cárdenas](../images/2018-03-10/bananas.jpg 'Mercado Villa Lázaro Cárdenas')
+![Mercado Villa Lázaro Cárdenas](/images/blog/2018-03-10/bananas.jpg 'Mercado Villa Lázaro Cárdenas')
 
 Owing to the fact that it was located inside a two-story building, it's not quite a _tianguis_, or street market, but it had quite a similar feel to it. There was definitely technology within the market, but not what'd you normally think of when that word comes to mind.
 
-![Old Radio](../images/2018-03-10/oldradio.jpg 'Old radio found in the Mercado')
+![Old Radio](../images/blog/2018-03-10/oldradio.jpg 'Old radio found in the Mercado')
 
 Electronics were scarce within the market. From a single old TV setup, a microwave, a stereo that looked like the one my mom used to teach skating classes with 15 years ago, and the lights inside the building and a few other random electronics, most of the tech here was for manual use.!
 
-[Shopworkers cutting meat](../images/2018-03-10/meat.jpg 'Shopworkers cutting meat')
+[Shopworkers cutting meat](../images/blog/2018-03-10/meat.jpg 'Shopworkers cutting meat')
 
 As an example, the more frequently seen technology within the market included meat grinders, sinks, knives, baskets, scales, plastic chairs, and gas stoves.
 
 The first level was mostly a market to buy various things such as fruit, meat, piñatas, and the outside housed a convenience store of sorts which sold chips, sodas, and ice cream.
 
-![Cafeteria with many restaurants](../images/2018-03-10/cafeteria.jpg 'Cafeteria with many restaurants')
+![Cafeteria with many restaurants](../images/blog/2018-03-10/cafeteria.jpg 'Cafeteria with many restaurants')
 
 The second level, however, was of more interest to me. Upstairs housed an open room full of tables. Along the walls were a variety of different stalls that each were like mini-restaurants. They had their own menus posted and it all smelled very delicious. We didn't stop to eat that day, but I hope to go back in the future and try out something! Each stall had their own flat-top griddle and some had deep fryers. Most of the food was Mexican in nature but there was one sushi restaurant as well. A couple of the people working the stalls also had TVs setup for their entertainment when business was slow.
 
@@ -38,7 +38,7 @@ Sitting cater-cornered from that market, there was another market. While we can 
 
 Enter, Paseo Acoxpa, a modern shopping mall.
 
-![Paseo Acoxpa, view of Cinepolis](../images/2018-03-10/paseoacoxpa.jpg 'Paseo Acoxpa')
+![Paseo Acoxpa, view of Cinepolis](../images/blog/2018-03-10/paseoacoxpa.jpg 'Paseo Acoxpa')
 
 The technology seen within Paseo Acoxpa *is* what the average person thinks of nowadays when that word is thrown around.
 
@@ -50,7 +50,7 @@ Perhaps most novel of all is the gigantic television mounted over the food court
 
 A soccer match for the world cup was playing on the TV during my visit and upon a goal being scored the entire courtyard erupted into cheer. It was an impressive idea, everyone united because of the results shown on that huge screen.
 
-![A world cup match being played overhead](../images/2018-03-10/football.jpg 'A world cup match being played overhead')
+![A world cup match being played overhead](../images/blog/2018-03-10/football.jpg 'A world cup match being played overhead')
 
 The technology within Paseo Acoxpa deeply contrasts that of the market we visited prior. If something could be electronic, it was. Hardly anything was intended for manual use.
 

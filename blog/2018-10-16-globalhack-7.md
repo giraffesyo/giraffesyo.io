@@ -17,6 +17,6 @@ By performing free favors for someone, they are able to grow their personal netw
 
 The implementation of this over a weekend was tough and we mostly got the idea and some of the interface fleshed out. While we did not make it to the final round, it was very exciting to see our names pop up when we made it into the second round and had the opportunity to defend our project in front of a second set of judges.
 
-![Round two confirmation for our team: Help Overflow](../images/2018-10-16/round2.jpg)
+![Round two confirmation for our team: Help Overflow](/images/blog/2018-10-16/round2.jpg)
 
 I hope to participate in more Hackathons in the future, this was an awesome networking opportunity and I had a ton of fun!

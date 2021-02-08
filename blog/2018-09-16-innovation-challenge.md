@@ -3,7 +3,7 @@ title: 'ConocoPhillips Innovation Challenge'
 date: '2018-09-16'
 path: '/blog/2018-09-16-conoco-phillips-innovation-challenge'
 discussionId: '2018-09-16-conoco-phillips-innovation-challenge'
-hidden: true
+hidden: false
 ---
 
 This past weekend was very exciting. About two months ago I was notified that I had been chosen to participate in the ConocoPhillips innovation challenge. I remember that I was so excited to get that news seeing as they had mentioned there would be job opportunities and prizes for attending.
@@ -32,4 +32,4 @@ I am thankful to both ConocoPhillips and to the people on my team who helped me 
 
 I would love to hear about programming contests that you might have participated in and if it was a similar experience or not, you can reach me below or by email at [michael@giraffesyo.io](mailto:michael@giraffesyo.io)
 
-![RealSense team](../images/2018-09-16/RealSense.jpeg 'Intel RealSense team from ConocoPhillips Innovation Challenge')
+![RealSense team](/images/blog/2018-09-16/RealSense.jpeg 'Intel RealSense team from ConocoPhillips Innovation Challenge')
