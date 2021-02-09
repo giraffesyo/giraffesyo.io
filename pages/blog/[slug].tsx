@@ -4,6 +4,7 @@ import { getPosts } from '@lib/mdx'
 import Layout from '../../layout'
 
 import MDXComponents from '@components/blog/mdx'
+import BlogLayout from 'layout/blog'
 
 const BlogPage = ({ post: { mdxSource, frontMatter } }) => {
   const content = hydrate(mdxSource, {
@@ -11,9 +12,13 @@ const BlogPage = ({ post: { mdxSource, frontMatter } }) => {
   })
 
   return (
-    <Layout pageTitle={frontMatter.title} description={frontMatter.description}>
+    <BlogLayout
+      image={frontMatter.image}
+      pageTitle={frontMatter.title}
+      description={frontMatter.description}
+    >
       {content}
-    </Layout>
+    </BlogLayout>
   )
 }
 

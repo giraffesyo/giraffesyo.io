@@ -5,7 +5,7 @@ import { useCallback } from 'react'
 import { FaYinYang } from 'react-icons/fa'
 import Footer from '../components/Footer'
 
-interface ILayoutProps {
+export interface ILayoutProps {
   pageTitle: string
   description: string
 }
