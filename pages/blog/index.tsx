@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import BlogPost from '@components/blog/BlogPost'
+import PostPreview from '@components/blog/PostPreview'
 import { getPosts } from '@lib/mdx'
 import Layout from 'layout'
 import { FaSearch } from 'react-icons/fa'
@@ -56,7 +56,7 @@ const BlogIndexPage: React.FC<
           </p>
         )}
         {filteredBlogPosts.map(({ frontMatter }) => (
-          <BlogPost key={frontMatter.title} {...frontMatter} />
+          <PostPreview key={frontMatter.title} {...frontMatter} />
         ))}
       </div>
     </Layout>

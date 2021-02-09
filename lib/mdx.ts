@@ -1,12 +1,11 @@
+import MDXComponents from '@components/blog/mdx'
 import fs from 'fs'
+import globby from 'globby'
 import matter from 'gray-matter'
 import mdxprism from 'mdx-prism'
-import path from 'path'
-import readingTime from 'reading-time'
 import renderToString from 'next-mdx-remote/render-to-string'
-import globby from 'globby'
-import MDXComponents from '@components/blog/mdx'
 import { MdxRemote } from 'next-mdx-remote/types'
+import readingTime from 'reading-time'
 
 const rootDir = process.cwd()
 const blogPath = rootDir + '/data/blog/'
@@ -25,6 +24,8 @@ export interface IFrontMatter {
   wordCount: number
   slug: string
   date: string
+  tags?: string[]
+  image?: string
 }
 export interface IBlogPost {
   mdxSource: MdxRemote.Source
@@ -56,7 +57,10 @@ const getPost = async (fileName) => {
       rehypePlugins: [mdxprism],
     },
   })
-  const { title, description, date, slug } = data
+  const { title, description, date, slug, summary, tags, image } = data
+  if (!slug) {
+    throw new Error(`No slug in frontmatter for ${fileName}`)
+  }
   if (!title) {
     throw new Error(`No title in frontmatter for ${fileName}  `)
   }
@@ -66,11 +70,17 @@ const getPost = async (fileName) => {
   if (!date) {
     throw new Error(`No date in frontmatter for ${fileName}`)
   }
+  if (!summary) {
+    throw new Error(`No summary in frontmatter for ${fileName}`)
+  }
   const post = {
     mdxSource,
     frontMatter: {
+      image,
+      tags,
       title,
       description,
+      summary,
       date,
       wordCount: content.split(/\s+/gu).length,
       readingTime: readingTime(content),
