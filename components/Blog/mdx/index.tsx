@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from './link'
 import Headers from './header'
+import List from './list'
 
 const MDXComponents = {
   Image,
@@ -11,6 +12,7 @@ const MDXComponents = {
   h4: Headers.H4,
   h5: Headers.H5,
   h6: Headers.H6,
+  ul: List,
 }
 
 export default MDXComponents
