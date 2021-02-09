@@ -26,6 +26,21 @@
   text-align: left;
 }
 
+.unhidechild {
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.unhidechild a {
+  visibility: hidden;
+}
+
+/* unhide permanlinks when hovering */
+.unhidechild:hover a,
+.unhidechild a:hover {
+  visibility: visible;
+}
+
 /*  Styling for code blocks in MDX */
 
 pre,

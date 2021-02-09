@@ -1,18 +1,16 @@
-import Link from 'next/link'
 import Image from 'next/image'
-
-const CustomLink = (props) => {
-  const href = props.href
-  return (
-    <Link href={href}>
-      <a {...props} />
-    </Link>
-  )
-}
+import Link from './link'
+import Headers from './header'
 
 const MDXComponents = {
   Image,
-  a: CustomLink,
+  a: Link,
+  h1: Headers.H1,
+  h2: Headers.H2,
+  h3: Headers.H3,
+  h4: Headers.H4,
+  h5: Headers.H5,
+  h6: Headers.H6,
 }
 
 export default MDXComponents

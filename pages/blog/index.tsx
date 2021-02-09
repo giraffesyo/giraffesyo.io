@@ -118,7 +118,7 @@ const BlogIndexPage: React.FC<
         blog
         {'>'}
       </h1>
-      <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
+      <div className='flex flex-col justify-center items-start max-w-4xl mx-auto mb-16'>
         <p className='text-gray-600 dark:text-gray-400 mb-4'>
           I started writing about software engineering problems in 2021. I want
           to keep being a nerd for the rest of my career, so I hope to litter
