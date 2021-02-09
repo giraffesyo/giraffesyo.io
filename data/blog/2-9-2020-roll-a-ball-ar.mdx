@@ -1,0 +1,86 @@
+---
+title: Roll-A-Ball AR
+description: Getting started in Augmented Reality development with Unity and Vuforia SDK
+date: 02-09-2020
+summary: In video game development, the hello world of 3D games is rolling a ball around the screen. In this post, I go over moving that into Augmented Reality with Unity and the Vuforia SDK.
+image: /images/blog/2021-02-09/doge-ar-roll-a-ball.png
+slug: roll-a-ball-ar
+tags: ['c#', 'unity', 'vuforia', 'augmented reality']
+---
+
+# Summary
+
+In this post, I'll be walking through the steps needed to create a roll-a-ball augmented reality (AR) game in Unity.
+We'll be using the Vuforia SDK in order to accomodate the AR piece of this tutorial.
+Vuforia and Unity are both free to get started with developing, so there won't be any costs to go through this post.
+
+As a bonus, we're going to add some coins that you can pick up with the ball.
+
+# Prerequisites
+
+In order to get started, you'll need to have the following:
+
+- Unity 3D  
+  For installing Unity, I recommend downloading [Unity Hub](https://unity3d.com/get-unity/download). It makes it easy to install new versions of Unity when they are released.  
+  Once you have Unity Hub installed, install a recent version of Unity using the hub.
+- Vuforia SDK
+  You can create a free Vuforia account at [Vuforia](https://developer.vuforia.com/), once you have an account, download the [Unity Package](https://developer.vuforia.com/downloads/sdk)
+- Turobsquid account (optional)
+  In order to get a free 3D model, I'm going to use Turbosquid. However, you can just use primitive shapes to complete this tutorial.
+
+# Creating a Vuforia Image Target
+
+Per the Vuforia [docs](https://library.vuforia.com/features/images/image-targets.html), image targets represent images that Vuforia can detect and track.
+
+> The Engine detects and tracks the image by comparing extracted natural features from the camera image against a known target resource database.
+
+<aside className='flex items-center my-2'>
+  <Image
+    alt='United States passport'
+    src='/images/blog/2021-02-09/us-passport.jpg'
+    width='175'
+    height='248'
+  />
+  <p className='w-2/3 ml-4'>
+    Vuforia has an online tool called the Target Manager which uses their cloud
+    to generate that database so we can use it with the SDK. The type of
+    augmented reality we are going to be doing depends on having an object in
+    the real world that we can use as a "target". The Vuforia SDK will apply
+    computer vision techniques in order to recgonize that target and then that
+    will be the base of our 3D environment. To get started, we need an object in
+    the real world and a good picture of that object. I chose to use my U.S.
+    passport because it was sitting on my desk and seemed somewhat generic. It's
+    easy to find a high resolution image of a passport, so I went out to google
+    and grabbed one.
+  </p>
+</aside>
+
+After you have your object and a picture of it:
+
+1. Open the [Target Manager](https://developer.vuforia.com/vui/develop/databases)
+2. Choose Add Database
+3. Give it any name, HelloWorld works fine. For type, choose "Device"
+4. Click on the newly created database to open its detail page
+5. Choose Add Target
+6. Leave Single Image Selected
+7. For width, this is technically meant to represent meters, but Unity physics calculations for objects as small as a passport can get a little strange, so for demo purposes put a number like `3` here.
+8. Choose Add
+
+<Image
+  alt='Image target rating'
+  src='/images/blog/2021-02-09/image-target-rating.png'
+  width='1183'
+  height='149'
+/>
+
+After a moment, it will show you a rating. This score represents how well Vuforia expects to be able to track the image.
+
+Finally, download the database, choosing Unity Editor when prompted, and we can continue on to Unity.
+
+# Creating the Unity 3D project
+
+I'm assuming that you've already installed Unity Hub. The first thing that we need to do is create an empty project in Unity.
+
+1.  Open the hub and click new
+2.  Choose 3D from the available templates
+3.  Give your project a name, Hello World works fine, and click create
