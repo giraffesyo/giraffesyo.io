@@ -41,6 +41,22 @@
   visibility: visible;
 }
 
+/* Styling for block quote in mDX */
+
+blockquote {
+  @apply dark:bg-gray-800 bg-gray-50 dark:border-gray-50 border-l-8 my-4 p-3;
+  quotes: '\201C''\201D''\2018''\2019';
+}
+blockquote:before {
+  @apply dark:text-gray-50 text-gray-400 text-6xl mr-1;
+  content: '“';
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  @apply inline;
+}
+
 /*  Styling for code blocks in MDX */
 
 pre,
