@@ -1,9 +1,8 @@
-import Head from 'next/head'
 import AboutMeSection from '../components/AboutMeSection'
 import CertificationsSection from '../components/CertificationsSection'
 import EducationSection from '../components/EducationSection'
 import WorkExperienceSection from '../components/WorkExperienceSection'
-import Layout from '../components/Layout'
+import Layout from '../layout'
 
 const IndexPage = () => {
   return (

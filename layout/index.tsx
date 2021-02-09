@@ -3,7 +3,7 @@ import Head from 'next/head'
 import * as React from 'react'
 import { useCallback } from 'react'
 import { FaYinYang } from 'react-icons/fa'
-import Footer from './Footer'
+import Footer from '../components/Footer'
 
 interface ILayoutProps {
   pageTitle: string

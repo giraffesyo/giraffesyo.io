@@ -61,9 +61,9 @@ const ConocoPhillips: ICompany = {
             name='Cluster information aggregrator'
             bullets={[
               <li>
-                Created Python script which runs and writes relevant system
-                information (cpu usage, temperatures, power consumption, etc.)
-                to networked filesystem every 3 minutes
+                Created Python script which writes relevant system information
+                (cpu usage, temperatures, power consumption, etc.) to networked
+                filesystem every 3 minutes
               </li>,
               <li>
                 Created a Node.js server which monitors mounted filesystem,
