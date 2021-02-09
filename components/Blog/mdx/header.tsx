@@ -22,7 +22,7 @@ interface IHeaderProps {
 }
 
 const H1: React.FC<IHeaderProps> = ({ children, ...props }) => (
-  <h1 className='text-2xl relative unhidechild' {...props}>
+  <h1 className='text-2xl relative text-blue-code unhidechild' {...props}>
     <Permalink href={'#' + props.id} />
     {children}
   </h1>
