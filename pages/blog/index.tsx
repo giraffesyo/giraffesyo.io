@@ -88,18 +88,26 @@
 import { useState } from 'react'
 
 // import Container from '@/components/Container'
-import BlogPost from '@components/Blog/BlogPost'
-import { getAllFilesFrontMatter } from '@lib/mdx'
+import BlogPost from '@components/blog/BlogPost'
+import { getPosts } from '@lib/mdx'
 import Layout from 'layout'
 import { FaSearch } from 'react-icons/fa'
+import { InferGetStaticPropsType } from 'next'
 
-export default function Blog({ posts }) {
+export const getStaticProps = async () => {
+  const posts = await getPosts()
+
+  return { props: { posts } }
+}
+
+const BlogIndexPage: React.FC<
+  InferGetStaticPropsType<typeof getStaticProps>
+> = ({ posts }) => {
   const [searchValue, setSearchValue] = useState('')
-  const filteredBlogPosts = posts
-    .sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
-    .filter((frontMatter) =>
-      frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
-    )
+
+  const filteredBlogPosts = posts.filter(({ frontMatter }) =>
+    frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
+  )
   return (
     <Layout
       pageTitle='Blog - giraffesyo.io'
@@ -136,7 +144,7 @@ export default function Blog({ posts }) {
             No posts found.
           </p>
         )}
-        {filteredBlogPosts.map((frontMatter) => (
+        {filteredBlogPosts.map(({ frontMatter }) => (
           <BlogPost key={frontMatter.title} {...frontMatter} />
         ))}
       </div>
@@ -144,8 +152,4 @@ export default function Blog({ posts }) {
   )
 }
 
-export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
-  console.log(posts)
-  return { props: { posts } }
-}
+export default BlogIndexPage

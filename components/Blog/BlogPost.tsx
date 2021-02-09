@@ -1,22 +1,11 @@
+import { IFrontMatter } from '@lib/mdx'
 import Link from 'next/link'
-interface IFrontmatter {
-  title: string
-  date: Date
-  description: string
-  readingTime: string
-  words: number
-  slug: string
-  summary: string
-}
 
-const BlogPost: React.FC<IFrontmatter> = ({
+const BlogPost: React.FC<IFrontMatter> = ({
   date,
-  description,
   readingTime,
   slug,
   title,
-  words,
-  children,
   summary,
 }) => {
   return (
@@ -30,7 +19,7 @@ const BlogPost: React.FC<IFrontmatter> = ({
         {'//'}
         {date}
       </h6>
-      <h6 className='font-code text-orange-code'>{readingTime}</h6>
+      <h6 className='font-code text-orange-code'>{readingTime.minutes}</h6>
       <p>{summary}</p>
       <Link href={`/blog/${slug}`}>
         <a>
