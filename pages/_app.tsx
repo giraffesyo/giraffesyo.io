@@ -1,7 +1,7 @@
-import 'tailwindcss/tailwind.css'
-import '../styles/tailwind.css'
-import 'typeface-raleway'
 import '../styles/index.css'
+import '../styles/tailwind.css'
+import 'tailwindcss/tailwind.css'
+import 'typeface-raleway'
 import { ThemeProvider } from 'next-themes'
 import type { AppProps } from 'next/app'
 
