@@ -127,7 +127,7 @@ const ParallelWorks: ICompany = {
               discussions with partners (AWS, Google, Microsoft).
             </li>
             <li>
-              Actively continue designing, developing and architecting systems.
+              Actively continue designing, developing, and architecting systems.
             </li>
           </ul>
         </div>
