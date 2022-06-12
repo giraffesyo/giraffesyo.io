@@ -46,6 +46,96 @@ interface IProjectBullets {
   companyName: string
 }
 
+const ParallelWorks: ICompany = {
+  name: 'Parallel Works',
+  imgSrc: '/images/workexperience/parallelworks.svg',
+  location: 'Chicago, IL (Remote from Houston, TX)',
+  positions: [
+    {
+      name: 'Senior Software Engineer',
+      startDate: DateTime.fromISO('2021-08-02T08:00:00-06:00'),
+      endDate: DateTime.fromISO('2022-03-14T08:00:00-06:00'),
+      details: (
+        <div>
+          <Project
+            name='Legacy Node.js migration'
+            bullets={[
+              <li>
+                Designed and implemented processes for CI/CD, dockerizing all
+                services with Dockerfiles, images built and pushed to DockerHub
+                using GitHub actions, and deployed into kubernetes (GKE standard
+                and autopilot) using Terraform.
+              </li>,
+              <li>
+                Migrated more than 150 routes from legacy v0.10 Node.js to
+                modern TypeScript.
+              </li>,
+              <li>
+                Utilized NGINX as reverse-proxy solution to map certain content
+                to new frontend/backend and other content to old backend. This
+                provided a smooth transition during code migration process.
+              </li>,
+            ]}
+          >
+            The company was founded in 2015 and had a legacy Node.js stack
+            running version 0.10 of Node, with frontend being delivered using
+            Jade templates. In order to more quickly iterate on web development
+            projects, I proposed and executed the project to migrate the
+            application to modern Node.js and a React.js frontend.
+          </Project>
+          <Project
+            name='Version 2 cloud clusters'
+            bullets={[
+              <li>
+                Actively developed and led development process for version 2
+                cloud clusters.
+              </li>,
+              <li>
+                Provided on-going support according to customer demand and
+                developed new features as needed.
+              </li>,
+              <li>
+                Fully integrated terraform-based cloud deployment solution into
+                Parallel Works platform.
+              </li>,
+            ]}
+          >
+            Deploying an HPC cluster in the cloud was originally done by
+            utilizing the vendor-specific solutions for each cloud, i.e. AWS
+            ParallelCluster, Azure CycleCloud, and Google Deployment Manager. In
+            order to quickly adopt new features and iterate faster with a small
+            team, we redesigned Parallel Works to create a uniform cluster
+            provisioning process utilizing Terraform on all three major clouds.
+            This feature is now the centerpiece of the Parallel Works product,
+            currently in use by the government organization NOAA for their R&D.
+          </Project>
+        </div>
+      ),
+    },
+    {
+      name: 'Director of Engineering',
+      startDate: DateTime.fromISO('2022-03-14T08:00:00-06:00'),
+      details: (
+        <div>
+          <ul className='list-disc ml-5 md:ml-10'>
+            <li>
+              Onboard, recruit, and lead team of developers, regular 1 on 1s
+              with team
+            </li>
+            <li>
+              Present architecture decisions to customers, facilitate
+              discussions with partners (AWS, Google, Microsoft).
+            </li>
+            <li>
+              Actively continue designing, developing and architecting systems.
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+  ],
+}
+
 const ConocoPhillips: ICompany = {
   name: 'ConocoPhillips',
   imgSrc: '/images/workexperience/conocophillips.svg',
@@ -171,6 +261,7 @@ const ConocoPhillips: ICompany = {
         </div>
       ),
       startDate: DateTime.fromISO('2020-12-01T08:00:00-06:00'),
+      endDate: DateTime.fromISO('2021-07-31T17:00:00-06:00'),
     },
   ],
 }
@@ -239,6 +330,12 @@ const FoundationSoftware: ICompany = {
     ),
   },
 }
+
+const Companies: ICompany[] = [
+  ParallelWorks,
+  ConocoPhillips,
+  FoundationSoftware,
+]
 
 const getDurationStringFromDateTimes = (
   earlierDT: DateTime,
@@ -350,8 +447,9 @@ const Timeline: React.FC<ITimelineProps> = ({ company }) => {
 const WorkExperienceSection: React.FC = () => {
   return (
     <div className='flex flex-col w-full items-center mb-10'>
-      <Timeline company={ConocoPhillips} />
-      <Timeline company={FoundationSoftware} />
+      {Companies.map(company => (
+        <Timeline key={company.name} company={company} />
+      ))}
     </div>
   )
 }
