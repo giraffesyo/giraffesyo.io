@@ -1,0 +1,196 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-purple-code: #b267e6;
+  --color-blue-codelight: rgb(150, 220, 250);
+  --color-blue-code: #4a9cd8;
+  --color-blue-twitter: rgb(85, 172, 238);
+  --color-blue-linkedin: rgb(0, 123, 181);
+  --color-green-code: #6a9955;
+  --color-gray-codelight: #292929;
+  --color-gray-codedark: rgb(30, 30, 30);
+  --color-gray-codelightest: #3c3c3c;
+  --color-orange-code: rgb(184, 85, 40);
+  --font-sans: 'Raleway', sans-serif;
+  --font-code: monaco, Consolas, 'Lucida Console', monospace;
+}
+
+/* Component classes */
+@layer components {
+  .section-header {
+    @apply dark:text-purple-code text-center font-sans font-light text-4xl md:text-5xl w-full;
+    letter-spacing: 0.5rem;
+
+    &:after {
+      content: '';
+      @apply pt-2;
+      margin: 0 auto 2rem auto;
+      border-bottom: 0.375rem solid;
+      @apply border-gray-codelight dark:border-purple-code w-4/5 block border-b-4;
+    }
+  }
+}
+
+.bullet-item::before {
+  content: '\00B7';
+  margin: 0 5px;
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+/* Navbar */
+.primarynav .navbar-brand {
+  font-size: 3em;
+  font-weight: 300;
+  font-family: 'Nunito', sans-serif;
+}
+
+.blog div {
+  margin-bottom: 5vh;
+}
+
+.PrairieDog {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
+.blog a:hover.orange-text {
+  color: rgb(184, 85, 40);
+}
+
+.blog .dark-blue-text {
+  text-align: left;
+}
+
+.unhidechild {
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.unhidechild a {
+  visibility: hidden;
+}
+
+.unhidechild:hover a,
+.unhidechild a:hover {
+  visibility: visible;
+}
+
+/* Blockquote styling for MDX */
+blockquote {
+  @apply dark:bg-gray-800 bg-gray-50 dark:border-gray-50 border-l-8 my-4 p-3;
+  quotes: '\201C' '\201D' '\2018' '\2019';
+}
+blockquote:before {
+  @apply dark:text-gray-50 text-gray-400 text-6xl mr-1;
+  content: '"';
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  @apply inline;
+}
+
+/* Code block styling for MDX */
+pre,
+code {
+  @apply text-sm;
+}
+
+code {
+  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-900;
+}
+
+pre {
+  @apply bg-gray-50 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 p-2 overflow-x-auto;
+}
+
+pre > code {
+  @apply border-0 pr-0 pl-0;
+}
+
+/* Prism syntax highlighting tokens */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.punctuation {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-green-500;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-purple-500;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  @apply text-yellow-500;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  @apply text-blue-500;
+}
+
+.token.function,
+.token.class-name {
+  @apply text-pink-500;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  @apply text-yellow-500;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply text-gray-800 dark:text-gray-50;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.remark-code-title {
+  @apply text-gray-800 dark:text-gray-200 px-5 py-3 border border-b-0 border-gray-200 dark:border-gray-700 rounded-t bg-gray-200 dark:bg-gray-800 text-sm font-mono font-bold;
+}
+
+.remark-code-title + pre {
+  @apply mt-0 rounded-t-none;
+}
+
+.mdx-marker {
+  @apply block -mx-4 px-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-blue-500;
+}
