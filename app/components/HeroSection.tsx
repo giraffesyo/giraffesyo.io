@@ -82,15 +82,14 @@ export default function HeroSection() {
               style={{ transitionDelay: '0.6s' }}
             >
               <a
-                href='mailto:michael@giraffesyo.io'
+                href='https://x.com/intent/tweet?text=@giraffesyo'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='btn-primary'
               >
                 Get in touch
                 <span aria-hidden='true'>&rarr;</span>
               </a>
-              <Link to='/blog' className='btn-secondary'>
-                Read my blog
-              </Link>
             </div>
           </div>
 

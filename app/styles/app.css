@@ -59,7 +59,7 @@ body {
 
 .btn-primary {
   @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-body text-sm font-medium
-    bg-accent text-zinc-950 hover:bg-accent-hover
+    bg-accent text-white hover:bg-accent-hover
     transition-all duration-200;
 }
 
