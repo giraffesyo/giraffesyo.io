@@ -4,10 +4,9 @@ interface ISchool {
   name: string
   logo: string
   darklogo?: string
-  degree?: {
+  degree: {
     type: string
     major?: string
-    subtitle: string
   }
 }
 
@@ -18,8 +17,7 @@ const schools: ISchool[] = [
     darklogo: '/images/education/uh_dark.svg',
     degree: {
       type: 'Master of Science',
-      major: 'Computer Sience',
-      subtitle: 'In progress',
+      major: 'Computer Science',
     },
   },
   {
@@ -28,51 +26,46 @@ const schools: ISchool[] = [
     degree: {
       type: 'Bachelor of Science',
       major: 'Computer Science',
-      subtitle: '3.70 GPA',
     },
   },
   {
-    name: 'Monterrey Institute of Technology and Higher Education',
+    name: 'Monterrey Institute of Technology',
     logo: '/images/education/tec.svg',
     darklogo: '/images/education/tec_dark.svg',
     degree: {
-      type: 'Full year international study abroad',
-      subtitle: '',
+      type: 'International Study Abroad',
     },
   },
 ]
 
 export default function EducationSection() {
   const { theme } = useTheme()
-  const Schools = schools.map((school) => (
-    <div
-      className='grid md:grid-cols-2 w-full md:w-2/3 ml-auto mr-auto  items-center my-4'
-      key={school.name}
-    >
-      <div className='h-32 w-64 relative justify-self-center md:justify-self-end'>
-        <img
-          className='absolute inset-0 w-full h-full object-contain'
-          alt={school.name + ' logo'}
-          src={
-            theme === 'dark' && school.darklogo ? school.darklogo : school.logo
-          }
-          loading='lazy'
-        />
-      </div>
-      <div className='ml-10'>
-        <div className='font-semibold dark:text-orange-code text-2xl'>
-          {school.name}
-        </div>
-        <div className='text-blue-700 dark:text-blue-code'>
-          <strong className='font-semibold'>{school.degree!.type}</strong>
-          {school.degree!.major && ','} {school.degree!.major}
-        </div>
-        <div className='text-black italic dark:text-green-code'>
-          {school.degree!.subtitle}
-        </div>
-      </div>
-    </div>
-  ))
 
-  return <>{Schools}</>
+  return (
+    <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+      {schools.map((school) => (
+        <div key={school.name} className='card p-6 flex flex-col items-center text-center'>
+          <div className='w-full h-20 flex items-center justify-center mb-4'>
+            <img
+              className='max-h-full max-w-[160px] object-contain'
+              alt={school.name + ' logo'}
+              src={
+                theme === 'dark' && school.darklogo
+                  ? school.darklogo
+                  : school.logo
+              }
+              loading='lazy'
+            />
+          </div>
+          <h3 className='font-display text-sm font-semibold text-stone-900 dark:text-zinc-100 leading-tight'>
+            {school.name}
+          </h3>
+          <p className='text-sm text-accent mt-1'>
+            {school.degree.type}
+            {school.degree.major && ` in ${school.degree.major}`}
+          </p>
+        </div>
+      ))}
+    </div>
+  )
 }
