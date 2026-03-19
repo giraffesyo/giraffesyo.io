@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router'
 import Terminal from './Terminal'
 
 export default function HeroSection() {
@@ -22,8 +21,7 @@ export default function HeroSection() {
       <div
         className='absolute inset-0 opacity-[0.025] dark:opacity-[0.035]'
         style={{
-          backgroundImage:
-            'radial-gradient(circle, currentColor 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
           backgroundSize: '40px 40px',
         }}
       />
@@ -35,9 +33,7 @@ export default function HeroSection() {
           <div className='flex-1'>
             <p
               className={`font-mono text-sm text-accent transition-all duration-700 ${
-                isReady
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-4'
+                isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
               style={{ transitionDelay: '0.1s' }}
             >
@@ -46,9 +42,7 @@ export default function HeroSection() {
 
             <h1
               className={`font-display text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight text-stone-900 dark:text-zinc-50 mt-3 transition-all duration-1000 ${
-                isReady
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-8'
+                isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{
                 transitionDelay: '0.2s',
@@ -62,22 +56,17 @@ export default function HeroSection() {
 
             <p
               className={`text-lg sm:text-xl text-stone-500 dark:text-zinc-400 mt-6 max-w-xl leading-relaxed transition-all duration-700 ${
-                isReady
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-4'
+                isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
               style={{ transitionDelay: '0.45s' }}
             >
-              Director of Engineering at Parallel Works, leading all product
-              design and engineering for the ACTIVATE hybrid multi-cloud
-              platform for HPC and AI workloads.
+              Director of Engineering at Parallel Works, leading all product design and engineering
+              for the ACTIVATE hybrid multi-cloud platform for HPC and AI workloads.
             </p>
 
             <div
               className={`flex flex-wrap gap-4 mt-8 transition-all duration-700 ${
-                isReady
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-4'
+                isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
               style={{ transitionDelay: '0.6s' }}
             >
@@ -96,9 +85,7 @@ export default function HeroSection() {
           {/* Right — terminal */}
           <div
             className={`lg:flex-shrink-0 transition-all duration-1000 ${
-              isReady
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-12'
+              isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
             style={{
               transitionDelay: '0.5s',

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { HiMagnifyingGlass } from 'react-icons/hi2'
 import PostPreview from '../components/blog/PostPreview'
-import { getPosts } from '../lib/blog'
 import FadeIn from '../components/FadeIn'
+import { getPosts } from '../lib/blog'
 
 export default function BlogList() {
   const [searchValue, setSearchValue] = useState('')
@@ -13,7 +13,7 @@ export default function BlogList() {
   }, [])
 
   const filtered = posts.filter(({ frontMatter }) =>
-    frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
+    frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()),
   )
 
   return (
@@ -27,8 +27,7 @@ export default function BlogList() {
             Writing
           </h1>
           <p className='text-stone-500 dark:text-zinc-400 leading-relaxed mb-8'>
-            Thoughts on software engineering, cloud infrastructure, and
-            augmented reality.{' '}
+            Thoughts on software engineering, cloud infrastructure, and augmented reality.{' '}
             <span className='font-mono text-sm text-stone-400 dark:text-zinc-500'>
               {posts.length} article{posts.length !== 1 ? 's' : ''}
             </span>
@@ -50,9 +49,7 @@ export default function BlogList() {
 
         <div className='grid gap-4'>
           {filtered.length === 0 && (
-            <p className='text-stone-400 dark:text-zinc-500 text-center py-12'>
-              No posts found.
-            </p>
+            <p className='text-stone-400 dark:text-zinc-500 text-center py-12'>No posts found.</p>
           )}
           {filtered.map(({ frontMatter }, i) => (
             <FadeIn key={frontMatter.slug} delay={0.05 * (i + 1)}>

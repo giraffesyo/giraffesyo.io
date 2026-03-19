@@ -3,7 +3,6 @@ import { FaLink } from 'react-icons/fa'
 
 const Permalink = ({ href }: { href: string }) => (
   <a
-    aria-hidden={true}
     className='absolute -left-6 top-1/2 -translate-y-1/2 text-xs text-stone-300 dark:text-zinc-700 hover:text-accent transition-colors'
     href={href}
   >
@@ -24,7 +23,7 @@ const H1 = ({ children, ...props }: HeaderProps) => (
   >
     {props.id && (
       <span className='opacity-0 group-hover:opacity-100 transition-opacity'>
-        <Permalink href={'#' + props.id} />
+        <Permalink href={`#${props.id}`} />
       </span>
     )}
     {children}
@@ -38,7 +37,7 @@ const H2 = ({ children, ...props }: HeaderProps) => (
   >
     {props.id && (
       <span className='opacity-0 group-hover:opacity-100 transition-opacity'>
-        <Permalink href={'#' + props.id} />
+        <Permalink href={`#${props.id}`} />
       </span>
     )}
     {children}
@@ -52,7 +51,7 @@ const H3 = ({ children, ...props }: HeaderProps) => (
   >
     {props.id && (
       <span className='opacity-0 group-hover:opacity-100 transition-opacity'>
-        <Permalink href={'#' + props.id} />
+        <Permalink href={`#${props.id}`} />
       </span>
     )}
     {children}

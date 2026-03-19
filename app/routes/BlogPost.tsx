@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
-import { useParams, Link } from 'react-router'
 import { HiArrowLeft } from 'react-icons/hi2'
-import { getPostBySlug } from '../lib/blog'
+import { Link, useParams } from 'react-router'
 import MDXComponents from '../components/blog/mdx'
+import { getPostBySlug } from '../lib/blog'
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>()
@@ -53,9 +53,7 @@ export default function BlogPost() {
             </time>
             {frontMatter.readingTime && (
               <>
-                <span className='text-stone-300 dark:text-zinc-700'>
-                  &middot;
-                </span>
+                <span className='text-stone-300 dark:text-zinc-700'>&middot;</span>
                 <span className='text-sm font-mono text-stone-400 dark:text-zinc-500'>
                   {frontMatter.readingTime}
                 </span>

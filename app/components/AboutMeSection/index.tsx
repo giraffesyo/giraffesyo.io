@@ -15,17 +15,15 @@ export default function AboutMeSection() {
           About me
         </h2>
         <p className='text-stone-600 dark:text-zinc-400 leading-relaxed mb-3'>
-          I'm a software engineer and engineering leader focused on
-          cloud-native infrastructure, high-performance computing, and AI
-          tooling. As Director of Engineering at Parallel Works, I lead all
-          product design and development for ACTIVATE, the first hybrid
-          multi-cloud HPC platform to receive DoD IL-5 Authority to Operate.
+          I'm a software engineer and engineering leader focused on cloud-native infrastructure,
+          high-performance computing, and AI tooling. As Director of Engineering at Parallel Works,
+          I lead all product design and development for ACTIVATE, the first hybrid multi-cloud HPC
+          platform to receive DoD IL-5 Authority to Operate.
         </p>
         <p className='text-stone-600 dark:text-zinc-400 leading-relaxed mb-3'>
-          I work primarily with Go, TypeScript, and Kubernetes across AWS, GCP,
-          and Azure. I'm passionate about building developer tools, distributed
-          systems, and infrastructure that makes HPC and AI accessible to more
-          people.
+          I work primarily with Go, TypeScript, and Kubernetes across AWS, GCP, and Azure. I'm
+          passionate about building developer tools, distributed systems, and infrastructure that
+          makes HPC and AI accessible to more people.
         </p>
       </div>
     </div>

@@ -48,12 +48,8 @@ export default function EducationSection() {
           <div className='w-full h-20 flex items-center justify-center mb-4'>
             <img
               className='max-h-full max-w-[160px] object-contain'
-              alt={school.name + ' logo'}
-              src={
-                theme === 'dark' && school.darklogo
-                  ? school.darklogo
-                  : school.logo
-              }
+              alt={`${school.name} logo`}
+              src={theme === 'dark' && school.darklogo ? school.darklogo : school.logo}
               loading='lazy'
             />
           </div>

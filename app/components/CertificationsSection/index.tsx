@@ -50,9 +50,7 @@ export default function CertificationsSection() {
           <h3 className='font-display text-sm font-semibold text-stone-900 dark:text-zinc-100'>
             {cert.shortName}
           </h3>
-          <p className='text-xs text-stone-400 dark:text-zinc-500 mt-1'>
-            {cert.awardDate}
-          </p>
+          <p className='text-xs text-stone-400 dark:text-zinc-500 mt-1'>{cert.awardDate}</p>
           <p className='text-xs text-accent mt-2 opacity-0 group-hover:opacity-100 transition-opacity'>
             View credential &rarr;
           </p>

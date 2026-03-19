@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router'
 import App from './App'
-import Home from './routes/Home'
 import BlogList from './routes/BlogList'
 import BlogPost from './routes/BlogPost'
+import Home from './routes/Home'
 import NotFound from './routes/NotFound'
 
 export const router = createBrowserRouter([

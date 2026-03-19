@@ -49,11 +49,7 @@ function buildPosts(): IBlogPost[] {
       Component: mod.default,
     }))
     .filter((p) => p.frontMatter.published !== false)
-    .sort(
-      (a, b) =>
-        new Date(b.frontMatter.date).getTime() -
-        new Date(a.frontMatter.date).getTime()
-    )
+    .sort((a, b) => new Date(b.frontMatter.date).getTime() - new Date(a.frontMatter.date).getTime())
 }
 
 let postsCache: IBlogPost[] | null = null

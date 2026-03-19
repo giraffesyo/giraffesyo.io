@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { type ReactNode, useEffect, useRef, useState } from 'react'
 
 interface FadeInProps {
   children: ReactNode
@@ -6,11 +6,7 @@ interface FadeInProps {
   className?: string
 }
 
-export default function FadeIn({
-  children,
-  delay = 0,
-  className = '',
-}: FadeInProps) {
+export default function FadeIn({ children, delay = 0, className = '' }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -24,7 +20,7 @@ export default function FadeIn({
           observer.disconnect()
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     )
     observer.observe(el)
     return () => observer.disconnect()

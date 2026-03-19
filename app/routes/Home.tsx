@@ -1,19 +1,19 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router'
 import AboutMeSection from '../components/AboutMeSection'
+import PostPreview from '../components/blog/PostPreview'
+import CertificationsSection from '../components/CertificationsSection'
+import EducationSection from '../components/EducationSection'
+import FadeIn from '../components/FadeIn'
 import HeroSection from '../components/HeroSection'
 import WorkExperienceSection from '../components/WorkExperienceSection'
-import EducationSection from '../components/EducationSection'
-import CertificationsSection from '../components/CertificationsSection'
-import FadeIn from '../components/FadeIn'
 import { getPosts } from '../lib/blog'
-import PostPreview from '../components/blog/PostPreview'
 
 export default function Home() {
   const posts = getPosts().slice(0, 2)
 
   useEffect(() => {
-    document.title = "Michael McQuade | Software Engineer"
+    document.title = 'Michael McQuade | Software Engineer'
   }, [])
 
   return (

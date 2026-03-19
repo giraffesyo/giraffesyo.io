@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon'
-import { useState, useEffect, type ReactNode } from 'react'
+import { type ReactNode, useEffect, useState } from 'react'
 import { HiChevronDown } from 'react-icons/hi2'
 
 interface IPosition {
@@ -26,9 +26,7 @@ interface ProjectProps {
 
 const Project = ({ name, children, bullets }: ProjectProps) => (
   <div className='mt-4'>
-    <h4 className='text-sm font-semibold text-stone-900 dark:text-zinc-100'>
-      {name}
-    </h4>
+    <h4 className='text-sm font-semibold text-stone-900 dark:text-zinc-100'>{name}</h4>
     <p className='text-sm text-stone-500 dark:text-zinc-400 mt-1'>{children}</p>
     <ul className='list-disc ml-5 mt-2 text-sm text-stone-600 dark:text-zinc-400 space-y-1'>
       {bullets}
@@ -54,24 +52,22 @@ const ParallelWorks: ICompany = {
       details: (
         <ul className='list-disc ml-5 text-sm text-stone-600 dark:text-zinc-400 space-y-1'>
           <li>
-            Driving all product design and engineering for ACTIVATE, a hybrid
-            multi-cloud control plane for HPC and AI workloads used by
-            organizations including NOAA and the U.S. Department of Defense.
+            Driving all product design and engineering for ACTIVATE, a hybrid multi-cloud control
+            plane for HPC and AI workloads used by organizations including NOAA and the U.S.
+            Department of Defense.
           </li>
           <li>
-            ACTIVATE became the first hybrid multi-cloud solution to receive
-            DoD IL-5 Authority to Operate from HPCMP (Sep 2025).
+            ACTIVATE became the first hybrid multi-cloud solution to receive DoD IL-5 Authority to
+            Operate from HPCMP (Sep 2025).
           </li>
           <li>
-            Architecting and shipping every major platform capability,
-            including Kubernetes integration, AI Gateway with LLM routing
-            and chat/agent interfaces, workflow framework, multi-cloud
-            cluster provisioning, API/SDK, and dashboard.
+            Architecting and shipping every major platform capability, including Kubernetes
+            integration, AI Gateway with LLM routing and chat/agent interfaces, workflow framework,
+            multi-cloud cluster provisioning, API/SDK, and dashboard.
           </li>
           <li>
-            Recruiting, onboarding, and leading engineers. Presenting
-            architecture decisions to customers and facilitating partner
-            discussions with AWS, Google, and Microsoft.
+            Recruiting, onboarding, and leading engineers. Presenting architecture decisions to
+            customers and facilitating partner discussions with AWS, Google, and Microsoft.
           </li>
         </ul>
       ),
@@ -95,38 +91,29 @@ const ConocoPhillips: ICompany = {
             name='Cluster Information Aggregator'
             bullets={[
               <li key='1'>
-                Python scripts writing system info to networked filesystem every
-                3 minutes.
+                Python scripts writing system info to networked filesystem every 3 minutes.
               </li>,
               <li key='2'>
-                Node.js cache server with RESTful API and PostgreSQL backing
-                database.
+                Node.js cache server with RESTful API and PostgreSQL backing database.
               </li>,
-              <li key='3'>
-                Hasura-powered GraphQL interface for flexible querying.
-              </li>,
+              <li key='3'>Hasura-powered GraphQL interface for flexible querying.</li>,
             ]}
           >
-            Built a system to aggregate data from 5,000+ compute nodes into a
-            centralized Node.js cache server.
+            Built a system to aggregate data from 5,000+ compute nodes into a centralized Node.js
+            cache server.
           </Project>
           <Project
             name='Visual Cluster Interface'
             bullets={[
               <li key='4'>
-                React + TypeScript app with drillable, color-coded data center
-                visualization.
+                React + TypeScript app with drillable, color-coded data center visualization.
               </li>,
-              <li key='5'>
-                Live-updating via SWR polling with GraphQL backend.
-              </li>,
-              <li key='6'>
-                LDAP authentication via Apache reverse proxy.
-              </li>,
+              <li key='5'>Live-updating via SWR polling with GraphQL backend.</li>,
+              <li key='6'>LDAP authentication via Apache reverse proxy.</li>,
             ]}
           >
-            Created a top-down visual representation of the data center with
-            real-time monitoring of power, CPU, and temperature.
+            Created a top-down visual representation of the data center with real-time monitoring of
+            power, CPU, and temperature.
           </Project>
         </div>
       ),
@@ -140,19 +127,14 @@ const ConocoPhillips: ICompany = {
           name='AWS CDK Construct Library'
           bullets={[
             <li key='7'>
-              TypeScript construct library compiled to Python, JS, and C# via
-              AWS JSii.
+              TypeScript construct library compiled to Python, JS, and C# via AWS JSii.
             </li>,
-            <li key='8'>
-              Published through Azure Artifacts for internal consumption.
-            </li>,
-            <li key='9'>
-              Pre-built compliant constructs for EC2, S3, Lambda, RDS, and more.
-            </li>,
+            <li key='8'>Published through Azure Artifacts for internal consumption.</li>,
+            <li key='9'>Pre-built compliant constructs for EC2, S3, Lambda, RDS, and more.</li>,
           ]}
         >
-          Built a CDK construct library to make cloud resource provisioning
-          repeatable, compliant, and self-service for business units.
+          Built a CDK construct library to make cloud resource provisioning repeatable, compliant,
+          and self-service for business units.
         </Project>
       ),
     },
@@ -173,36 +155,22 @@ const FoundationSoftware: ICompany = {
         <Project
           name='Marketing Website Rewrite'
           bullets={[
-            <li key='1'>
-              Gatsby.js rewrite cut page load from 6.2s to 800ms.
-            </li>,
-            <li key='2'>
-              Migrated to Netlify CDN with Git-powered CMS.
-            </li>,
-            <li key='3'>
-              Rewrote 40 pages as React components.
-            </li>,
+            <li key='1'>Gatsby.js rewrite cut page load from 6.2s to 800ms.</li>,
+            <li key='2'>Migrated to Netlify CDN with Git-powered CMS.</li>,
+            <li key='3'>Rewrote 40 pages as React components.</li>,
           ]}
         >
-          Replaced a repeatedly hacked WordPress site with a statically
-          generated Gatsby.js build.
+          Replaced a repeatedly hacked WordPress site with a statically generated Gatsby.js build.
         </Project>
         <Project
           name='UPS Label Printer'
           bullets={[
-            <li key='4'>
-              Internal label printing app with Node.js/Express backend.
-            </li>,
-            <li key='5'>
-              ETL of thousands of Word documents into MSSQL database.
-            </li>,
-            <li key='6'>
-              Electron app with Windows Active Directory SSO.
-            </li>,
+            <li key='4'>Internal label printing app with Node.js/Express backend.</li>,
+            <li key='5'>ETL of thousands of Word documents into MSSQL database.</li>,
+            <li key='6'>Electron app with Windows Active Directory SSO.</li>,
           ]}
         >
-          Automated the weekly paycheck mailing process, replacing a manual
-          Microsoft Word workflow.
+          Automated the weekly paycheck mailing process, replacing a manual Microsoft Word workflow.
         </Project>
       </div>
     ),
@@ -243,9 +211,7 @@ function CompanyCard({ company }: { company: ICompany }) {
   const [now, setNow] = useState(DateTime.local())
   useEffect(() => setNow(DateTime.local()), [])
 
-  const positions = Array.isArray(company.positions)
-    ? company.positions
-    : [company.positions]
+  const positions = Array.isArray(company.positions) ? company.positions : [company.positions]
 
   const start = positions[0].startDate
   const end = positions[positions.length - 1].endDate
@@ -270,9 +236,7 @@ function CompanyCard({ company }: { company: ICompany }) {
                 {company.name}
               </h3>
               <p className='text-sm text-accent font-medium'>{company.title}</p>
-              <p className='text-xs text-stone-400 dark:text-zinc-500 mt-0.5'>
-                {company.location}
-              </p>
+              <p className='text-xs text-stone-400 dark:text-zinc-500 mt-0.5'>{company.location}</p>
             </div>
             <div className='text-right shrink-0'>
               <p className='text-xs text-stone-500 dark:text-zinc-400 font-mono'>

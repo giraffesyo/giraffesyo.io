@@ -1,5 +1,5 @@
-import CustomLink from './link'
 import Headers from './header'
+import CustomLink from './link'
 import List from './list'
 
 const Image = (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
@@ -23,10 +23,7 @@ const MDXComponents = {
   ul: List.UL,
   ol: List.OL,
   p: ({ children, ...props }: { children?: React.ReactNode }) => (
-    <p
-      className='text-stone-600 dark:text-zinc-400 leading-relaxed my-4'
-      {...props}
-    >
+    <p className='text-stone-600 dark:text-zinc-400 leading-relaxed my-4' {...props}>
       {children}
     </p>
   ),
