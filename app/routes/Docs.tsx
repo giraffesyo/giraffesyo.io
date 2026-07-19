@@ -1,8 +1,9 @@
-import { useEffect } from 'react'
 import { FaGithub } from 'react-icons/fa6'
 import { HiArrowRight, HiCodeBracket, HiDocumentText, HiTag } from 'react-icons/hi2'
 import { Link } from 'react-router'
+import { ROUTE_METADATA } from '../../site.config.mjs'
 import FadeIn from '../components/FadeIn'
+import Seo from '../components/Seo'
 
 const projects = [
   {
@@ -35,12 +36,9 @@ const projects = [
 ]
 
 export default function Docs() {
-  useEffect(() => {
-    document.title = 'Documentation | giraffesyo.io'
-  }, [])
-
   return (
     <div className='px-6 py-20 sm:py-24'>
+      <Seo pathname='/docs' {...ROUTE_METADATA['/docs']} />
       <div className='max-w-6xl mx-auto'>
         <FadeIn>
           <div className='section-label max-w-3xl'>

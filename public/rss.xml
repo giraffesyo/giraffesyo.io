@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>giraffesyo.io</title>
+    <link>https://giraffesyo.io</link>
+    <description>Michael McQuade is a software engineering leader building cloud-native infrastructure, high-performance computing platforms, and AI tooling.</description>
+    <language>en-US</language>
+    <atom:link href="https://giraffesyo.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Roll-A-Ball AR</title>
+      <link>https://giraffesyo.io/blog/roll-a-ball-ar</link>
+      <guid isPermaLink="true">https://giraffesyo.io/blog/roll-a-ball-ar</guid>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 GMT</pubDate>
+      <description>In video game development, the hello world of 3D games is rolling a ball around the screen. In this post, I go over moving that into Augmented Reality with Unity and the Vuforia SDK.</description>
+      <category>c#</category>
+      <category>unity</category>
+      <category>vuforia</category>
+      <category>augmented reality</category>
+    </item>
+  </channel>
+</rss>

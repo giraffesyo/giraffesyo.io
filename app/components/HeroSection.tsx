@@ -1,12 +1,41 @@
-import { useEffect, useState } from 'react'
-import Terminal from './Terminal'
+import { lazy, Suspense, useEffect, useState } from 'react'
+
+const Terminal = lazy(() => import('./Terminal'))
+
+function TerminalPlaceholder() {
+  return (
+    <div
+      className='w-full max-w-md h-[310px] rounded-xl border border-stone-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-2xl shadow-stone-200/50 dark:shadow-black/30'
+      aria-hidden='true'
+    >
+      <div className='h-11 border-b border-stone-100 dark:border-zinc-800 bg-stone-50 dark:bg-zinc-900' />
+    </div>
+  )
+}
 
 export default function HeroSection() {
   const [isReady, setIsReady] = useState(false)
+  const [loadTerminal, setLoadTerminal] = useState(false)
 
   useEffect(() => {
     const t = setTimeout(() => setIsReady(true), 50)
     return () => clearTimeout(t)
+  }, [])
+
+  useEffect(() => {
+    const browser = window as typeof window & {
+      cancelIdleCallback?: (handle: number) => void
+      requestIdleCallback?: (callback: () => void, options: { timeout: number }) => number
+    }
+    const load = () => setLoadTerminal(true)
+
+    if (browser.requestIdleCallback) {
+      const handle = browser.requestIdleCallback(load, { timeout: 1200 })
+      return () => browser.cancelIdleCallback?.(handle)
+    }
+
+    const handle = window.setTimeout(load, 300)
+    return () => window.clearTimeout(handle)
   }, [])
 
   return (
@@ -92,7 +121,13 @@ export default function HeroSection() {
               transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
             }}
           >
-            <Terminal />
+            {loadTerminal ? (
+              <Suspense fallback={<TerminalPlaceholder />}>
+                <Terminal />
+              </Suspense>
+            ) : (
+              <TerminalPlaceholder />
+            )}
           </div>
         </div>
       </div>

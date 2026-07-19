@@ -1,23 +1,21 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router'
+import { ROUTE_METADATA } from '../../site.config.mjs'
 import AboutMeSection from '../components/AboutMeSection'
 import PostPreview from '../components/blog/PostPreview'
 import CertificationsSection from '../components/CertificationsSection'
 import EducationSection from '../components/EducationSection'
 import FadeIn from '../components/FadeIn'
 import HeroSection from '../components/HeroSection'
+import Seo from '../components/Seo'
 import WorkExperienceSection from '../components/WorkExperienceSection'
 import { getPosts } from '../lib/blog'
 
 export default function Home() {
   const posts = getPosts().slice(0, 2)
 
-  useEffect(() => {
-    document.title = 'Michael McQuade | Software Engineer'
-  }, [])
-
   return (
     <>
+      <Seo pathname='/' {...ROUTE_METADATA['/']} />
       <HeroSection />
 
       {/* ── About ── */}
