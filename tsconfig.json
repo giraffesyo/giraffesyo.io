@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"],
-      "@components/*": ["app/components/*"],
-      "@lib/*": ["app/lib/*"],
-      "@data/*": ["data/*"]
+      "@components/*": ["./app/components/*"],
+      "@lib/*": ["./app/lib/*"],
+      "@data/*": ["./data/*"]
     },
     "target": "ES2022",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
