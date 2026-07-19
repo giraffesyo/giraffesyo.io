@@ -24,6 +24,10 @@ export const router = createBrowserRouter([
         path: 'pdf',
         lazy: async () => ({ Component: (await import('./routes/PdfDocs')).default }),
       },
+      {
+        path: 'openapi-go-naming',
+        lazy: async () => ({ Component: (await import('./routes/OpenApiGoNamingDocs')).default }),
+      },
       { path: '*', Component: NotFound },
     ],
   },

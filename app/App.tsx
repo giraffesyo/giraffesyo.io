@@ -8,7 +8,7 @@ import { pageview } from './lib/gtag'
 function Nav() {
   const { theme, setTheme } = useTheme()
   const location = useLocation()
-  const docsActive = ['/docs', '/downmark', '/pdf'].some(
+  const docsActive = ['/docs', '/downmark', '/pdf', '/openapi-go-naming'].some(
     (path) => location.pathname === path || location.pathname.startsWith(`${path}/`),
   )
 

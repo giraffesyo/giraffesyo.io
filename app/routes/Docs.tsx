@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { FaGithub } from 'react-icons/fa6'
-import { HiArrowRight, HiCodeBracket, HiDocumentText } from 'react-icons/hi2'
+import { HiArrowRight, HiCodeBracket, HiDocumentText, HiTag } from 'react-icons/hi2'
 import { Link } from 'react-router'
 import FadeIn from '../components/FadeIn'
 
@@ -22,6 +22,15 @@ const projects = [
     github: 'https://github.com/giraffesyo/pdf',
     icon: HiCodeBracket,
     details: ['Positioned glyphs', 'Zero dependencies', 'Hostile-file budgets'],
+  },
+  {
+    name: 'openapi-go-naming',
+    description:
+      'Convert OpenAPI identifiers into idiomatic, deterministic, and collision-safe Go names.',
+    to: '/openapi-go-naming',
+    github: 'https://github.com/giraffesyo/openapi-go-naming',
+    icon: HiTag,
+    details: ['Valid Go identifiers', 'Collision-safe', 'Zero dependencies'],
   },
 ]
 
@@ -45,7 +54,7 @@ export default function Docs() {
           </p>
         </FadeIn>
 
-        <div className='grid md:grid-cols-2 gap-6 mt-14'>
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14'>
           {projects.map((project, index) => {
             const Icon = project.icon
             return (

@@ -21,6 +21,11 @@ interface DocsPageProps {
 const projects = [
   { to: '/downmark', name: 'downmark', summary: 'Documents to Markdown' },
   { to: '/pdf', name: 'pdf', summary: 'PDF text extraction' },
+  {
+    to: '/openapi-go-naming',
+    name: 'openapi-go-naming',
+    summary: 'OpenAPI names for Go',
+  },
 ]
 
 function usePageMetadata(name: string, description: string) {
