@@ -8,6 +8,9 @@ import { pageview } from './lib/gtag'
 function Nav() {
   const { theme, setTheme } = useTheme()
   const location = useLocation()
+  const docsActive = ['/docs', '/downmark', '/pdf', '/openapi-go-naming'].some(
+    (path) => location.pathname === path || location.pathname.startsWith(`${path}/`),
+  )
 
   const toggleTheme = useCallback(() => {
     setTheme(theme === 'light' ? 'dark' : 'light')
@@ -29,6 +32,9 @@ function Nav() {
             className={`nav-link hidden sm:block ${location.pathname === '/' ? 'active' : ''}`}
           >
             Home
+          </Link>
+          <Link to='/docs' className={`nav-link ${docsActive ? 'active' : ''}`}>
+            Docs
           </Link>
           <Link
             to='/blog'
