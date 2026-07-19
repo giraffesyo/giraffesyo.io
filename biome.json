@@ -1,7 +1,13 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.5.4/schema.json",
   "files": {
-    "includes": ["app/**/*.ts", "app/**/*.tsx", "vite.config.ts"]
+    "includes": [
+      "app/**/*.ts",
+      "app/**/*.tsx",
+      "scripts/**/*.mjs",
+      "site.config.mjs",
+      "vite.config.ts"
+    ]
   },
   "formatter": {
     "indentStyle": "space",

@@ -1,18 +1,8 @@
-import type { ComponentType } from 'react'
+import { type ComponentType, type LazyExoticComponent, lazy } from 'react'
+import blogManifest from '../generated/blog-manifest.json'
 
 interface MDXModule {
   default: ComponentType<any>
-  frontmatter: {
-    title: string
-    description: string
-    slug: string
-    date: Date | string
-    summary?: string
-    tags?: string[]
-    image?: string
-    published?: boolean
-    readingTime?: string
-  }
 }
 
 export interface IFrontMatter {
@@ -29,27 +19,24 @@ export interface IFrontMatter {
 
 export interface IBlogPost {
   frontMatter: IFrontMatter
-  Component: ComponentType<any>
+  Component: LazyExoticComponent<ComponentType<any>>
 }
 
-const modules = import.meta.glob('../../data/blog/*.mdx', {
-  eager: true,
-}) as Record<string, MDXModule>
+const modules = import.meta.glob('../../data/blog/*.mdx') as Record<
+  string,
+  () => Promise<MDXModule>
+>
 
 function buildPosts(): IBlogPost[] {
-  return Object.values(modules)
-    .map((mod) => ({
-      frontMatter: {
-        ...mod.frontmatter,
-        date:
-          mod.frontmatter.date instanceof Date
-            ? mod.frontmatter.date.toISOString().split('T')[0]
-            : String(mod.frontmatter.date),
-      },
-      Component: mod.default,
-    }))
-    .filter((p) => p.frontMatter.published !== false)
-    .sort((a, b) => new Date(b.frontMatter.date).getTime() - new Date(a.frontMatter.date).getTime())
+  return blogManifest.map(({ frontMatter, modulePath }) => {
+    const loadModule = modules[modulePath]
+    if (!loadModule) throw new Error(`No MDX module found for ${modulePath}`)
+
+    return {
+      Component: lazy(loadModule),
+      frontMatter: frontMatter as IFrontMatter,
+    }
+  })
 }
 
 let postsCache: IBlogPost[] | null = null

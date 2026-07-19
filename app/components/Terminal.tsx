@@ -1,6 +1,8 @@
 import { FitAddon } from '@xterm/addon-fit'
 import { Terminal as XTerm } from '@xterm/xterm'
 import { useCallback, useEffect, useRef, useState } from 'react'
+import '@fontsource/jetbrains-mono/400.css'
+import '@fontsource/jetbrains-mono/500.css'
 import '@xterm/xterm/css/xterm.css'
 
 const PURPLE = '\x1b[38;2;178;103;230m'

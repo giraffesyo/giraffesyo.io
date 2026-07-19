@@ -1,8 +1,8 @@
 import { useCallback, useEffect } from 'react'
 import { FaGithub, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
-import { HiMoon, HiSun } from 'react-icons/hi2'
+import { HiComputerDesktop, HiMoon, HiSun } from 'react-icons/hi2'
 import { Link, Outlet, useLocation } from 'react-router'
-import { ThemeProvider, useTheme } from './hooks/useTheme'
+import { type Theme, ThemeProvider, useTheme } from './hooks/useTheme'
 import { pageview } from './lib/gtag'
 
 function Nav() {
@@ -12,9 +12,13 @@ function Nav() {
     (path) => location.pathname === path || location.pathname.startsWith(`${path}/`),
   )
 
-  const toggleTheme = useCallback(() => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
+  const cycleTheme = useCallback(() => {
+    const themes: Theme[] = ['system', 'dark', 'light']
+    setTheme(themes[(themes.indexOf(theme) + 1) % themes.length])
   }, [theme, setTheme])
+
+  const nextTheme = theme === 'system' ? 'dark' : theme === 'dark' ? 'light' : 'system'
+  const ThemeIcon = theme === 'system' ? HiComputerDesktop : theme === 'dark' ? HiMoon : HiSun
 
   return (
     <nav className='fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-zinc-950/80 backdrop-blur-xl border-b border-stone-200/50 dark:border-zinc-800/50'>
@@ -44,11 +48,12 @@ function Nav() {
           </Link>
           <button
             type='button'
-            onClick={toggleTheme}
+            onClick={cycleTheme}
             className='p-2 rounded-lg text-stone-500 dark:text-zinc-500 hover:text-stone-900 dark:hover:text-zinc-100 hover:bg-stone-100 dark:hover:bg-zinc-800 transition-all'
-            aria-label='Toggle theme'
+            aria-label={`Theme: ${theme}. Switch to ${nextTheme}`}
+            title={`Theme: ${theme}`}
           >
-            {theme === 'dark' ? <HiSun className='w-4 h-4' /> : <HiMoon className='w-4 h-4' />}
+            <ThemeIcon className='w-4 h-4' />
           </button>
         </div>
       </div>

@@ -39,7 +39,7 @@ const schools: ISchool[] = [
 ]
 
 export default function EducationSection() {
-  const { theme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
   return (
     <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -49,7 +49,7 @@ export default function EducationSection() {
             <img
               className='max-h-full max-w-[160px] object-contain'
               alt={`${school.name} logo`}
-              src={theme === 'dark' && school.darklogo ? school.darklogo : school.logo}
+              src={resolvedTheme === 'dark' && school.darklogo ? school.darklogo : school.logo}
               loading='lazy'
             />
           </div>

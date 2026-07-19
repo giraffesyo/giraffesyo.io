@@ -2,6 +2,7 @@ import { type ReactNode, useEffect, useState } from 'react'
 import { FaGithub } from 'react-icons/fa6'
 import { HiCheck, HiClipboardDocument, HiOutlineBookOpen } from 'react-icons/hi2'
 import { Link, useLocation } from 'react-router'
+import Seo from '../Seo'
 
 export interface DocsSectionLink {
   id: string
@@ -28,30 +29,6 @@ const projects = [
   },
 ]
 
-function usePageMetadata(name: string, description: string) {
-  useEffect(() => {
-    document.title = `${name} documentation | giraffesyo.io`
-
-    let meta = document.querySelector<HTMLMetaElement>('meta[name="description"]')
-    const created = !meta
-    const previous = meta?.content
-    if (!meta) {
-      meta = document.createElement('meta')
-      meta.name = 'description'
-      document.head.appendChild(meta)
-    }
-    meta.content = description
-
-    return () => {
-      if (created) {
-        meta?.remove()
-      } else if (meta && previous !== undefined) {
-        meta.content = previous
-      }
-    }
-  }, [description, name])
-}
-
 export default function DocsPage({
   children,
   description,
@@ -63,7 +40,6 @@ export default function DocsPage({
 }: DocsPageProps) {
   const location = useLocation()
   const [activeSection, setActiveSection] = useState(sections[0]?.id ?? '')
-  usePageMetadata(name, description)
 
   useEffect(() => {
     const updateActiveSection = () => {
@@ -96,6 +72,20 @@ export default function DocsPage({
 
   return (
     <div className='px-6 py-16 sm:py-20'>
+      <Seo
+        title={`${name} documentation | giraffesyo.io`}
+        description={description}
+        pathname={location.pathname}
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareSourceCode',
+          codeRepository: githubUrl,
+          description,
+          name,
+          programmingLanguage: 'Go',
+          url: githubUrl,
+        }}
+      />
       <div className='max-w-6xl mx-auto'>
         <header className='pb-12 border-b border-stone-200 dark:border-zinc-800'>
           <div className='flex items-center gap-2 font-mono text-xs text-stone-400 dark:text-zinc-500 mb-6'>

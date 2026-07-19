@@ -1,12 +1,16 @@
-import { DateTime } from 'luxon'
-import { type ReactNode, useEffect, useState } from 'react'
+import { type ReactNode, useState } from 'react'
 import { HiChevronDown } from 'react-icons/hi2'
+
+interface DateParts {
+  month: number
+  year: number
+}
 
 interface IPosition {
   name: string
   details: ReactNode
-  startDate: DateTime
-  endDate?: DateTime
+  startDate: DateParts
+  endDate?: DateParts
 }
 
 interface ICompany {
@@ -34,6 +38,8 @@ const Project = ({ name, children, bullets }: ProjectProps) => (
   </div>
 )
 
+const date = (year: number, month: number): DateParts => ({ month, year })
+
 const ParallelWorks: ICompany = {
   name: 'Parallel Works',
   title: 'Director of Engineering',
@@ -42,13 +48,13 @@ const ParallelWorks: ICompany = {
   positions: [
     {
       name: 'Senior Software Engineer',
-      startDate: DateTime.fromISO('2021-08-02'),
-      endDate: DateTime.fromISO('2022-03-14'),
+      startDate: date(2021, 8),
+      endDate: date(2022, 3),
       details: null,
     },
     {
       name: 'Director of Engineering',
-      startDate: DateTime.fromISO('2022-03-14'),
+      startDate: date(2022, 3),
       details: (
         <ul className='list-disc ml-5 text-sm text-stone-600 dark:text-zinc-400 space-y-1'>
           <li>
@@ -83,8 +89,8 @@ const ConocoPhillips: ICompany = {
   positions: [
     {
       name: 'HPC System Administrator',
-      startDate: DateTime.fromISO('2019-06-01'),
-      endDate: DateTime.fromISO('2020-12-02'),
+      startDate: date(2019, 6),
+      endDate: date(2020, 12),
       details: (
         <div>
           <Project
@@ -120,8 +126,8 @@ const ConocoPhillips: ICompany = {
     },
     {
       name: 'Cloud Architect',
-      startDate: DateTime.fromISO('2020-12-01'),
-      endDate: DateTime.fromISO('2021-07-31'),
+      startDate: date(2020, 12),
+      endDate: date(2021, 7),
       details: (
         <Project
           name='AWS CDK Construct Library'
@@ -147,8 +153,8 @@ const FoundationSoftware: ICompany = {
   imgSrc: '/images/workexperience/foundation.svg',
   location: 'Strongsville, OH',
   positions: {
-    startDate: DateTime.fromISO('2018-05-15'),
-    endDate: DateTime.fromISO('2018-08-21'),
+    startDate: date(2018, 5),
+    endDate: date(2018, 8),
     name: 'Software Engineering Intern',
     details: (
       <div>
@@ -185,31 +191,34 @@ const Apple: ICompany = {
   location: 'Tulsa, OK',
   positions: {
     name: 'Senior Advisor',
-    startDate: DateTime.fromISO('2012-09-01'),
-    endDate: DateTime.fromISO('2015-08-01'),
+    startDate: date(2012, 9),
+    endDate: date(2015, 8),
     details: null,
   },
 }
 
 const Companies: ICompany[] = [ParallelWorks, ConocoPhillips, FoundationSoftware, Apple]
 
-function getDuration(start: DateTime, end: DateTime): string {
-  const d = end.diff(start, ['years', 'months'])
-  const y = d.years
-  const m = Math.floor(d.months)
+function getDuration(start: DateParts, end: DateParts): string {
+  const totalMonths = Math.max(0, (end.year - start.year) * 12 + end.month - start.month)
+  const y = Math.floor(totalMonths / 12)
+  const m = totalMonths % 12
   const yStr = y ? `${y} yr${y > 1 ? 's' : ''} ` : ''
   const mStr = m ? `${m} mo${m > 1 ? 's' : ''}` : ''
   return `${yStr}${mStr}`.trim() || 'Just started'
 }
 
-function formatDate(dt: DateTime): string {
-  return `${dt.monthShort} ${dt.year}`
+function formatDate(value: DateParts): string {
+  const month = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(
+    new Date(value.year, value.month - 1),
+  )
+  return `${month} ${value.year}`
 }
 
 function CompanyCard({ company }: { company: ICompany }) {
   const [expanded, setExpanded] = useState(false)
-  const [now, setNow] = useState(DateTime.local())
-  useEffect(() => setNow(DateTime.local()), [])
+  const currentDate = new Date()
+  const now = date(currentDate.getFullYear(), currentDate.getMonth() + 1)
 
   const positions = Array.isArray(company.positions) ? company.positions : [company.positions]
 
