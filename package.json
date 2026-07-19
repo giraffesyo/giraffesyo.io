@@ -29,6 +29,7 @@
     "dev": "pnpm generate && vite",
     "build": "pnpm generate && vite build && node scripts/generate-site.mjs --postbuild",
     "preview": "vite preview",
+    "test": "node --test scripts/*.test.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
@@ -47,6 +48,7 @@
     "remark-mdx-frontmatter": "^5.2.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
-    "vite": "^8.1.5"
+    "vite": "^8.1.5",
+    "yaml": "^2.9.0"
   }
 }

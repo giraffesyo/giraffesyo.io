@@ -2,47 +2,12 @@ import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { absoluteUrl, ROUTE_METADATA, SITE } from '../site.config.mjs'
+import { parseFrontMatter } from './front-matter.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const blogDirectory = path.join(root, 'data/blog')
 const generatedDirectory = path.join(root, 'app/generated')
 const publicDirectory = path.join(root, 'public')
-
-function parseValue(rawValue) {
-  const value = rawValue.trim()
-  if (value === 'true') return true
-  if (value === 'false') return false
-
-  if (value.startsWith('[') && value.endsWith(']')) {
-    return value
-      .slice(1, -1)
-      .split(',')
-      .map((item) => item.trim().replace(/^['"]|['"]$/g, ''))
-      .filter(Boolean)
-  }
-
-  return value.replace(/^['"]|['"]$/g, '')
-}
-
-function parseFrontMatter(source, filename) {
-  const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---/)
-  if (!match) throw new Error(`Missing front matter in ${filename}`)
-
-  const frontMatter = {}
-  for (const line of match[1].split(/\r?\n/)) {
-    if (!line.trim() || line.trimStart().startsWith('#')) continue
-    const separator = line.indexOf(':')
-    if (separator === -1) continue
-    const key = line.slice(0, separator).trim()
-    frontMatter[key] = parseValue(line.slice(separator + 1))
-  }
-
-  for (const required of ['title', 'description', 'date', 'slug']) {
-    if (!frontMatter[required]) throw new Error(`Missing ${required} in ${filename}`)
-  }
-
-  return frontMatter
-}
 
 async function readPosts() {
   const filenames = (await readdir(blogDirectory)).filter((filename) => filename.endsWith('.mdx'))
